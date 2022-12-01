@@ -1,0 +1,342 @@
+<template>
+
+  <form class="form-horizontal" with.bind="context">
+
+    <div class="row">
+
+      <div class="col-md-6" style="padding:0">
+
+        <au-textbox
+          label="No. Sales Contract"
+          value.bind="data.SalesContractNo"
+          read-only="true"
+          if.bind="data.SalesContractNo"
+          options.bind="controlOptions">
+        </au-textbox>
+
+        <au-autocomplete
+          label="Buyer"
+          value.bind="selectedBuyer"
+          read-only.bind="(readOnly||isEdit)"
+          error.bind="error.buyer"
+          loader.bind="buyerLoader"
+          text.bind="buyerView"
+          options.bind="controlOptions"
+          placeholder="pilih buyer">
+        </au-autocomplete>
+
+        <au-textbox
+          label="Nama Penerima"
+          value.bind="data.RecipientName"
+          error.bind="error.RecipientName"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-textbox>
+
+        <au-textbox
+          label="Jabatan Penerima"
+          value.bind="data.RecipientJob"
+          error.bind="error.RecipientJob"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-textbox>
+        
+        <au-multiline
+          label="Alamat Penerima"
+          value.bind="data.RecipientAddress"
+          read-only.bind="readOnly"
+          error.bind="error.RecipientAddress"
+          options.bind="controlOptions">
+        </au-multiline>
+
+        <au-datepicker
+          label="Tgl"
+          value.bind="data.CreatedUtc"
+          read-only="true"
+          options.bind="controlOptions">
+        </au-datepicker>
+
+        <au-textbox
+          label="Packing"
+          value.bind="data.Packing"
+          error.bind="error.Packing"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-textbox>
+        
+        <au-multiline
+          label="DocPresented"
+          value.bind="data.DocPresented"
+          error.bind="error.DocPresented"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-multiline>
+
+        <au-multiline
+          label="FOB"
+          value.bind="data.FOB"
+          read-only.bind="readOnly"
+          error.bind="error.FOB"
+          options.bind="controlOptions">
+        </au-multiline>
+
+        <au-numeric
+          label="Total Amount"
+          value.bind="amount"
+          read-only="true"
+          format = "0,0.00"
+          options.bind="controlOptions">
+        </au-numeric>
+
+        <au-dropdown
+          label="Delivery"
+          value.bind="data.Delivery"
+          error.bind="error.Delivery"
+          items.bind="DeliveryOptions"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-dropdown>
+
+        <au-dropdown
+          label="Destination"
+          value.bind="data.Country"
+          error.bind="error.Country"
+          read-only.bind="readOnly"
+          items.bind="countries"
+          options.bind="controlOptions"
+          if.bind="data.SCType!='Lokal'"
+        ></au-dropdown>
+
+        <au-textbox
+          label="Destination"
+          value.bind="data.Country"
+          error.bind="error.Country"
+          read-only.bind="readOnly"
+          options.bind="controlOptions"
+          if.bind="data.SCType=='Lokal'"
+        ></au-textbox>
+
+        <au-multiline
+          label="No. HS"
+          value.bind="data.NoHS"
+          error.bind="error.NoHS"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-multiline>
+        
+      </div>
+
+<!--Right-->
+
+      <div class="col-md-6" style="padding:0">
+        <au-checkbox
+          label="Material?"
+          value.bind="data.IsMaterial"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-checkbox>
+
+        <au-checkbox
+          label="Trimming?"
+          value.bind="data.IsTrimming"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-checkbox>
+
+        <au-checkbox
+          label="Embrodiary?"
+          value.bind="data.IsEmbrodiary"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-checkbox>
+
+        <au-checkbox
+          label="Printed?"
+          value.bind="data.IsPrinted"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-checkbox>
+
+        <au-checkbox
+          label="Wash?"
+          value.bind="data.IsWash"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-checkbox>
+
+        <au-checkbox
+          label="TTPayment?"
+          value.bind="data.IsTTPayment"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-checkbox>
+        
+        <au-multiline
+          label="Payment"
+          value.bind="data.PaymentDetail"
+          error.bind="error.Payment"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-multiline>
+
+        <au-autocomplete
+          label="Bank Detail"
+          value.bind="selectedAccountBank"
+          error.bind="error.AccountBankId"
+          read-only.bind="readOnly"
+          loader.bind="accountBankLoader"
+          text.bind="bankView"
+          key="BankName"
+          query.bind="filterBank"
+          options.bind="controlOptions"
+          placeholder="pilih rekening">
+        </au-autocomplete>
+
+        <au-numeric
+          label="Ongkos Angkut"
+          value.bind="data.FreightCost"
+          read-only.bind="readOnly"
+          format = "0,0.00"
+          options.bind="controlOptions">
+        </au-numeric>
+
+        <au-textbox
+          label="Cara Pembayaran"
+          value.bind="data.PaymentMethod"
+          error.bind="error.PaymentMethod"
+          read-only.bind="readOnly"
+          options.bind="controlOptions">
+        </au-textbox>
+
+        <au-textbox
+          label="Down Payment (DP)"
+          value.bind="data.DownPayment"
+          error.bind="error.DownPayment"
+          read-only.bind="readOnly"
+          if.bind="type=='Lokal'"
+          options.bind="controlOptions">
+        </au-textbox>
+        <div class="row" if.bind="type=='Lokal'">
+
+          <div class="col-sm-2" style="padding-left: 10%;">
+            
+            <textbox label="Denda Keterlambatan" read-only="true"></textbox>
+            
+          </div>
+
+          <div class="col-sm-6">
+            
+            <au-textbox
+              value.bind="data.LatePayment"
+              error.bind="error.LatePayment"
+              placeholder="input denda"
+              read-only.bind="readOnly"
+              options.bind="controlOptions">
+            </au-textbox>
+            
+          </div>
+
+          <div class="col-sm-1">
+
+              <textbox label="%" read-only="true"></textbox>
+
+          </div>
+
+      </div>
+        <div class="row" if.bind="type=='Lokal'">
+
+          <div class="col-sm-2" style="padding-left: 10%;">
+            
+            <textbox label="Pengembalian Barang" read-only="true"></textbox>
+            
+          </div>
+    
+          <div class="col-sm-6">
+    
+            <au-textbox
+              value.bind="data.LateReturn"
+              error.bind="error.LateReturn"
+              placeholder="input pengembalian barang"
+              read-only.bind="readOnly"
+              options.bind="controlOptions">
+            </au-textbox>
+    
+          </div>
+    
+          <div class="col-sm-1">
+    
+            <textbox label="Hari" read-only="true"></textbox>
+    
+          </div>
+            
+        </div>
+    
+        <div class="row" if.bind="type=='Lokal'">
+    
+          <div class="col-sm-2" style="padding-left: 10%;">
+            
+            <textbox label="Pemberitahuan Klaim" read-only="true"></textbox>
+            
+          </div>
+    
+          <div class="col-sm-6">
+            
+            <au-textbox
+              value.bind="data.Claim"
+              error.bind="error.Claim"
+              placeholder="input claim"
+              read-only.bind="readOnly"
+              options.bind="controlOptions">
+            </au-textbox>
+    
+          </div>
+    
+          <div class="col-sm-1">
+    
+            <textbox label="Hari" read-only="true"></textbox>
+    
+          </div>
+            
+        </div>
+        
+      </div>
+
+    </div>
+    
+
+    <!--<au-textbox error.bind="error.Details" read-only.bind="true"></au-textbox>-->
+
+    <au-collection
+      items.bind="data.SalesContractROs"
+      errors.bind="error.SalesContractROs"
+      read-only.bind="readOnly"
+      columns.bind="detailHeader"
+      item-template="modules/merchandiser/garment-sales-contract/template/ro"
+      add.bind="addItems"
+      options.bind="itemOptions"
+      remove.bind="removeItems"
+      view-model.ref="SCCollection"
+      change.delegate="itemsChanged($event)"
+      if.bind="selectedBuyer && type !='Ekspor'">
+    </au-collection>
+
+    <!-- options.bind="itemsInfo.options" -->
+
+    <au-collection
+      items.bind="data.SalesContractROs"
+      errors.bind="error.SalesContractROs"
+      read-only.bind="readOnly"
+      columns.bind="detailHeader"
+      item-template="modules/merchandiser/garment-sales-contract/template/ro"
+      options.bind="itemOptions"
+      view-model.ref="SCCollection"
+      change.delegate="itemsChanged($event)"
+      if.bind="selectedBuyer && type =='Ekspor'">
+    </au-collection>
+
+    <!-- options.bind="itemsInfo.options" -->
+
+    <au-textbox error.bind="error.TotalQuantity" read-only.bind="true"></au-textbox>
+
+  </form>
+</template>

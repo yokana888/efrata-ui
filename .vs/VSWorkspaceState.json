@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\modules",
+    "\\src\\modules\\customs-report",
+    "\\src\\modules\\garment-purchasing",
+    "\\src\\modules\\garment-purchasing\\monitoring-intern-note-all",
+    "\\src\\modules\\merchandiser",
+    "\\src\\modules\\merchandiser\\cost-calculation"
+  ],
+  "SelectedNode": "\\src\\modules\\garment-purchasing\\monitoring-intern-note-all\\list.js",
+  "PreviewInSolutionExplorer": false
+}
