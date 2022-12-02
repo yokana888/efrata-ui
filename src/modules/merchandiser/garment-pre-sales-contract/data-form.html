@@ -18,7 +18,15 @@
             options.bind="controlOptions">
         </au-textbox>
 
-        <au-autocomplete 
+        <au-textbox
+            label="Seksi"
+            value.bind="data.sectionName"
+            read-only="false"
+            text.bind = "sectionView"
+            options.bind="controlOptions">
+        </au-textbox>
+
+        <!-- <au-autocomplete 
             label="Seksi"
             value.bind="section"
             error.bind="error.Section"
@@ -28,7 +36,7 @@
             aria-placeholder="Cari Seksi"
             read-only.bind="data.SCNo"
             options.bind="controlOptions">
-        </au-autocomplete>
+        </au-autocomplete> -->
 
         <au-datepicker
             label="Tgl. Sales Contract"

@@ -57,8 +57,8 @@ export class CoreService extends RestService {
         super(http, aggregator, config, "core");
     }
 
-    getSectionById(id) {
-        var endpoint = `${serviceUriSection}/${id}`;
+    getSection() {
+        var endpoint = `${serviceUriSection}`;
         return super.get(endpoint);
     }
 }

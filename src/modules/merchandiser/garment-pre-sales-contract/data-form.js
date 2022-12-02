@@ -36,6 +36,16 @@ export class DataForm {
         this.data = context.data;
         this.error = context.error;
         this.data.SCDate=this.data.SCDate?this.data.SCDate:new Date();
+        this.section= await this.coreService.getSection();
+       
+        for(var i of this.section)
+        {
+            console.log(i);
+            this.data.sectionName=i.Name; 
+            this.data.SectionId = i.Id;
+            this.data.SectionCode = i.Code;
+  
+        } 
         if(this.data.SCNo){
         
             this.buyerAgent={};
@@ -50,9 +60,7 @@ export class DataForm {
             this.buyerBrand.Code = this.data.BuyerBrandCode;
             this.buyerBrand.Name = this.data.BuyerBrandName;
 
-            if(this.data.SectionId){
-                this.section= await this.coreService.getSectionById(this.data.SectionId);
-            }
+        
         }
         else {
             this.data.SCNo = null;
@@ -60,13 +68,13 @@ export class DataForm {
         this.options.isCreate = this.context.isCreate;
     }
 
-    sectionChanged(newValue){
-        var selectedSection = newValue;
-        if(selectedSection){
-            this.data.SectionId = selectedSection.Id;
-            this.data.SectionCode = selectedSection.Code;
-        }
-    }
+    // sectionChanged(newValue){
+    //     var selectedSection = newValue;
+    //     if(selectedSection){
+    //         this.data.SectionId = selectedSection.Id;
+    //         this.data.SectionCode = selectedSection.Code;
+    //     }
+    // }
 
     buyerAgentChanged(newValue) {
         var selectedBuyerAgent = newValue;
@@ -95,7 +103,7 @@ export class DataForm {
 
 
     sectionView = (section) => { 
-        return `${section.Code} - ${section.Name}`
+        return `${section.Name}`
     }
     buyerAgentView = (buyerAgent) => {
         return `${buyerAgent.Code} - ${buyerAgent.Name}`
@@ -104,9 +112,7 @@ export class DataForm {
         return `${buyerBrand.Code} - ${buyerBrand.Name}`
     }
 
-    get sectionLoader() {
-        return SectionLoader;
-    }
+   
     get garmentBuyerLoader() { 
         return GarmentBuyerLoader;
     }
