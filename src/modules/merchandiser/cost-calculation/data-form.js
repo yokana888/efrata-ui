@@ -128,6 +128,13 @@ export class DataForm {
     this.context = context;
     this.data = this.context.data;
     this.error = this.context.error;
+   
+    // const unit = await this.serviceCore.getUnit();
+    
+    // for (var u of unit)
+    // {
+
+    // }
     this.selectedSMV_Cutting = this.data.SMV_Cutting ? this.data.SMV_Cutting : 0;
     this.selectedSMV_Sewing = this.data.SMV_Sewing ? this.data.SMV_Sewing : 0;
     this.selectedSMV_Finishing = this.data.SMV_Finishing ? this.data.SMV_Finishing : 0;
@@ -247,7 +254,16 @@ export class DataForm {
         this.selectedRate="IDR";
       }
     }
+    const units = await this.serviceCore.getUnit();
     
+    for(var i of units)
+    {
+      this.data.Unit = i;
+      this.data.UnitId=i.Id;
+      this.data.UnitCode=i.Code;
+      this.data.UnitName=i.Name;
+    }
+     console.log(units);
   }
 
   get preSalesContractLoader() {
@@ -258,7 +274,8 @@ export class DataForm {
     return BookingOrderLoader;
   }
 
-  bookingOrderView = (bookingorder) => {                          
+  bookingOrderView = (bookingorder) => {      
+    console.log(bookingorder);                    
     return`${bookingorder.BookingOrderNo} - ${bookingorder.ComodityName} - ${bookingorder.ConfirmQuantity} - ${moment(bookingorder.ConfirmDate).format("DD MMM YYYY")}`
   }
 
@@ -297,6 +314,7 @@ export class DataForm {
   }
 
   unitView = (unit) => {
+    console.log(unit);
     return `${unit.Code} - ${unit.Name}`
   }
 
@@ -322,8 +340,9 @@ export class DataForm {
       this.data.PreSCId = newValue.Id;
       this.data.PreSCNo = newValue.SCNo;
       this.data.Section = newValue.SectionCode;
-      console.log(this.data.Section);
+     
       const section = await this.serviceCore.getSection(newValue.SectionId);
+ console.log(section);
       this.data.SectionName = section.Name;
       this.data.ApprovalCC = section.ApprovalCC;
       this.data.ApprovalRO = section.ApprovalRO;   
@@ -379,7 +398,9 @@ export class DataForm {
          this.data.BookingOrderNo = newValue.BookingOrderNo;   
          this.data.BOQuantity = newValue.ConfirmQuantity;
          this.data.ConfirmDate = newValue.ConfirmDate;   
-         //this.data.Commodity = newValue.ComodityName;
+         this.data.ComodityId=newValue.ComodityId;
+         this.data.ComodityCode=newValue.ComodityCode;
+         this.data.ComodityName=newValue.ComodityName;
 
          console.log(this.data.BookingOrderId);
          console.log(this.data.BookingOrderItemId);      

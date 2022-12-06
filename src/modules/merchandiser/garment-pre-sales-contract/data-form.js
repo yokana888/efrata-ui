@@ -39,11 +39,14 @@ export class DataForm {
         this.section= await this.coreService.getSection();
        
         for(var i of this.section)
-        {
-            console.log(i);
-            this.data.sectionName=i.Name; 
-            this.data.SectionId = i.Id;
-            this.data.SectionCode = i.Code;
+        { 
+            if(i.Name == "AYU RIMA")
+            {
+                this.data.sectionName=i.Name; 
+                this.data.SectionId = i.Id;
+                this.data.SectionCode = i.Code;
+            }
+           
   
         } 
         if(this.data.SCNo){
