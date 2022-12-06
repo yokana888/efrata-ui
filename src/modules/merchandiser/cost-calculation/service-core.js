@@ -5,6 +5,7 @@ const uomServiceUri = 'master/uoms';
 const sectionServiceUri = 'master/garment-sections';
 const serviceMasterGarmentProductUri = 'master/garmentProducts';
 const categoryServiceUri = 'master/garment-categories';
+const unitServiceUri='master/garment-units';
 
 export class ServiceCore extends RestService {
 
@@ -20,6 +21,14 @@ export class ServiceCore extends RestService {
       })
   }
 
+  getUnit() {
+    var endpoint = `${unitServiceUri}`;
+    return super.get(endpoint)
+      .then((result) => {
+      
+        return result;
+      })
+  }
   getUomByUnit(unit) {
     var endpoint = `${uomServiceUri}?keyword=${unit}`;
     return super.get(endpoint)

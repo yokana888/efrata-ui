@@ -21,8 +21,14 @@
                     error.bind="error.Article"
                     options.bind="length4">
                 </au-textbox>
-
-                <au-autocomplete
+                <au-textbox
+                label="Unit"
+                read-only="true"
+                value.bind="data.UnitName"
+                error.bind="error.UnitName"
+                options.bind="length4">
+            </au-textbox>
+                <!-- <au-autocomplete
                     label="Unit"
                     value.bind="selectedUnit"
                     error.bind="error.Unit"
@@ -32,9 +38,29 @@
                     read-only.bind="readOnly || isEdit"
                     options.bind="length4"
                     keypress.delegate="enterDelegate($event)">
-                </au-autocomplete>
+                </au-autocomplete> -->
                 <au-autocomplete
+                    value.bind="selectedBookingOrder"
+                    error.bind="error.BookingOrder"                    
+                    label="No Booking Order"
+                    loader.bind="bookingOrderLoader" 
+                    query.bind="filter"
+                    text.bind="bookingOrderView"                                                         
+                    placeholder="No Booking Order"
+                    read-only.bind="readOnly || isEdit"
+                    options.bind="length4">
+                </au-autocomplete>
+                <au-textbox
+                label="Komoditi"
+                placeholder="ComodityName"
+                value.bind="data.ComodityName"
+                error.bind="error.ComodityName"
+                read-only="true"
+                options.bind="length4">
+            </au-textbox>
+                <!-- <au-autocomplete
                     label="Komoditi"
+                    read-only="true"
                     placeholder="Cari Komoditi"
                     value.bind="selectedComodity"
                     text.bind="comodityView"
@@ -42,7 +68,7 @@
                     loader.one-time="comodityLoader"
                     options.bind="length4"
                     keypress.delegate="enterDelegate($event)">
-                </au-autocomplete>
+                </au-autocomplete> -->
                 <au-multiline
                     placeholder="Deskripsi Komoditi"
                     label="Deskripsi Komoditi"
@@ -66,21 +92,11 @@
             <div class="col-md-3">
                 <au-textbox
                     label="Seksi"
-                    value.bind="dataSection"
+                    value.bind="data.SectionName"
                     read-only="true"
                     options.bind="length4">
                 </au-textbox>
-                <au-autocomplete
-                    value.bind="selectedBookingOrder"
-                    error.bind="error.BookingOrder"                    
-                    label="No Booking Order"
-                    loader.bind="bookingOrderLoader" 
-                    query.bind="filter"
-                    text.bind="bookingOrderView"                                                         
-                    placeholder="No Booking Order"
-                    read-only.bind="readOnly || isEdit"
-                    options.bind="length4">
-                </au-autocomplete>
+                
                 <au-numeric
                     label="Remaining Confirm Quantity"
                     format="0"
@@ -302,12 +318,12 @@
                     error.bind="error.Insurance"
                     options.bind="length4">
                 </au-numeric>
-                <au-numeric
+                <!-- <au-numeric
                     label="Other Expense"
                     value.bind="data.CommissionPortion"
                     error.bind="error.CommissionPortion"
                     options.bind="length4">
-                </au-numeric>
+                </au-numeric> -->
                 <au-numeric
                     label="Komisi"
                     value.bind="commissionRate"
