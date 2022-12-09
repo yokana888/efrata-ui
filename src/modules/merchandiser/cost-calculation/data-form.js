@@ -6,6 +6,7 @@ import { ServiceCore } from './service-core';
 import moment from 'moment';
 
 import numeral from 'numeral';
+//import { ThrottleBindingBehavior } from "../../../../node_modules/aurelia-templating-resources/dist/aurelia-templating-resources";
 numeral.defaultFormat("0,0.00");
 const rateNumberFormat = "0,0.000";
 var PreSalesContractLoader = require('../../../loader/garment-pre-sales-contracts-loader');
@@ -398,9 +399,14 @@ export class DataForm {
          this.data.BookingOrderNo = newValue.BookingOrderNo;   
          this.data.BOQuantity = newValue.ConfirmQuantity;
          this.data.ConfirmDate = newValue.ConfirmDate;   
-         this.data.ComodityId=newValue.ComodityId;
-         this.data.ComodityCode=newValue.ComodityCode;
-         this.data.ComodityName=newValue.ComodityName;
+         this.data.Comodity=
+         {
+          Id: newValue.ComodityId,
+          Code: newValue.ComodityCode,
+          Name: newValue.ComodityName
+         }
+      
+        this.data.ComodityName= newValue.ComodityName;
 
          console.log(this.data.BookingOrderId);
          console.log(this.data.BookingOrderItemId);      
@@ -427,6 +433,7 @@ export class DataForm {
      this.data.ComodityId=newVal.Id;
      this.data.ComodityCode=newVal.Code;
      this.data.ComodityName=newVal.Name;
+      
     }
     else
     {

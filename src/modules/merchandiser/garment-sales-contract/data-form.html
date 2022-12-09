@@ -130,6 +130,19 @@
 
       <div class="col-md-6" style="padding:0">
         <au-checkbox
+        label="PPN?"
+        value.bind="data.UseVat"
+        read-only.bind="readOnly"
+        options.bind="controlOptions">
+      </au-checkbox>
+    <au-autocomplete value.bind="vatTax" 
+        error.bind="error.vat" label="Jenis Ppn" 
+        loader.bind="vatLoader" text.bind="vatView" placeholder="cari ppn" 
+        read-only.bind="readOnly || isEdit" show.bind="data.UseVat" 
+        options.bind="controlOptions" view-model.ref="vatTaxVM" 
+        change.delegate="vatTaxChanged($event)">
+  </au-autocomplete>
+        <au-checkbox
           label="Material?"
           value.bind="data.IsMaterial"
           read-only.bind="readOnly"
