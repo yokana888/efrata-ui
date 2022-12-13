@@ -82,7 +82,8 @@
         <au-multiline 
             label="Keterangan"
             value.bind="data.Remark"
-            placeholder="tambah keterangan"
+            error.bind="error.Remark"
+            placeholder="Estimasi Kedatangan Fabric dan Accessories"
             read-only.bind="readOnly"
             options.bind="controlOptions">
         </au-multiline>
