@@ -3,6 +3,7 @@ import { Service, CoreService } from './service';
 
 import AccountBankLoader from "../../../loader/account-banks-loader";
 import BuyerBrandLoader from "../../../loader/garment-buyer-brands-loader";
+var VatLoader = require('../../../loader/vat-tax-loader');
 
 @inject(BindingEngine, Service,CoreService, Element)
 export class DataForm {
@@ -13,6 +14,7 @@ export class DataForm {
   @bindable error = {};
   @bindable hasItems = false;
   @bindable type = "Ekspor";
+  @bindable vatTax;
   lampHeader = [{ header: "Standar Lampu" }];
 
   DeliveryOptions = ["BY LAND", "BY SEA", "BY AIR", "BY SEA-AIR"];
@@ -30,16 +32,42 @@ export class DataForm {
     this.service = service;
     this.coreService = coreService;
   }
-
+  vatTaxChanged(newValue,oldValue) {
+    var selectedVat = newValue;
+    console.log(selectedVat);
+    if (selectedVat) {
+        if (selectedVat.Id) {
+            this.data.VatId= selectedVat.Id;
+            this.data.VatValue = selectedVat.Rate;
+            
+        }
+        else {
+            this.data.vat = null;
+        }
+    }
+    else {
+        this.data.vat = null;
+    }
+    
+}
+ get vatLoader() {
+      return VatLoader;
+  }
+ 
+  vatView = (vat) => {
+      var rate = vat.rate ? vat.rate : vat.Rate;
+      return `${rate}`;
+  }
   async bind(context) {
     this.context = context;
     this.data = context.data;
     this.error = context.error;
     this.data.CreatedUtc = this.data.CreatedUtc ? this.data.CreatedUtc : new Date();
-    // this.itemsInfo.options = {
-    //   ROList: []
-    // }
-
+    
+    if(this.data.UseVat === true) {
+      this.data.VatValue=this.data.VatValue;
+      this.vatTax= this.data.VatValue;
+  }
     this.itemOptions = {
       ROList: []
     }    
