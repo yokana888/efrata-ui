@@ -224,8 +224,8 @@ export class DataForm {
     this.data.Wage = all[0];
     this.data.Wage.Value=this.data.Wage.Value.toLocaleString('en-EN', { minimumFractionDigits: 2 }) ;
     this.data.THR = all[1];
-    //this.data.Rate = all[2];
-    this.RateDollar = all[2];
+    this.data.Rate = all[2];
+    //this.RateDollar = all[2];
     this.selectedRate = this.data.Rate ? this.data.Rate : "";
 
     if (this.data.CostCalculationGarment_Materials) {
@@ -248,11 +248,11 @@ export class DataForm {
     this.costCalculationGarment_MaterialsInfo.options.SCId = this.data.PreSCId;
     
     if(this.data.Rate){
-      if(this.data.Rate.Value>1){
-        this.selectedRate="USD";
+      if(this.data.Rate.Value > 1){
+        this.selectedRate = "USD";
       }
-      else if(this.data.Rate.Value==1){
-        this.selectedRate="IDR";
+      else if(this.data.Rate.Value == 1){
+        this.selectedRate = "IDR";
       }
     }
     const units = await this.serviceCore.getUnit();
@@ -297,6 +297,7 @@ export class DataForm {
   get comodityLoader() {
     return ComodityLoader;
   }
+  
   comodityView = (comodity) => {
     return`${comodity.Code} - ${comodity.Name}`
   }
@@ -343,7 +344,7 @@ export class DataForm {
       this.data.Section = newValue.SectionCode;
      
       const section = await this.serviceCore.getSection(newValue.SectionId);
- console.log(section);
+      console.log(section);
       this.data.SectionName = section.Name;
       this.data.ApprovalCC = section.ApprovalCC;
       this.data.ApprovalRO = section.ApprovalRO;   
@@ -445,6 +446,7 @@ export class DataForm {
   @bindable selectedLeadTime = "";
   selectedLeadTimeChanged(newVal) {
  
+    console.log(newVal);
     if (newVal === "25 hari")
     {
       this.data.LeadTime = 25;
@@ -452,11 +454,16 @@ export class DataForm {
     else if (newVal === "35 hari")
     {      
       this.data.LeadTime = 35;
-      
     }
-    else
+    else if(newVal === "40 hari")
+    {
+      this.data.LeadTime = 40;
+    }
+    else {
       this.data.LeadTime = 0;
+    }
      
+    console.log(this.data.LeadTime);
   }
 
   @bindable imageUpload;
