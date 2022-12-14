@@ -397,7 +397,7 @@ export class DataForm {
         this.data.BookingOrderNo = newValue.BookingOrderNo;   
         this.data.BOQuantity = newValue.ConfirmQuantity;
         this.data.ConfirmDate = newValue.ConfirmDate;
-        
+        this.data.DeliveryDate=newValue.DeliveryDate;
         this.data.Comodity=
         {
           Id: newValue.ComodityId,
