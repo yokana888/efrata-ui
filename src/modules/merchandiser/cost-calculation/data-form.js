@@ -150,21 +150,23 @@ export class DataForm {
     this.data.OTL2 = this.data.OTL2 ? this.data.OTL2 : Object.assign({}, this.defaultRate);
     this.data.ConfirmPrice =this.data.ConfirmPrice ? this.data.ConfirmPrice:0 ;
     this.create = this.context.create; 
+    
     if (!this.create)
-      {
-          this.selectedBookingOrder = {
-               BookingOrderId :this.data.BookingOrderId,
-               BookingOrderItemId : this.data.BookingOrderItemId,
-               BookingOrderNo : this.data.BookingOrderNo, 
-               ConfirmDate : this.data.ConfirmDate,
-               ConfirmQuantity : this.data.BOQuantity,
-               //ComodityName : this.data.Comodity.Name,
-        }
+    {
+      this.selectedBookingOrder = {
+        BookingOrderId :this.data.BookingOrderId,
+        BookingOrderItemId : this.data.BookingOrderItemId,
+        BookingOrderNo : this.data.BookingOrderNo, 
+        ConfirmDate : this.data.ConfirmDate,
+        ConfirmQuantity : this.data.BOQuantity,
+        Comodity : this.data.Comodity,
       }
-      else
-      {
-          this.selectedBookingOrder = null;
-      }
+      this.data.ComodityName=this.data.Comodity.Name;
+    }
+    else
+    {
+        this.selectedBookingOrder = null;
+    }
     let promises = [];
 
     let wage;
@@ -264,7 +266,6 @@ export class DataForm {
       this.data.UnitCode=i.Code;
       this.data.UnitName=i.Name;
     }
-     console.log(units);
   }
 
   get preSalesContractLoader() {
@@ -275,8 +276,7 @@ export class DataForm {
     return BookingOrderLoader;
   }
 
-  bookingOrderView = (bookingorder) => {      
-    console.log(bookingorder);                    
+  bookingOrderView = (bookingorder) => {          
     return`${bookingorder.BookingOrderNo} - ${bookingorder.ComodityName} - ${bookingorder.ConfirmQuantity} - ${moment(bookingorder.ConfirmDate).format("DD MMM YYYY")}`
   }
 
@@ -315,7 +315,6 @@ export class DataForm {
   }
 
   unitView = (unit) => {
-    console.log(unit);
     return `${unit.Code} - ${unit.Name}`
   }
 
@@ -343,7 +342,6 @@ export class DataForm {
       this.data.Section = newValue.SectionCode;
      
       const section = await this.serviceCore.getSection(newValue.SectionId);
- console.log(section);
       this.data.SectionName = section.Name;
       this.data.ApprovalCC = section.ApprovalCC;
       this.data.ApprovalRO = section.ApprovalRO;   
@@ -353,7 +351,6 @@ export class DataForm {
         Name: newValue.BuyerAgentName
       };
       this.data.BuyerCode = this.data.Buyer.Code;
-      console.log(this.data.BuyerCode);
 
       this.data.BuyerBrand = {
         Id: newValue.BuyerBrandId,
@@ -391,39 +388,36 @@ export class DataForm {
  
  @bindable selectedBookingOrder;
   async selectedBookingOrderChanged(newValue, oldValue) {
-    //console.log(newValue);
     if (newValue)
-       {
-         this.data.BookingOrderId = newValue.BookingOrderId;
-         this.data.BookingOrderItemId = newValue.BookingOrderItemId;
-         this.data.BookingOrderNo = newValue.BookingOrderNo;   
-         this.data.BOQuantity = newValue.ConfirmQuantity;
-         this.data.ConfirmDate = newValue.ConfirmDate;   
-         this.data.Comodity=
-         {
+    {
+      if(!this.data.Id){
+        this.data.BookingOrderId = newValue.BookingOrderId;
+        this.data.BookingOrderItemId = newValue.BookingOrderItemId;
+        this.data.BookingOrderNo = newValue.BookingOrderNo;   
+        this.data.BOQuantity = newValue.ConfirmQuantity;
+        this.data.ConfirmDate = newValue.ConfirmDate;
+        
+        this.data.Comodity=
+        {
           Id: newValue.ComodityId,
           Code: newValue.ComodityCode,
           Name: newValue.ComodityName
-         }
+        }
       
-        this.data.ComodityName= newValue.ComodityName;
-
-         console.log(this.data.BookingOrderId);
-         console.log(this.data.BookingOrderItemId);      
-         console.log(this.data.BookingOrderNo);
-         console.log(this.data.BOQuantity);
-         console.log(this.data.ConfirmDate);     
-         //console.log(this.data.Commodity);   
-       } 
-       else 
-       {
-          this.data.BookingOrderId = 0;
-          this.data.BookingOrderItemId = 0;
-          this.data.BookingOrderNo = null;      
-          this.data.BOQuantity = 0;
-          this.data.ConfirmDate = null;
-         // this.data.Commodity = this.data.Commodity;
-       }
+        this.data.ComodityName= newValue.ComodityName;  
+        
+      }
+       
+    } 
+    else 
+    {
+      this.data.BookingOrderId = 0;
+      this.data.BookingOrderItemId = 0;
+      this.data.BookingOrderNo = null;      
+      this.data.BOQuantity = 0;
+      this.data.ConfirmDate = null;
+      // this.data.Commodity = this.data.Commodity;
+    }
   }
 
   @bindable selectedComodity = "";
@@ -439,12 +433,10 @@ export class DataForm {
     {
           this.selectedBookingOrder = null;
     }
-    console.log(this.data.ComodityCode);
   }
 
   @bindable selectedLeadTime = "";
   selectedLeadTimeChanged(newVal) {
- 
     if (newVal === "25 hari")
     {
       this.data.LeadTime = 25;
@@ -456,7 +448,6 @@ export class DataForm {
     }
     else
       this.data.LeadTime = 0;
-     
   }
 
   @bindable imageUpload;
@@ -473,6 +464,7 @@ export class DataForm {
 
   @bindable selectedRate;
   selectedRateChanged(newValue, oldValue) { //condition rule option changed
+    
  		this.rateService.search({ filter: "{Name:\""+newValue+"\"}"}) // get USD rate value from master.rate
         .then(results => {
           let result = results.data[0] ? results.data[0] : this.defaultRate;

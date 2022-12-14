@@ -28,6 +28,8 @@ export class Edit {
                 ConfirmDate : this.data.ConfirmDate,
                 ConfirmQuantity : this.data.BOQuantity,
                 ComodityName : this.data.Comodity.Name,
+                // ComodityId:this.data.Comodity.Id,
+                // ComodityCode:this.data.Comodity.Code
             }
 
             const prMasterIds = this.data.CostCalculationGarment_Materials
