@@ -46,6 +46,7 @@ export class List {
             dateTo : this.dateTo ? moment(this.dateTo).format("YYYY-MM-DD") : "",
             unitcode : this.unit ? this.unit : "",
             category : this.category ? this.category : "",
+            planPo : this.PlanPO ? this.PlanPO : "",
             //suppliertype : this.Tipe
         };
         this.service.search(args)
@@ -117,7 +118,8 @@ export class List {
             unitcode : this.unit ? this.unit : "",
             unitname : this.unitname ? this.unitname : "",
             category : this.category ? this.category : "",
-            categoryname : this.categoryname ? this.categoryname : ""
+            categoryname : this.categoryname ? this.categoryname : "",
+            planPo : this.PlanPO ? this.PlanPO : "",
         };
         
         this.service.generateExcel(args);
