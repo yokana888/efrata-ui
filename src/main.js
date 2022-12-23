@@ -31,28 +31,28 @@ export async function configure(aurelia) {
             }
 
 
-            var core = "https://com-efrata-service-core.azurewebsites.net/v1/";
-            var auth = "https://com-efrata-service-auth.azurewebsites.net/v1/";
+            var core = "https://com-efrata-service-core-dev.azurewebsites.net/v1/";
+            var auth = "https://com-efrata-service-auth-dev.azurewebsites.net/v1/";
             var production = "https://dl-production-webapi.azurewebsites.net/v1/";
-            var productionAzure = "https://com-efrata-service-finishing-printing.azurewebsites.net/v1/";
+            var productionAzure = "https://com-efrata-service-finishing-printing-dev.azurewebsites.net/v1/";
             var purchasing = "https://dl-purchasing-webapi.azurewebsites.net/v1/";
-            var purchasingAzure = "https://com-efrata-service-purchasing.azurewebsites.net/v1/";
+            var purchasingAzure = "https://com-efrata-service-purchasing-dev.azurewebsites.net/v1/";
             var garmentPurchasing = "https://dl-purchasing-garment-webapi.azurewebsites.net/v1/";
             var inventory = "https://dl-inventory-webapi.azurewebsites.net/v1/";
-            var inventoryAzure = "https://com-efrata-service-inventory.azurewebsites.net/v1/";
+            var inventoryAzure = "https://com-efrata-service-inventory-dev.azurewebsites.net/v1/";
             var garmentMasterPlan = "https://dl-garment-master-plan-webapi.azurewebsites.net/v1/";
             var spMasterPlan = "https://dl-sp-master-plan-webapi.mybluemix.net/v1/";
-            var spinning = "https://com-efrata-service-spinning.azurewebsites.net/";
-            var intPurchasing = "https://com-efrata-service-internal-transfer.azurewebsites.net/v1/";
+            var spinning = "https://com-efrata-service-spinning-dev.azurewebsites.net/";
+            var intPurchasing = "https://com-efrata-service-internal-transfer-dev.azurewebsites.net/v1/";
             var customsReport = "https://com-efrata-service-support.azurewebsites.net/v1/";
-            var merchandiser = "https://com-efrata-service-md.azurewebsites.net/v1/";
-            const dealTracking = 'https://com-efrata-service-deal-tracking.azurewebsites.net/v1/';
-            const sales = "https://com-efrata-service-sales.azurewebsites.net/v1/";
-            var weaving = "https://com-efrata-service-weaving.azurewebsites.net/";
-            var finance = "https://com-efrata-service-finance-accounting.azurewebsites.net/v1/";
-            var garmentProduction = "https://com-efrata-service-garment.azurewebsites.net/";
-            var packingInventory = "https://com-efrata-service-packing-inventory.azurewebsites.net/v1/";
-            var dyeing = "https://dyeing-printing-etl-service.azurewebsites.net/api/";
+            var merchandiser = "https://com-efrata-service-md-dev.azurewebsites.net/v1/";
+            const dealTracking = 'https://com-efrata-service-deal-tracking-dev.azurewebsites.net/v1/';
+            const sales = "https://com-efrata-service-sales-dev.azurewebsites.net/v1/";
+            var weaving = "https://com-efrata-service-weaving-dev.azurewebsites.net/";
+            var finance = "https://com-efrata-service-finance-accounting-dev.azurewebsites.net/v1/";
+            var garmentProduction = "https://com-efrata-service-garment-dev.azurewebsites.net/";
+            var packingInventory = "https://com-efrata-service-packing-inventory-dev.azurewebsites.net/v1/";
+            var dyeing = "https://dyeing-printing-etl-service-dev.azurewebsites.net/api/";
             const garmentShipping = "https://garment-etl-service.azurewebsites.net/api/";
             var ItInven = "https://it-inventory-etl-service.azurewebsites.net/api/";
 
