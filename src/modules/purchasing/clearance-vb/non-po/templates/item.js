@@ -29,7 +29,7 @@ export class Item {
     this.calculateTotalAmount();
   }
 
-  IncomeTaxByOptions = ["", "Supplier", "AG"];
+  IncomeTaxByOptions = ["", "Supplier", "EFRATA"];
 
   get incomeTaxLoader() {
     return IncomeTaxLoader;

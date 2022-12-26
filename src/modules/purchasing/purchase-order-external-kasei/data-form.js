@@ -20,7 +20,7 @@ export class DataForm {
     @bindable selectedUnit;
     @bindable options = { useVat: false };
 
-    IncomeTaxByOptions=["Supplier","AG"];
+    IncomeTaxByOptions=["Supplier","EFRATA"];
     termPaymentOptions = ['CASH', 'KREDIT', 'DP (DOWN PAYMENT) + BP (BALANCE PAYMENT)', 'DP (DOWN PAYMENT) + TERMIN 1 + BP (BALANCE PAYMENT)', 'RETENSI'];
     freightCostByOptions = ['Penjual', 'Pembeli'];
     controlOptions = {
