@@ -30,7 +30,7 @@ export class DataForm {
         }
     }
 
-    IncomeTaxByOptions=["","Supplier","AG"];
+    IncomeTaxByOptions=["","Supplier","EFRATA"];
 
     itemsColumns = [{ header: "Nomor External PO"},
                     { header: "Kena PPN"},
