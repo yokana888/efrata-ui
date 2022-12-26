@@ -134,7 +134,7 @@ export class DataForm {
     ]
 
     PackingTypeOptions = ["EXPORT", "RE EXPORT", "LOKAL"];
-    InvoiceTypeOptions = ["AG", "DS", "SM"];
+    InvoiceTypeOptions = ["EFRATA", "DS", "SM"];
     InvoiceTypeOptionsR = ["AGR", "SMR"];
     PaymentTermOptions = ["LC", "TT/OA", "NON COMMERCIAL"];
     roTypes = ["RO JOB", "RO MASTER"]
