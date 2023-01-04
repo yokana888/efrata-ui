@@ -6,11 +6,11 @@ import { Service } from './service';
 @inject(Router, Service)
 export class View {
     hasCancel = true;
-    hasEdit = true;
+   // hasEdit = true;
     hasDelete = true;
     hasView = true;
     hasCreate = false;
-    hasEdit = false;
+    //hasEdit = false;
 
     constructor(router, service) {
         this.router = router;
@@ -27,10 +27,12 @@ export class View {
         //     this.isCustomsDisplay="Ya"
         // else
         //     this.isCustomsDisplay="Tidak"
-        if (this.data.customsId==0) {
-            this.hasDelete = true;
-            this.hasEdit = true;
+        if (this.data.isInvoice || this.data.isCustoms) {
+            this.hasDelete = false;
+            this.hasView = false;
+            console.log(this.hasEdit)
         }
+        
     }
 
     cancel(event) {
