@@ -30,7 +30,7 @@ export class List {
     KategoriItem = ['','BAHAN BAKU', 'NON BAHAN BAKU'];
     
    
-    termPaymentLocal = ['', 'AG', 'CMT', 'FREE FROM BUYER', 'SAMPLE']; 
+    termPaymentLocal = ['', 'EFRATA', 'CMT', 'FREE FROM BUYER', 'SAMPLE']; 
     termPaymentImport = ['','T/T PAYMENT', 'CMT', 'FREE FROM BUYER', 'SAMPLE'];
 
     get unitLoader() {

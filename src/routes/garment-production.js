@@ -409,7 +409,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1},
+            //permission: { "C9": 1, "AG2": 1, "PDU":1},
             iconClass: 'fa fa-dashboard'
         }
     },
