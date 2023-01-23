@@ -82,15 +82,15 @@ export class List {
           this.totalDebit += Number.parseInt(x.DebitNominal);
         
           x.MemoGarmentPurchasing.MemoDate = x.MemoGarmentPurchasing.MemoDate ? moment(x.MemoGarmentPurchasing.MemoDate).format('DD MMM YYYY') : "-";
-          x.DebitNominal = x.DebitNominal ? numeral(x.DebitNominal).format('0,0.0000') : '0';
-          x.CreditNominal = x.CreditNominal ? numeral(x.CreditNominal).format('0,0.0000') : '0';
+          x.DebitNominal = x.DebitNominal ? numeral(x.DebitNominal).format('0,0.00') : '0';
+          x.CreditNominal = x.CreditNominal ? numeral(x.CreditNominal).format('0,0.00') : '0';
           x.MemoGarmentPurchasing.Remarks = x.MemoGarmentPurchasing.Remarks ? x.MemoGarmentPurchasing.Remarks : '-'; 
           return x;
       });
     });
 
-    this.totalCredit = numeral(this.totalCredit).format('0,0.0000');
-    this.totalDebit = numeral(this.totalDebit).format('0,0.0000');
+    this.totalCredit = numeral(this.totalCredit).format('0,0.00');
+    this.totalDebit = numeral(this.totalDebit).format('0,0.00');
   }
 
   excel() {
