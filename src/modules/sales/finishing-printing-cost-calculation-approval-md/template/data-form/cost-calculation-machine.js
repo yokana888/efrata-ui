@@ -14,7 +14,7 @@ import { DepretiationForm } from '../../dialogs/depretiation-form';
 import { ChemicalAddForm } from '../../dialogs/chemical-add-form';
 import { ChemicalListForm } from '../../dialogs/chemical-list-form';
 
-const rateNumberFormat = "0,0.000";
+const rateNumberFormat = "0,0.00";
 
 // const materialLoader = require('../../../../loader/material-md-loader');
 const UomLoader = require('../../../../../loader/uom-loader');

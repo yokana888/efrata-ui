@@ -8,7 +8,7 @@ import moment from 'moment';
 import numeral from 'numeral';
 //import { ThrottleBindingBehavior } from "../../../../node_modules/aurelia-templating-resources/dist/aurelia-templating-resources";
 numeral.defaultFormat("0,0.00");
-const rateNumberFormat = "0,0.000";
+const rateNumberFormat = "0,0.00";
 var PreSalesContractLoader = require('../../../loader/garment-pre-sales-contracts-loader');
 var BookingOrderLoader = require('../../../loader/garment-booking-order-by-no-for-ccg-loader');
 

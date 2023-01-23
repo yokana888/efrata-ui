@@ -5,7 +5,7 @@ import { RateService } from '../service-rate';
 
 import numeral from 'numeral';
 numeral.defaultFormat("0,0.00");
-const rateNumberFormat = "0,0.000";
+const rateNumberFormat = "0,0.00";
 
 @inject(Router, Service, PurchasingService, RateService)
 export class Copy {

@@ -166,7 +166,7 @@
                     value.bind="data.Nominal"
                     error.bind="error.Nominal"
                     read-only.bind="readOnly"
-                    format="0,0.0000"
+                    format="0,0.00"
                     options.bind="controlOptions">
         </au-numeric>
 
@@ -174,7 +174,7 @@
                     value.bind="data.BankCharges"
                     error.bind="error.BankCharges"
                     read-only.bind="readOnly"
-                    format="0,0.0000"
+                    format="0,0.00"
                     if.bind="data.SourceType == 'Pendanaan' && data.SourceFundingType=='Internal'"
                     options.bind="controlOptions">
         </au-numeric>
@@ -183,7 +183,7 @@
                     value.bind="data.Rates"
                     error.bind="error.Rates"
                     read-only.bind="readOnly"
-                    format="0,0.0000"
+                    format="0,0.00"
                     if.bind="data.SourceType == 'Pendanaan'&& data.SourceFundingType=='Internal' && data.OutputBank && data.Bank.Currency && data.OutputBank.Currency.Code!=data.Bank.Currency.Code "
                     options.bind="controlOptions">
         </au-numeric>
@@ -192,7 +192,7 @@
                     value.bind="data.TransactionNominal"
                     error.bind="error.TransactionNominal"
                     read-only.bind="readOnly"
-                    format="0,0.0000"
+                    format="0,0.00"
                     show.bind="data.SourceType == 'Pendanaan'"
                     options.bind="controlOptions">
         </au-numeric>

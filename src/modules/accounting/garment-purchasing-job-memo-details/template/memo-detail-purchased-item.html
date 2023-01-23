@@ -84,7 +84,7 @@
         <td style="text-align:center;">
             <au-numeric value.bind="data.PurchaseAmount"
                         read-only.bind="true"
-                        format="0,0.0000"
+                        format="0,0.00"
                         options.bind="controlOptions">
             </au-numeric>
         </td>
@@ -92,14 +92,14 @@
             <au-numeric value.bind="data.MemoAmount"
                         error.bind="error.MemoAmount"
                         read-only.bind="readOnly"
-                        format="0,0.0000"
+                        format="0,0.00"
                         options.bind="controlOptions">
             </au-numeric>
         </td>
         <td style="text-align:center;">
             <au-numeric value.bind="data.MemoAmount * data.PaymentRate || 0"
                         read-only.bind="true"
-                        format="0,0.0000"
+                        format="0,0.00"
                         options.bind="controlOptions">
             </au-numeric>
         </td>

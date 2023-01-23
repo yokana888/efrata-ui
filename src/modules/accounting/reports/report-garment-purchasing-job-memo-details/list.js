@@ -46,7 +46,7 @@ export class List {
         this.data.result = [];
 
         this.isEmpty = true;
-        this.totalIdrAmount = numeral(0).format('0,0.0000');
+        this.totalIdrAmount = numeral(0).format('0,0.00');
 
         this.currentYear = moment().format('YYYY');
 
@@ -95,12 +95,12 @@ export class List {
                     let newItem = item;
                     totalIdrAmount = item.MemoIdrAmount + totalIdrAmount;
                     newItem.MemoDate = moment(item.MemoDate).format('DD MMM YYYY');
-                    newItem.MemoAmount = numeral(item.MemoAmount).format('0,0.0000');
-                    newItem.MemoIdrAmount = numeral(item.MemoIdrAmount).format('0,0.0000');
+                    newItem.MemoAmount = numeral(item.MemoAmount).format('0,0.00');
+                    newItem.MemoIdrAmount = numeral(item.MemoIdrAmount).format('0,0.00');
                     newData.push(newItem);
                 })
 
-                this.totalIdrAmount = numeral(totalIdrAmount).format('0,0.0000');
+                this.totalIdrAmount = numeral(totalIdrAmount).format('0,0.00');
 
                 return newData;
             });
@@ -170,7 +170,7 @@ export class List {
         this.data.Month = { text: 'January', value: 1 };
         this.data.Year = parseInt(moment().format('YYYY'));
         this.isEmpty = true;
-        this.totalIdrAmount = numeral(0).format('0,0.0000');
+        this.totalIdrAmount = numeral(0).format('0,0.00');
     }
 
     onClickValas(e) {
