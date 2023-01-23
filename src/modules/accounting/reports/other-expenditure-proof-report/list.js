@@ -63,10 +63,10 @@ export class List {
                     totalAmount = item.Total + totalAmount;
                     item.Index = index+1;
                     item.DateFormatted = moment(item.Date).format('DD MMM YYYY');
-                    item.TotalFormatted = numeral(item.Total).format('0,0.0000');
+                    item.TotalFormatted = numeral(item.Total).format('0,0.00');
                 })
 
-                this.totalAmount = numeral(totalAmount).format('0,0.0000');
+                this.totalAmount = numeral(totalAmount).format('0,0.00');
 
                 return result.data;
             });

@@ -34,7 +34,7 @@ export class List {
     { field: "UnitRequest", title: "Bagian/Unit" },
     {
       field: "Amount", title: "Nominal", formatter: function (value, data, index) {
-        return numeral(value).format('0,0.000');
+        return numeral(value).format('0,0.00');
       },
     },
     {

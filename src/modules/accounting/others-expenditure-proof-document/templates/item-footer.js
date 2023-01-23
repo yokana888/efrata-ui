@@ -20,7 +20,7 @@ export class ItemFooter {
   }
 
   formatNumber(number) {
-    var result = numeral(number).format("0,0.0000");
+    var result = numeral(number).format("0,0.00");
     return result;
   }
 }
