@@ -67,6 +67,8 @@
                         <th><label>Artikel</label></th>
                         <th><label>Quantity</label></th>
                         <th><label>Satuan</label></th>
+                        <th><label>Fabric</label></th>
+                        <th><label>Size</label></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -116,6 +118,12 @@
                             </td>
                             <td align="center">
                                 <au-textbox value.bind="tableData[i].Uom" read-only="true"></au-textbox>
+                            </td>
+                            <td align="center">
+                                <au-textbox value.bind="tableData[i].Fabric" read-only="true"></au-textbox>
+                            </td>
+                            <td align="center">
+                                <au-textbox value.bind="tableData[i].SizeRange" read-only="true"></au-textbox>
                             </td>
                         </tr>
                     </template>
