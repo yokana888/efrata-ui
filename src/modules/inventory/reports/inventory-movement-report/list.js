@@ -38,13 +38,13 @@ export class List {
         { field: "productName", title: "Nama Barang" },
         { field: "uomUnit", title: "UOM" },
         { field: "before", title: "Before", formatter:(value,data)=>{
-            return value.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         }  },
         { field: "quantity", title: "Kuantiti", formatter:(value,data)=>{
-            return value.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         } },
         { field: "after", title: "After" , formatter:(value,data)=>{
-            return value.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         } },
         { field: "type", title: "Status" }
     ]

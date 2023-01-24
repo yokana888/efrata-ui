@@ -150,7 +150,7 @@ export class View {
         this.data.AfterFreightCost = this.data.AfterRisk + this.data.FreightCost;
         this.data.ConfirmPriceWithRate =
             this.data.ConfirmPrice * this.data.Rate.Value;
-        this.data.ConfirmPriceWithRate = this.data.ConfirmPriceWithRate.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+        this.data.ConfirmPriceWithRate = this.data.ConfirmPriceWithRate.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         let CM_Price = 0;
         if (this.data.CostCalculationGarment_Materials) {
             this.data.CostCalculationGarment_Materials.forEach(item => {
@@ -171,8 +171,8 @@ export class View {
             FOB_Price = 0;
         }
         this.data.ConfirmPrice = this.isDollar
-            ? US + this.data.ConfirmPrice.toLocaleString('en-EN', { minimumFractionDigits: 4 })//numeral(this.data.ConfirmPrice).format()
-            : RP + this.data.ConfirmPrice.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            ? US + this.data.ConfirmPrice.toLocaleString('en-EN', { minimumFractionDigits: 2 })//numeral(this.data.ConfirmPrice).format()
+            : RP + this.data.ConfirmPrice.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         this.data.FOB_Price = this.isDollar
             ? US + numeral(FOB_Price).format()
             : RP + numeral(FOB_Price).format();
@@ -205,7 +205,7 @@ export class View {
         this.data.SMV_Total = numeral(this.data.SMV_Total).format();
 
         this.data.LeadTime = `${this.data.LeadTime} hari`
-        this.data.ConfirmPrice = (this.data.ConfirmPrice.toLocaleString('en-EN', { minimumFractionDigits: 4 }));
+        this.data.ConfirmPrice = (this.data.ConfirmPrice.toLocaleString('en-EN', { minimumFractionDigits: 2 }));
 
         this.editCallback = this.approve;
         if (this.activeTab === 0) {

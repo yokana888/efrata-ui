@@ -110,7 +110,7 @@ export class InternNoteItem {
 							ePONo: detail.ePONo,
 							poSerialNumber: detail.pOSerialNumber,
 							roNo: detail.roNo,
-							pricePerDealUnit: detail.pricePerDealUnit.toLocaleString('en-EN', { maximumFractionDigits: 4, minimumFractionDigits: 4 }),
+							pricePerDealUnit: detail.pricePerDealUnit.toLocaleString('en-EN', { maximumFractionDigits: 4, minimumFractionDigits: 2 }),
 							priceTotal: prices.toLocaleString('en-EN', { maximumFractionDigits: 2, minimumFractionDigits: 2 }),
 							paymentDueDays: detail.paymentDueDays,
 							quantity: detail.doQuantity.toLocaleString('en-EN', { maximumFractionDigits: 2, minimumFractionDigits: 2 }),

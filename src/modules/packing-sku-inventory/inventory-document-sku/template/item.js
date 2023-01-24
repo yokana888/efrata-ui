@@ -24,7 +24,7 @@ export class Item {
 
 
     // if(this.data.quantity)
-    //   this.data.quantity=this.data.quantity.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+    //   this.data.quantity=this.data.quantity.toLocaleString('en-EN', { minimumFractionDigits: 2 });
   }
 
   @bindable selectedProductSKU;

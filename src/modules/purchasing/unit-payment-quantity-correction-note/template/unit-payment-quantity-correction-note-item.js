@@ -11,11 +11,11 @@ export class UnitPaymentQuantityCorrectionNoteItem {
       this.data.quantity=this.data.quantity.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     }
     // if(this.data.pricePerDealUnitAfter){
-    //   this.data.pricePerDealUnitAfter=this.data.pricePerDealUnitAfter.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+    //   this.data.pricePerDealUnitAfter=this.data.pricePerDealUnitAfter.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     // }
 
     if(this.data.priceTotalAfter){
-      this.data.priceTotalAfter=this.data.priceTotalAfter.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+      this.data.priceTotalAfter=this.data.priceTotalAfter.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     }
 
   }
