@@ -147,7 +147,7 @@ export class ROItem {
     }
 
     PriceChanged(e){
-        this.data.Price=parseFloat(e.srcElement.value).toLocaleString('en-EN', { minimumFractionDigits: 4});
+        this.data.Price=parseFloat(e.srcElement.value).toLocaleString('en-EN', { minimumFractionDigits: 2});
     
         this.data.Amount=parseFloat(this.data.Quantity*parseFloat(e.srcElement.value))//.toLocaleString('en-EN', { minimumFractionDigits: 2});
         

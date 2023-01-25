@@ -16,14 +16,14 @@ export class UnitReceiptNoteItemTotal {
 
     }
     // if(this.pricePerDealUnitAfter){
-    //   this.pricePerDealUnitAfter=this.pricePerDealUnitAfter.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+    //   this.pricePerDealUnitAfter=this.pricePerDealUnitAfter.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     // }
     if (this.data.priceTotalAfter) {
       this.data.priceTotalAfter = this.data.priceTotalAfter.toLocaleString('en-EN', { maximumFractionDigits: 15 });
     }
     console.log('in')
     // if(this.totalPrice){
-    //   this.totalPrice=this.totalPrice.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+    //   this.totalPrice=this.totalPrice.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     // }
 
 

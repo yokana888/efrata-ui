@@ -41,8 +41,8 @@ export class List {
                 var datas = [];
                 for (var item of this.data){
                     item.CMIDR=item.CMIDR.toLocaleString('en-EN',{minimumFractionDigits: 2, maximumFractionDigits: 2});
-                    item.CM=item.CM.toLocaleString('en-EN',{minimumFractionDigits: 4, maximumFractionDigits: 4});                     
-                    item.FOB_Price=item.FOB_Price.toLocaleString('en-EN',{minimumFractionDigits: 4, maximumFractionDigits: 4});
+                    item.CM=item.CM.toLocaleString('en-EN',{minimumFractionDigits: 2, maximumFractionDigits: 4});                     
+                    item.FOB_Price=item.FOB_Price.toLocaleString('en-EN',{minimumFractionDigits: 2, maximumFractionDigits: 4});
                     
                     item.DeliveryDate=moment(item.DeliveryDate).format("DD MMM YYYY")=="01 Jan 1970" ? "-" : moment(item.DeliveryDate).format("DD MMM YYYY");                    
                     item.Quantity=item.Quantity.toLocaleString('en-EN',{minimumFractionDigits: 2, maximumFractionDigits: 2});

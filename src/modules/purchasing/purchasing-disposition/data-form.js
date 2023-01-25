@@ -56,7 +56,7 @@ export class DataForm {
             this.selectedSupplier = this.data.supplier;
         }
         // if(this.readOnly){
-        //     this.data.Amount=this.data.Amount.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+        //     this.data.Amount=this.data.Amount.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         // }
     }
 

@@ -37,7 +37,7 @@ export class Edit {
     saveCallback(event) {
         // this.data.deliverySchedule = moment(this.data.deliverySchedule).format("YYYY-MM-DD");
 
-        this.data.Rate = Number(this.data.Rate).toFixed(4);
+        this.data.Rate = Number(this.data.Rate).toFixed(2);
         this.service.update(this.data)
             .then(result => {
                 this.router.navigateToRoute('view', { id: this.data.Id });

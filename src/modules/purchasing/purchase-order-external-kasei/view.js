@@ -33,7 +33,7 @@ export class View {
                     canClose = true;
                 }
                 if(b.priceBeforeTax){
-                    b.priceBeforeTax=b.priceBeforeTax.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+                    b.priceBeforeTax=b.priceBeforeTax.toLocaleString('en-EN', { minimumFractionDigits: 2 });
                   }
             }
         }

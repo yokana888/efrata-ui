@@ -38,7 +38,7 @@ export class Edit {
     saveCallback(event) {
         // this.data.deliverySchedule = moment(this.data.deliverySchedule).format("YYYY-MM-DD");
 
-        // this.data.rate = Number(this.data.rate).toFixed(4);
+        // this.data.rate = Number(this.data.rate).toFixed(2);
         this.service.update(this.data)
             .then(result => {
                 this.cancelCallback();

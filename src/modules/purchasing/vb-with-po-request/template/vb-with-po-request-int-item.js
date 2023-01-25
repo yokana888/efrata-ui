@@ -87,7 +87,7 @@ export class PurchaseOrderItem {
     }
 
     // if(this.data.priceBeforeTax){
-    //   this.data.priceBeforeTax=this.data.priceBeforeTax.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+    //   this.data.priceBeforeTax=this.data.priceBeforeTax.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     // }
     if (this.data.dealQuantity) {
       this.data.dealQuantity = this.data.dealQuantity.toLocaleString('en-EN', { minimumFractionDigits: 2 });

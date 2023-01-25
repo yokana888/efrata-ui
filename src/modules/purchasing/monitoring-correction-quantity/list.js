@@ -25,7 +25,7 @@ export class List {
 
                     for (var corqty of this.data)
                      {
-                        var x= corqty.items.pricePerUnit.toFixed(4).toString().split('.');
+                        var x= corqty.items.pricePerUnit.toFixed(2).toString().split('.');
                         var x1=x[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                         var HARGA= x1 + '.' + x[1];
 
