@@ -33,7 +33,7 @@ export class ItemFFooter {
     }
 
     value = (data) => {
-        return parseFloat((data.value).toFixed(4));
+        return parseFloat((data.value).toFixed(2));
     }
 
     get error() {

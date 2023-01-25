@@ -26,7 +26,7 @@ export class View {
                             detail.ProductCode = detail.Product.Code;
                             detail.CuttingInUomUnit = detail.CuttingInUom.Unit;
                             detail.Currency = "IDR";
-                            detail.BasicPrice=detail.BasicPrice.toFixed(4);
+                            detail.BasicPrice=detail.BasicPrice.toFixed(2);
                             detail.PreparingUomUnit = detail.PreparingUom.Unit;
 
                             dataRemainingQuantity += detail.RemainingQuantity;

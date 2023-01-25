@@ -66,7 +66,7 @@ export class PurchaseOrderItem {
     //   }
     // }
     if(this.options.readOnly){
-      this.data.PricePerDealUnit=parseFloat(this.data.PricePerDealUnit).toFixed(4);
+      this.data.PricePerDealUnit=parseFloat(this.data.PricePerDealUnit).toFixed(2);
     }
     if(!this.options.readOnly)
       this.checkIsOverBudget();
@@ -88,15 +88,15 @@ export class PurchaseOrderItem {
   checkIsOverBudget() {
     if(!this.options.readOnly)
       if (this.context.context.options.checkOverBudget) {
-        this.data.UsedBudget=parseFloat(this.data.budgetUsed.toFixed(4));
+        this.data.UsedBudget=parseFloat(this.data.budgetUsed.toFixed(2));
         //this.data.budgetUsed=(this.data.DealQuantity * this.data.PricePerDealUnit * this.kurs.Rate);
-        //var totalDealPrice = ((this.data.DealQuantity * this.price * this.kurs.Rate) + this.data.budgetUsed).toFixed(4);
-        var totalDealPrice = (this.data.remainingBudget-parseFloat(this.data.budgetUsed.toFixed(4))).toFixed(4);
-        //var totalBudget=parseInt(this.data.totalBudget.toFixed(4));
+        //var totalDealPrice = ((this.data.DealQuantity * this.price * this.kurs.Rate) + this.data.budgetUsed).toFixed(2);
+        var totalDealPrice = (this.data.remainingBudget-parseFloat(this.data.budgetUsed.toFixed(2))).toFixed(2);
+        //var totalBudget=parseInt(this.data.totalBudget.toFixed(2));
         //this.data.RemainingBudget=totalDealPrice;
 
         if (this.data.UENItemId) {
-          totalDealPrice = parseFloat((this.data.BudgetFromUEN - parseFloat(this.data.budgetUsed.toFixed(4))).toFixed(4));
+          totalDealPrice = parseFloat((this.data.BudgetFromUEN - parseFloat(this.data.budgetUsed.toFixed(2))).toFixed(2));
         }
         if (totalDealPrice <0) {
           this.data.IsOverBudget = true;
