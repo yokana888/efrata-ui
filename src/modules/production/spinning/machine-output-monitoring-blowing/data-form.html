@@ -89,11 +89,11 @@
         <au-textbox error.bind="error.Differences" show.bind="error.Differences" read-only.bind="true">
         </au-textbox>
 
-        <div>Total Output (Bruto) : ${grandTotal | numberFormat: '0,0.0000'} ${uomUnitDisplay}</div>
-        <div>Total Output (Nett): ${grandTotalNett | numberFormat: '0,0.0000'} ${uomUnitDisplay}</div>
-        <div>Total Output (Bruto) : ${grandTotalBale | numberFormat: '0,0.0000'} BALE</div>
-        <div>Total Output (Nett) : ${grandTotalBaleNett | numberFormat: '0,0.0000'} BALE</div>
-        <div>Eff (Bruto): ${grandEff | numberFormat: '0,0.0000'} %</div>
-        <div>Eff (Nett): ${grandEffNett | numberFormat: '0,0.0000'} %</div>
+        <div>Total Output (Bruto) : ${grandTotal | numberFormat: '0,0.00'} ${uomUnitDisplay}</div>
+        <div>Total Output (Nett): ${grandTotalNett | numberFormat: '0,0.00'} ${uomUnitDisplay}</div>
+        <div>Total Output (Bruto) : ${grandTotalBale | numberFormat: '0,0.00'} BALE</div>
+        <div>Total Output (Nett) : ${grandTotalBaleNett | numberFormat: '0,0.00'} BALE</div>
+        <div>Eff (Bruto): ${grandEff | numberFormat: '0,0.00'} %</div>
+        <div>Eff (Nett): ${grandEffNett | numberFormat: '0,0.00'} %</div>
     </au-input-form>
 </template>

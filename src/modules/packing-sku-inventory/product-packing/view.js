@@ -23,7 +23,7 @@ export class View {
     async activate(params) {
         this.data = await this.service.getById(params.id)
             .then((productPacking) => {
-                productPacking.quantity = numeral(productPacking.quantity).format("0,0.000");
+                productPacking.quantity = numeral(productPacking.quantity).format("0,0.00");
                 return this.service.getSKUById(productPacking.skuId)
                     .then((productSKU) => {
                         return {

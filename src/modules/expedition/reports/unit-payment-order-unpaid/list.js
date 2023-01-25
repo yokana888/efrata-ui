@@ -21,12 +21,12 @@ export class List {
         { field: 'Currency', title: 'Mata Uang' },
         {
             field: 'IncomeTax', title: 'PPH', formatter: function (value, data, index) {
-                return value ? numeral(value).format('0,000.0000') : (value == 0 ? '0.0000' : '-');
+                return value ? numeral(value).format('0,000.0000') : (value == 0 ? '0.00' : '-');
             },
         },
         {
             field: 'DPPVat', title: 'DPP + PPN', sortable: false, formatter: function (value, data, index) {
-                return value ? numeral(value).format('0,000.0000') : (value == 0 ? '0.0000' : '-');
+                return value ? numeral(value).format('0,000.0000') : (value == 0 ? '0.00' : '-');
             },
         },
         {
@@ -43,7 +43,7 @@ export class List {
         { field: 'UnitName', title: 'Unit' },
         {
             field: 'TotalPaid', title: 'Bayar', formatter: function (value, data, index) {
-                return value ? numeral(value).format('0,000.0000') : (value == 0 ? '0.0000' : '-');
+                return value ? numeral(value).format('0,000.0000') : (value == 0 ? '0.00' : '-');
             },
         },
     ];

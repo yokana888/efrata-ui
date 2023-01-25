@@ -8,7 +8,7 @@ import { Service } from '../../service';
 import { ServiceCore } from '../../service-core';
 import { PRMasterDialog } from './pr-master-dialog';
 
-const rateNumberFormat = "0,0.000";
+const rateNumberFormat = "0,0.00";
 
 // const materialLoader = require('../../../../../loader/material-md-loader');
 const UomLoader = require('../../../../../loader/uom-loader');
