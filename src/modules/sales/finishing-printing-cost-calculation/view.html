@@ -131,17 +131,17 @@
               </tr>
               <tr>
                 <td class="label-td">Berat Kain Prep</td>
-                <td>${data.PreparationFabricWeight | numberFormat:'0,0.000'}</td>
+                <td>${data.PreparationFabricWeight | numberFormat:'0,0.00'}</td>
 
               </tr>
               <tr>
                 <td show.bind="!isPrinting" class="label-td">Berat Kain RFD</td>
                 <td show.bind="isPrinting" class="label-td">Berat Kain RFP</td>
-                <td>${data.RFDFabricWeight | numberFormat:'0,0.000'}</td>
+                <td>${data.RFDFabricWeight | numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Total</td>
-                <td>${data.ActualPrice | numberFormat:'0,0.000'}</td>
+                <td>${data.ActualPrice | numberFormat:'0,0.00'}</td>
               </tr>
             </tbody>
           </table>
@@ -154,7 +154,7 @@
               </tr>
               <tr>
                 <td class="label-td">Biaya Screem</td>
-                <td>${data.ScreenCost | numberFormat:'0,0.000'}</td>
+                <td>${data.ScreenCost | numberFormat:'0,0.00'}</td>
 
               </tr>
               <tr>
@@ -173,35 +173,35 @@
             <tbody>
               <tr>
                 <td class="label-td">Total</td>
-                <td colspan="2">${totalMachinesAndGreige | numberFormat:'0,0.0000'}</td>
+                <td colspan="2">${totalMachinesAndGreige | numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Upah TKL</td>
-                <td>${directLaborWage | numberFormat:'0,0.000'}</td>
+                <td>${directLaborWage | numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Gaji TKTL</td>
-                <td>${indirectLaborWage | numberFormat:'0,0.000'}</td>
+                <td>${indirectLaborWage | numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Biaya Umum & Administrasi</td>
-                <td>${data.GeneralAdministrationCost | numberFormat:'0,0.000'}</td>
+                <td>${data.GeneralAdministrationCost | numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Biaya Dir & Kantor Panin</td>
-                <td>${data.DirectorOfficeCost | numberFormat:'0,0.000'}</td>
+                <td>${data.DirectorOfficeCost | numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Biaya Bank & Lain-Lain</td>
-                <td>${data.BankMiscCost | numberFormat:'0,0.000'}</td>
+                <td>${data.BankMiscCost | numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Sub Total</td>
-                <td colspan="2">${subTotal | numberFormat:'0,0.0000'}</td>
+                <td colspan="2">${subTotal | numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Confirm Price</td>
-                <td colspan="2">${totalConfirmPrice | numberFormat:'0,0.0000'}</td>
+                <td colspan="2">${totalConfirmPrice | numberFormat:'0,0.00'}</td>
               </tr>
             </tbody>
           </table>
@@ -258,16 +258,16 @@
             <tbody>
               <tr>
                 <td class="label-td">Biaya Angkut</td>
-                <td colspan="2">${data.FreightCost| numberFormat:'0,0.000'}</td>
+                <td colspan="2">${data.FreightCost| numberFormat:'0,0.00'}</td>
               </tr>
               <tr>
                 <td class="label-td">Embalase</td>
-                <td>${data.Embalase | numberFormat:'0,0.000'}</td>
+                <td>${data.Embalase | numberFormat:'0,0.00'}</td>
 
               </tr>
               <tr>
                 <td class="label-td">ConfirmPrice</td>
-                <td>${finalConfirmPrice | numberFormat:'0,0.000'}</td>
+                <td>${finalConfirmPrice | numberFormat:'0,0.00'}</td>
               </tr>
 
             </tbody>

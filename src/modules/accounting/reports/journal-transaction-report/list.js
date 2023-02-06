@@ -58,8 +58,8 @@ export class List {
                         detail.COAName = detail.COAName ? detail.COAName : "-";
                         detail.COACode = detail.COACode ? detail.COACode : "-";
                         detail.Remark = detail.Remark ? detail.Remark : "-";
-                        detail.Debit = detail.Debit ? numeral(detail.Debit).format('0,0.0000') : '0';
-                        detail.Credit = detail.Credit ? numeral(detail.Credit).format('0,0.0000') : '0';
+                        detail.Debit = detail.Debit ? numeral(detail.Debit).format('0,0.00') : '0';
+                        detail.Credit = detail.Credit ? numeral(detail.Credit).format('0,0.00') : '0';
                         detail.header = item;
                         detail.header.Description = detail.header.Description ? detail.header.Description : "-";
                         detail.header.ReferenceNo = detail.header.ReferenceNo ? detail.header.ReferenceNo : "-";
@@ -71,14 +71,14 @@ export class List {
                     //     COAName: item.COAName ? item.COAName : "-",
                     //     COACode: item.COACode ? item.COACode : "-",
                     //     Remark: item.Remark ? item.Remark : "-",
-                    //     Debit: item.Debit ? numeral(item.Debit).format('0,0.0000') : '0',
-                    //     Credit: item.Credit ? numeral(item.Credit).format('0,0.0000') : '0'
+                    //     Debit: item.Debit ? numeral(item.Debit).format('0,0.00') : '0',
+                    //     Credit: item.Credit ? numeral(item.Credit).format('0,0.00') : '0'
                     // }
                     // newData.push(newVM);
                 }
 
-                this.totalCredit = numeral(result.info.TotalCredit).format('0,0.0000');
-                this.totalDebit = numeral(result.info.TotalDebit).format('0,0.0000');
+                this.totalCredit = numeral(result.info.TotalCredit).format('0,0.00');
+                this.totalDebit = numeral(result.info.TotalDebit).format('0,0.00');
 
                 return newData;
             });

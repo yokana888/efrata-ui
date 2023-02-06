@@ -7,7 +7,7 @@ var CurrencyLoader = require('../../../../loader/currency-loader');
 @inject(Service)
 export class List {
   itemYears = [];
-  itempaymentMethod = ['','AG', 'T/T PAYMENT', 'CMT', 'FREE FROM BUYER', 'SAMPLE'];
+  itempaymentMethod = ['','EFRATA', 'T/T PAYMENT', 'CMT', 'FREE FROM BUYER', 'SAMPLE'];
   constructor(service) {
     this.service = service;
     this.info = {};

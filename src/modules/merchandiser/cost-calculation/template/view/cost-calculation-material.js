@@ -1,6 +1,6 @@
 import { inject, bindable, computedFrom } from 'aurelia-framework';
 import numeral from 'numeral';
-const defaultNumberFormat = "0,0.000";
+const defaultNumberFormat = "0,0.00";
 
 export class CostCalculationMaterial {
 

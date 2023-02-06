@@ -58,6 +58,12 @@ export class DataForm {
                 }
             );
         }
+        if(this.data.DONo){
+            this.selectedDO={
+                DONo:this.data.DONo,
+                URNNo: this.data.URNNo
+            };
+        }
     }
 
     unitView = (unit) => {
@@ -124,7 +130,6 @@ get GDOLoader() {
             };
             return this.purchasingService.getDOUrnBC(info)
                 .then((result) => {
-                    console.log(result.data);
                     return result.data;
                 });
         }
@@ -163,27 +168,27 @@ get GDOLoader() {
     }
 
    async selectedDOChanged(newValue, oldValue){
-        this.selectedDO = null;
-        this.data.DONo = null;
-        this.data.BCNo = null;
-        this.data.BCType = null;        
-        this.data.URNNo = null;
-        
-        if(newValue) 
-           {
+        // if(!newValue){
+
+        // }
+        // this.selectedDO = null;
+        // this.data.DONo = null;
+        // this.data.BCNo = null;
+        // this.data.BCType = null;        
+        // this.data.URNNo = null;
+        if(newValue) {
             this.data.DONo = newValue.DONo;            
             this.data.BCNo = newValue.BeacukaiNo;            
             this.data.BCType = newValue.CustomsType;
             this.data.URNNo = newValue.URNNo;
-           }                
-        else
-           {
+        }                
+        else {
             this.context.selectedDOViewModel.editorValue = "";
             this.data.DONo = null;
             this.data.BCNo = null;
             this.data.BCType = null;        
             this.data.URNNo = null;
-           }
+        }
     }
 
     async selectedEGChanged(newValue, oldValue){
@@ -308,7 +313,7 @@ get GDOLoader() {
     }
 
     GDOView=(gdo) => {
- //       return `${gdo.DONo} - ${gdo.URNNo}`;   
+ //       return `${gdo.DONo} - ${gdo.URNNo}`;  
         return `${gdo.DONo}`;          
     }
 
