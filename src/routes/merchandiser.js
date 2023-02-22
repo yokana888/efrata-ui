@@ -628,11 +628,11 @@ module.exports = [
         settings: {
             group: "merchandiser",
             subGroup: "monitoring",
-            permission: { "PGA": 2, "PDU": 1, "C9": 1 },
+            //permission: { "PGA": 2, "PDU": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },   
-     {
+    {
         route: '/merchandiser/latest-available-ro-garment-report',
         name: 'latest-available-ro-garment-report',
         moduleId: './modules/merchandiser/report/latest-available-ro-garment-report/index',
