@@ -36,7 +36,7 @@ export class DataForm {
         DivisionName: "G"
     };
 
-    INCOTERMSOptions=["FOB", "FAS","CFR","CIF","EXW","FCA","CPT","CIP","DAT","DAP","DDP"];
+    INCOTERMSOptions=["FOB","FAS","CFR","CIF","EXW","FCA","CPT","CIP","DAT","DAP","DDP"];
 
     bind(context) {
         this.context = context;
@@ -74,7 +74,7 @@ export class DataForm {
                 });
             }
             
-            if (this.data.packingListType == "LOCAL"){
+            if (this.data.packingListType == "LOKAL"){
                 this.fabricType = this.data.fabricType;
             }else{
                 this.fabricType = {
@@ -180,7 +180,7 @@ export class DataForm {
         var selectedfabric = newValue;
         console.log(newValue);
         console.log(this.data.packingListType);
-        if (selectedfabric && this.data.packingListType == "LOCAL") {
+        if (selectedfabric && this.data.packingListType == "LOKAL") {
             this.data.fabricTypeId = 0 ;
             this.data.fabricType = selectedfabric;
         } else if (selectedfabric && this.data.packingListType == "EXPORT") {

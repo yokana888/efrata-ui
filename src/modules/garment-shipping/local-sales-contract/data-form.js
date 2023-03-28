@@ -81,7 +81,7 @@ export class DataForm {
             this.items.options.transactionTypeId = this.data.transactionType.id;
         }
         if(!this.data.sellerAddress || this.data.sellerAddress==""){
-            this.data.sellerAddress="PT ag (DIVISI GARMENT) - KAWASAN BERIKAT \nJL. MERAPI NO. 23, KELURAHAN BANARAN, KECAMATAN GROGOL, SUKOHARJO";
+            this.data.sellerAddress="PT EFRATA GARMINDO UTAMA (DIVISI GARMENT) - \nJl. Cemani, Banaran Baru, Cemani, Kec. Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552";
         }
 
         if(!this.data.sellerNPWP || this.data.sellerNPWP==""){

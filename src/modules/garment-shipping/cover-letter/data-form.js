@@ -72,7 +72,7 @@ export class DataForm {
             }
         this.selectedEMKL=this.data.emkl;
         if (this.data.unit == null) {
-            this.data.unit = "AG2";
+            this.data.unit = "EFRATA GARMINDO UTAMA";
         }
     }
 

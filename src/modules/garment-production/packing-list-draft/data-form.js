@@ -13,7 +13,8 @@ export class DataForm {
     constructor(service) {
         this.service = service;
     }
-    typeOptions=["EXPORT","LOKAL"];
+    //typeOptions=["EXPORT","LOKAL"];
+    typeOptions=["LOKAL"];
     formOptions = {
         cancelText: "Back"
     }
@@ -121,8 +122,8 @@ export class DataForm {
             header: this.data
         }
 
-        this.data.invoiceType = this.data.invoiceType || "AG";
-        this.data.packingListType = this.data.packingListType || "EXPORT";
+        this.data.invoiceType = this.data.invoiceType || "EF";
+        this.data.packingListType = this.data.packingListType || "LOKAL";
         this.data.sayUnit = this.data.sayUnit || "CARTONS";
 
         this.shippingMarkImageSrc = this.data.shippingMarkImageFile || this.noImage;
