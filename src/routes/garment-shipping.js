@@ -334,7 +334,7 @@ module.exports = [
         settings: {
             group: "g-shipping",
             subGroup: "transaksi",
-            permission: { "C9": 1, "SP": 2, "PDU":1  },
+            //permission: { "C9": 1, "SP": 2, "PDU":1  },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -362,7 +362,7 @@ module.exports = [
         settings: {
             group: "g-shipping",
             subGroup: "transaksi",
-            permission: { "C9": 1, "SP": 2, "PDU":1 },
+            //permission: { "C9": 1, "SP": 2, "PDU":1 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -376,7 +376,7 @@ module.exports = [
         settings: {
             group: "g-shipping",
             subGroup: "transaksi",
-            permission: { "C9": 1, "SP": 2, "PDU":1 },
+            //permission: { "C9": 1, "SP": 2, "PDU":1 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -880,7 +880,7 @@ module.exports = [
         settings: {
             group: "g-shipping",
             subGroup: "transaksi",
-            permission: { "C9": 1, "SP": 2, "PDU":1, "B1": 2 },
+            //permission: { "C9": 1, "SP": 2, "PDU":1, "B1": 2 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -978,7 +978,7 @@ module.exports = [
         settings: {
             group: "g-shipping",
             subGroup: "transaksi",
-            permission: { "C9": 1, "SP": 2, "PDU":1, "B1": 2 },
+            //permission: { "C9": 1, "SP": 2, "PDU":1, "B1": 2 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -1006,7 +1006,7 @@ module.exports = [
         settings: {
             group: "g-shipping",
             subGroup: "transaksi",
-            permission: { "C9": 1, "SP": 2, "PDU":1, "B1": 2 },
+            //permission: { "C9": 1, "SP": 2, "PDU":1, "B1": 2 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -1034,7 +1034,7 @@ module.exports = [
         settings: {
             group: "g-shipping",
             subGroup: "transaksi",
-            permission: { "C9": 1, "SP": 2, "PDU":1 },
+            //permission: { "C9": 1, "SP": 2, "PDU":1 },
             iconClass: "fa fa-dashboard"
         }
     },
