@@ -1,14 +1,15 @@
 import { inject, bindable, containerless, computedFrom, BindingEngine } from 'aurelia-framework'
-import { Service } from "./service";
+import { Service, ServiceCore } from "./service";
 
 const PackingListLoader = require('../../../loader/garment-packing-list-loader');
-const UnitLoader=require('../../../loader/unit-loader')
+//const UnitLoader=require('../../../loader/unit-loader');
 
-@inject(Service)
+@inject(Service, ServiceCore)
 export class DataForm {
 
-    constructor(service) {
+    constructor(service, serviceCore) {
         this.service = service;
+        this.serviceCore = serviceCore;
     }
 
     @bindable readOnly = false;
@@ -50,11 +51,12 @@ export class DataForm {
     get packingListLoader() {
         return PackingListLoader;
     }
-    get unitLoader(){
-        return UnitLoader;
-    }
+    
+    // get unitLoader(){
+    //     return UnitLoader;
+    // }
 
-    unitOptions = ["AG1 - AMBASSADOR GARMINDO 1", "AG2 - AMBASSADOR GARMINDO 2"];
+    // unitOptions = ["AG1 - AMBASSADOR GARMINDO 1", "AG2 - AMBASSADOR GARMINDO 2"];
     // get unitQuery(){
     //     var result = { "Description" : "GARMENT" }
     //     return result;   
@@ -62,11 +64,11 @@ export class DataForm {
 
     ShipmentModeOptions=["By Air", "By Sea"];
     
-    unitView = (unit) => {
-        return `${unit.Code || unit.code} - ${unit.Name || unit.name}`;
-    }
+    // unitView = (unit) => {
+    //     return `${unit.Code || unit.code} - ${unit.Name || unit.name}`;
+    // }
 
-    bind(context) {
+    async bind(context) {
         this.context = context;
         this.data = context.data;
         this.error = context.error;
@@ -80,6 +82,16 @@ export class DataForm {
             this.selectedInvoiceNo={
                 invoiceNo:this.data.invoiceNo
             };
+        }
+
+        const units = await this.serviceCore.getUnit();
+    
+        for(var i of units)
+        {
+            this.data.unit = i;
+            this.data.unitId= i.Id;
+            this.data.unitCode= i.Code;
+            this.data.unitName= i.Name;
         }
     }
 

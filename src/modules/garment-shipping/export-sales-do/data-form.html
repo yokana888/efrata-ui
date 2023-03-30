@@ -58,14 +58,22 @@
             options.bind="controlOptions">
         </au-autocomplete> -->
 
-        <au-dropdown
+        <!-- <au-dropdown
             label="Bag Gudang Packing" 
             value.bind="data.unit" 
             error.bind="error.unit" 
-            read-only.bind="readOnly "
+            read-only.bind="readOnly"
             items.bind="unitOptions"
             options.bind="controlOptions">
-        </au-dropdown>
+        </au-dropdown> -->
+
+        <au-textbox
+            label="Bag Gudang Packing" 
+            value.bind="data.unitName" 
+            error.bind="error.unit"
+            read-only="true"
+            options.bind="controlOptions">
+        </au-textbox>
 
         <au-dropdown
             label="Shipment Mode"
