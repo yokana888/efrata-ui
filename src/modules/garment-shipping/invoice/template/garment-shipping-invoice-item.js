@@ -18,7 +18,6 @@ export class items {
   constructor(service, salesService) {
     this.service = service;
     this.salesService = salesService;
-
   }
 
   get filter() {
@@ -51,7 +50,8 @@ export class items {
     this.readOnlyDesc1 = this.options.isAdd;
     this.isEdit = this.options.isEdit;
     this.isUpdated = this.options.isUpdated;
-console.log(this.data);
+    
+    console.log(this.data);
     this.roNo = this.data.roNo;
     if (this.data) {
       this.uom = this.data.uom;
@@ -85,6 +85,7 @@ console.log(this.data);
 
     return am;
   }
+
   uomChanged(newValue, oldValue) {
     var selectedUom = newValue;
     if (selectedUom) {
@@ -121,7 +122,7 @@ console.log(this.data);
             this.data.amount = sc.Amount;
             this.data.price = sc.Price;
             this.data.priceRO = sc.Price;
-            this.data.currencyCode = "USD"
+            this.data.currencyCode = result.Rate ? (result.Rate.Value == 1 ? "IDR" : "USD") : "IDR";
             this.data.comodity = {
               id: result.Comodity.Id,
               code: result.Comodity.Code,
@@ -136,6 +137,7 @@ console.log(this.data);
           })
       });
   }
+
   get cmtAmount(){
     var amount=0;
     if(this.data.cmtPrice && this.data.quantity){
