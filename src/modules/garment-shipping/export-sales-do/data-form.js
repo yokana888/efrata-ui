@@ -62,7 +62,8 @@ export class DataForm {
     //     return result;   
     //   }
 
-    ShipmentModeOptions=["By Air", "By Sea"];
+    // ShipmentModeOptions=["By Air", "By Sea"];
+    ShipmentModeOptions=["By Air", "By Land"];
     
     // unitView = (unit) => {
     //     return `${unit.Code || unit.code} - ${unit.Name || unit.name}`;

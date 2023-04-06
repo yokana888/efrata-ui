@@ -27,7 +27,6 @@
                 options.bind="length4">
             </au-textbox>
 
-
             <au-textbox label="To" value.bind="data.to" error.bind="error.To" read-only.bind="readOnly"
                 options.bind="length4">
             </au-textbox>
@@ -61,7 +60,7 @@
             <au-textbox label="Shipping Per" value.bind="data.shippingPer" error.bind="error.ShippingPer"
                 read-only.bind="readOnly " options.bind="length4">
             </au-textbox>
-            <au-datepicker label="SailingDate" value.bind="data.sailingDate" error.bind="error.SailingDate"
+            <au-datepicker label="Tanggal Pengiriman" value.bind="data.sailingDate" error.bind="error.SailingDate"
                 read-only.bind="readOnly " options.bind="length4">
             </au-datepicker>
 
@@ -83,16 +82,21 @@
             <au-numeric label="Tempo Pembayaran (HARI)" value.bind="data.paymentDue" error.bind="error.PaymentDue"
                 read-only.bind="readOnly " options.bind="length4" format="0">
             </au-numeric>
-            <au-textbox label="No PEB" value.bind="data.pebNo" error.bind="error.pEBNo" read-only.bind="readOnly "
+            <au-multiline label="Description" value.bind="data.description" error.bind="error.description"
+                read-only.bind="readOnly" options.bind="length4">
+            </au-multiline>
+            <au-multiline label="Keterangan" value.bind="data.remark" error.bind="error.remark"
+                read-only.bind="readOnly" options.bind="length4">
+            </au-multiline>
+            <!-- <au-textbox label="No PEB" value.bind="data.pebNo" error.bind="error.pEBNo" read-only.bind="readOnly "
                 options.bind="length4">
             </au-textbox>
             <au-datepicker label="Tgl PEB" value.bind="data.pebDate" error.bind="error.pEBDate"
                 read-only.bind="readOnly " options.bind="length4">
-            </au-datepicker>
+            </au-datepicker> -->
         </div>
-        <div class="col-sm-3">
-
-            <au-textbox label="No NPE" value.bind="data.npeNo" error.bind="error.npeNo" read-only.bind="readOnly "
+        <!-- <div class="col-sm-3"> -->
+            <!-- <au-textbox label="No NPE" value.bind="data.npeNo" error.bind="error.npeNo" read-only.bind="readOnly "
                 options.bind="length4">
             </au-textbox>
             <au-datepicker label="Tgl NPE" value.bind="data.npeDate" error.bind="error.npeDate"
@@ -116,14 +120,14 @@
             </au-textbox>
             <au-datepicker label="Tgl COTP" value.bind="data.cotpDate" error.bind="error.cotpDate"
                 read-only.bind="readOnly" options.bind="length4">
-            </au-datepicker>
-            <au-multiline label="Description" value.bind="data.description" error.bind="error.description"
+            </au-datepicker> -->
+            <!-- <au-multiline label="Description" value.bind="data.description" error.bind="error.description"
                 read-only.bind="readOnly" options.bind="length4">
             </au-multiline>
             <au-multiline label="Keterangan" value.bind="data.remark" error.bind="error.remark"
                 read-only.bind="readOnly" options.bind="length4">
-            </au-multiline>
-        </div>
+            </au-multiline> -->
+        <!-- </div> -->
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group has-error">

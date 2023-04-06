@@ -128,4 +128,4 @@ class GarmentProductionService extends RestService {
     }
 }
 
-export { Service, SalesService, CoreService,GarmentProductionService }
+export { Service, SalesService, CoreService, GarmentProductionService }
