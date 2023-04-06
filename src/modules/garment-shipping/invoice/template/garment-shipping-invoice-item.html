@@ -10,7 +10,7 @@
                 placeholder = "Cari RO"
                 query.bind="filter"
                 options.bind="length4">
-        </au-autocomplete>
+            </au-autocomplete>
         </td>
        
         <td>
@@ -36,38 +36,38 @@
         </td>
         <td>
             <au-multiline
-            value.bind="data.comodityDesc"
-            error.bind="error.description"
-            read-only.bind="data.isAdd">
+                value.bind="data.comodityDesc"
+                error.bind="error.description"
+                read-only.bind="data.isAdd">
         </au-multiline>
         </td>
        
         <td>
             <au-multiline
-            value.bind="data.desc2"
-            error.bind="error.desc2"
-            read-only.bind="data.isAdd">
+                value.bind="data.desc2"
+                error.bind="error.desc2"
+                read-only.bind="data.isAdd">
         </au-multiline>
         </td>
         <td>
             <au-multiline
-            value.bind="data.desc3"
-            error.bind="error.desc3"
-            read-only.bind="data.isAdd">
+                value.bind="data.desc3"
+                error.bind="error.desc3"
+                read-only.bind="data.isAdd">
         </au-multiline>
         </td>
         <td>
             <au-multiline
-            value.bind="data.desc4"
-            error.bind="error.desc4"
-            read-only.bind="readOnly ">
-        </au-multiline>
+                value.bind="data.desc4"
+                error.bind="error.desc4"
+                read-only.bind="readOnly ">
+            </au-multiline>
         </td>
         <td>
             <au-numeric 
                 value.bind="data.quantity" 
                 error.bind="error.Quantity" 
-                read-only.bind="readOnly"
+                read-only.bind="true"
                 options.bind="controlOptions"
                 format="0.00">
             </au-numeric>
@@ -106,40 +106,38 @@
             </au-textbox> 
         </td> 
         <td>
-                <au-numeric 
-                    value.bind="Amount" 
-                    read-only.bind="true"
-                    options.bind="controlOptions"
-                    format="0.00">
-                </au-numeric>        
-            </td>   
-            <td>
-                <au-textbox 
-                    value.bind="data.unit.code" 
-                    read-only.bind="true"
-                    options.bind="controlOptions">
-                </au-textbox>        
-            </td>   
-            <td>
-                <au-numeric 
-                    value.bind="data.cmtPrice" 
-                    read-only.bind="readOnly"
-                    options.bind="controlOptions"
-                    format="0.00">
-                </au-numeric>        
-            </td> 
-            
-            <td>
-                <au-numeric 
-                    value.bind="cmtAmount" 
-                    read-only.bind="true"
-                    options.bind="controlOptions"
-                    format="0.00">
-                </au-numeric>        
-            </td> 
+            <au-numeric 
+                value.bind="Amount" 
+                read-only.bind="true"
+                options.bind="controlOptions"
+                format="0.00">
+            </au-numeric>        
+        </td>   
+        <td>
+            <au-textbox 
+                value.bind="data.unit.code" 
+                read-only.bind="true"
+                options.bind="controlOptions">
+            </au-textbox>        
+        </td>   
+        <td>
+            <au-numeric 
+                value.bind="data.cmtPrice" 
+                read-only.bind="readOnly"
+                options.bind="controlOptions"
+                format="0.00">
+            </au-numeric>        
+        </td>     
+        <td>
+            <au-numeric 
+                value.bind="cmtAmount" 
+                read-only.bind="true"
+                options.bind="controlOptions"
+                format="0.00">
+            </au-numeric>        
         </td> 
         <td if.bind="!readOnly">
             <button class="btn btn-danger pull-right" click.delegate="onremove(data, $event)" >-</button>
         </td>
-     </tr>
+    </tr>
 </template>
