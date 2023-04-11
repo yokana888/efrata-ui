@@ -86,7 +86,6 @@
                     options.bind="controlOptions">
                 </au-autocomplete> -->
 
-
                 <au-datepicker 
                     label="TGL" 
                     value.bind="data.date" 
@@ -170,10 +169,9 @@
                     read-only.bind="readOnly" 
                     options.bind="controlOptions">
                 </au-datepicker>
-
-                
+       
                 <au-datepicker 
-                    label="TGL Perkiraan Export" 
+                    label="TGL Perkiraan Pengiriman" 
                     value.bind="data.exportEstimationDate" 
                     error.bind="error.ExportEstimationDate"
                     read-only.bind="readOnly" 
@@ -210,8 +208,7 @@
                     read-only.bind="readOnly"
                     options.bind="controlOptions">
                 </au-autocomplete>
-
-                
+            
                 <au-textbox
                     label="Authorized"
                     value.bind="data.userAuthorizedName"
@@ -219,12 +216,13 @@
                     read-only.bind="readOnly" 
                     options.bind="controlOptions">
                 </au-textbox>
-                   
-
-                <au-multiline label="Keterangan" value.bind="data.sampleRemarkMd" error.bind="error.sampleRemarkMd"
+                
+                <au-multiline 
+                    label="Keterangan" value.bind="data.sampleRemarkMd" error.bind="error.sampleRemarkMd"
                 read-only.bind="readOnly"  
                 options.bind="controlOptions">
-            </au-multiline>
+                </au-multiline>
+
                 <au-dropdown
                     label="Jenis RO"
                     value.bind="roType"
