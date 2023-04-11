@@ -25,7 +25,7 @@ export class List {
             }
         },
         {
-            field: "exportEstimationDate", title: "Tgl Perkiraan Export", formatter: function (value, data, index) {
+            field: "exportEstimationDate", title: "Tgl Perkiraan Pengiriman", formatter: function (value, data, index) {
                 return moment(value).format("DD MMM YYYY");
             }
         },
