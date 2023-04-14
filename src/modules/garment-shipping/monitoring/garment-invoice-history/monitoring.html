@@ -1,5 +1,5 @@
 <template>
-    <h1 class="page-header">Monitoring Invoice Export Garment History</h1>
+    <h1 class="page-header">Monitoring Invoice Garment History</h1>
     <form class="form-horizontal">
         <au-autocomplete 
             label="Buyer Agent"
@@ -18,7 +18,7 @@
             error.bind="error.InvoiceNo"
             loader.bind="shippinginvoiceLoader"
             text.bind = "shippinginvoiceNoView"
-            key="InvoiceNo"
+            key="invoiceNo"
             placeholder="Cari Invoice No"
             options.bind="controlOptions">
         </au-autocomplete>
