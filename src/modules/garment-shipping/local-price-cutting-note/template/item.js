@@ -35,16 +35,26 @@ export class Item {
     }
 
     get salesNoteFilter() {
-        return {
-            buyerId: this.context.context.options.buyerId,
-            useVat:this.useVat
-        };
+        const salesNoteFilled = this.context.context.items.some(dataToCheck => dataToCheck.data.salesNoteId != undefined);
+        if (salesNoteFilled) {
+            return {
+                buyerId: this.context.context.options.buyerId,
+                useVat: this.useVat,
+                vatRate: this.context.context.options.vatRate
+            };
+        } else {
+            return {
+                buyerId: this.context.context.options.buyerId,
+                useVat: this.useVat
+            };
+        }
     }
 
     selectedSalesNoteChanged(newValue) {
         if (newValue) {
             this.data.salesNoteId = newValue.id;
             this.data.salesNoteNo = newValue.noteNo;
+            this.context.context.options.vatRate = newValue.vat.rate;
             this.service.getSalesNoteById(newValue.id)
                 .then(sn => {
                     this.service.searchReturnNoteItem({ filter: JSON.stringify({ SalesNoteId: this.data.salesNoteId }) })

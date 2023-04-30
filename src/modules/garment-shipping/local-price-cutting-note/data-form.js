@@ -39,7 +39,8 @@ export class DataForm {
         }.bind(this),
         options: {
             buyerId: 0,
-            useVat : false
+            useVat : false,
+            vatRate : 0
         }
     };
 
