@@ -8,7 +8,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: {  "C9" : 1 },
+            ////permission: {  "C9" : 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -21,7 +21,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: {"C9" : 1 },
+            ////permission: {"C9" : 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -35,7 +35,8 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 2 },
+            ////permission: { "C9": 1, "PDU":1, "PG": 2 },
+            permission: { "E1": 1 },
             iconClass: 'fa fa-calculator',
             byUser: false
         }
@@ -50,7 +51,8 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 2 },
+            ////permission: { "C9": 1,"PDU":1,"PG": 2 },
+            permission: { "E2" : 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -63,7 +65,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "PGA": 1, "C9": 1 },
+            ////permission: { "PGA": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -76,7 +78,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "PGA": 1, "C9": 1 },
+            ////permission: { "PGA": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     }, {
@@ -89,7 +91,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 2 },
+            permission : {'E3' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -102,7 +106,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "C9": 1, "PG": 1, },
+            ////permission: { "C9": 1, "PG": 1, },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -116,7 +120,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 2 },
+            permission : {'E4' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 2 },
             conClass: 'fa fa-dashboard'
         }
     },
@@ -130,7 +136,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1, "PG": 2 },
+            permission : {'E5' : 1},
+
+            //permission: { "C9": 1,"PDU":1, "PG": 2 },
             conClass: 'fa fa-dashboard'
         }
     },
@@ -144,7 +152,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"B4": 2},
+            permission : {'E6' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"B4": 2},
             conClass: 'fa fa-dashboard'
         }
     },
@@ -158,7 +168,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "C9": 1,"PDU":1,"PG": 1 },
+            permission : {'E26' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 1 },
             conClass: 'fa fa-dashboard'
         }
     },
@@ -172,7 +184,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "C9": 1, "PDU":1,"PG": 1 },
+            permission : {'E27' : 1},
+
+            //permission: { "C9": 1, "PDU":1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -186,7 +200,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1,"AG2" : 1},
+            permission : {'E28' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1,"AG2" : 1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -200,7 +216,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 2 },
+            permission : {'E7' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -213,7 +231,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "C9": 1, "PG": 1 },
+            ////permission: { "C9": 1, "PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -227,7 +245,8 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1,"AG2" : 1 },
+            permission : {'E29' : 1},
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1,"AG2" : 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -241,7 +260,7 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            //permission: { "C9": 1,"PDU":1,"PG": 2 },
+            ////permission: { "C9": 1,"PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -254,7 +273,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "C9": 1, "PG": 1, "AG2" : 1, "AG1" : 1, "C2C" : 1, "C2B" : 1, "C2A" : 1  },
+            ////permission: { "C9": 1, "PG": 1, "AG2" : 1, "AG1" : 1, "C2C" : 1, "C2B" : 1, "C2A" : 1  },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -268,7 +287,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 1},
+            permission : {'E8' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -281,7 +302,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "C9": 1, "PG": 1 },
+            ////permission: { "C9": 1, "PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -295,7 +316,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 1 },
+            permission : {'E9' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -309,7 +332,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 3 },
+            permission : {'E10' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 3 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -323,7 +348,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1},
+            permission : {'E30' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -336,7 +363,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //            permission: { "C9": 1, "PG": 1, "B9": 1, "B1": 1 },
+            //            //permission: { "C9": 1, "PG": 1, "B9": 1, "B1": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -350,7 +377,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 1,"AG2": 1 },
+            permission : {'E11' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 1,"AG2": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -364,7 +393,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
+            permission : {'E12' : 1},
+
+            //permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -378,7 +409,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
+            permission : {'E13' : 1},
+
+            //permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
             iconClass: 'fa fa-dashboard',
             byUser: true
         }
@@ -393,7 +426,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
+            permission : {'E14' : 1},
+
+            //permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
             iconClass: 'fa fa-dashboard',
             byUser: false
         }
@@ -408,7 +443,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
+            permission : {'E15' : 1},
+
+            //permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -422,7 +459,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU":1,"PG": 1, "AG2": 1 },
+            permission : {'E16' : 1},
+
+            //permission: { "C9": 1,"PDU":1,"PG": 1, "AG2": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -436,7 +475,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1, "PG": 1,"PDU": 1 },
+            permission : {'E17' : 1},
+
+            //permission: { "C9": 1, "PG": 1,"PDU": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -450,7 +491,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU": 1,"PG": 1, "AG2": 1 },
+            permission : {'E18' : 1},
+
+            //permission: { "C9": 1,"PDU": 1,"PG": 1, "AG2": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -464,7 +507,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
+            permission : {'E19' : 1},
+
+            //permission: { "C9": 1,"PDU": 1,"PG": 1,"AG2": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -477,7 +522,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "C9": 1, "AG2" : 1, "AG1" : 1, "C2C" : 1, "C2B" : 1, "C2A" : 1  },
+            ////permission: { "C9": 1, "AG2" : 1, "AG1" : 1, "C2C" : 1, "C2B" : 1, "C2A" : 1  },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -491,7 +536,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1,"AG2" : 1 },
+            permission : {'E31' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1,"AG2" : 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -505,7 +552,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1, "PG": 1, "PDU": 1 },
+            permission : {'E20' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -518,7 +567,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "C9": 1, "PG": 1 },
+            ////permission: { "C9": 1, "PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -532,7 +581,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1, "PG": 1, "PDU": 1 },
+            permission : {'E21' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -546,7 +597,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1,"PDU": 1,"PG": 1 },
+            permission : {'E22' : 1},
+
+            //permission: { "C9": 1,"PDU": 1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -559,7 +612,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "C9": 1, "PG": 1 },
+            ////permission: { "C9": 1, "PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -573,7 +626,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU": 1,"PG": 1 },
+            permission : {'E32' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU": 1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -587,7 +642,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU": 1,"PG": 1 },
+            permission : {'E33' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU": 1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -601,7 +658,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "C9": 1, "PDU": 1,"PG": 2 },
+            permission : {'E39' : 1},
+
+            //permission: { "C9": 1, "PDU": 1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -615,7 +674,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E40' : 1},
+
+            //permission: { "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -629,7 +690,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "C9": 1, "PDU":1,"PG": 1,"B1":2 },
+            permission : {'E41' : 1},
+
+            //permission: { "C9": 1, "PDU":1,"PG": 1,"B1":2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -643,7 +706,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E23' : 1},
+
+            //permission: { "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -657,7 +722,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1, "PDU":1, "PG": 2 },
+            permission : {'E24' : 1},
+
+            //permission: { "C9": 1, "PDU":1, "PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -671,7 +738,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "transaksi",
-            permission: { "C9": 1, "PDU":1, "PG": 2 },
+            permission : {'E25' : 1},
+
+            //permission: { "C9": 1, "PDU":1, "PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -685,7 +754,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
+            permission : {'E34' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -699,7 +770,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
+            permission : {'E35' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -713,7 +786,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E42' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -727,7 +802,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E43' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -741,7 +818,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1  },
+            permission : {'E36' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1  },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -755,7 +834,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
+            permission : {'E37' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -768,7 +849,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            // permission: { "B1": 1, "C9": 1, "AG2":1, "AG1":1, "C2C":1,"C2B":1,"C2A":1 },
+            // //permission: { "B1": 1, "C9": 1, "AG2":1, "AG1":1, "C2C":1,"C2B":1,"C2A":1 },
             iconClass: 'fa fa-clone'
         }
     },
@@ -782,7 +863,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2},
+            permission : {'E44' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2},
             iconClass: 'fa fa-clone'
         }
     },
@@ -796,7 +879,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E45' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-clone'
         }
     },
@@ -810,7 +895,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E46' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-clone'
         }
     },
@@ -824,7 +911,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E47' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-clone'
         }
     },
@@ -838,7 +927,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E48' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-clone'
         }
     },
@@ -852,7 +943,7 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            //            permission: {"B1": 1, "C9": 1},
+            //            //permission: {"B1": 1, "C9": 1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -865,7 +956,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //   permission: {"B1": 1, "C9": 1},
+            //   //permission: {"B1": 1, "C9": 1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -878,7 +969,7 @@ module.exports = [
     //   auth: true,
     //   settings: {
     //       group: "g-purchasing",
-    //       permission: {"C9": 1, "PG": 1, "B9": 1, "B1": 1},
+    //       //permission: {"C9": 1, "PG": 1, "B9": 1, "B1": 1},
     //       iconClass: 'fa fa-dashboard'
     //   }
     // }
@@ -892,7 +983,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E49' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -906,7 +999,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E50' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -919,7 +1014,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            // permission: {"C9": 1, "PG": 1, "B9": 1, "B1": 1, "AG2":1, "AG1":1, "C2C":1,"C2B":1,"C2A":1},
+            // //permission: {"C9": 1, "PG": 1, "B9": 1, "B1": 1, "AG2":1, "AG1":1, "C2C":1,"C2B":1,"C2A":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -933,7 +1028,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E51' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -947,7 +1044,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E52' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -960,7 +1059,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //   permission: { "B1": 1, "C9": 1 },
+            //   //permission: { "B1": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -975,7 +1074,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E53' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -988,7 +1089,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            // permission: {"C9": 1, "B1": 1},
+            // //permission: {"C9": 1, "B1": 1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1001,7 +1102,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //   permission: { "B1": 1, "C9": 1 },
+            //   //permission: { "B1": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1015,7 +1116,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "fitur",
-            permission: { "B1": 1, "C9": 1, "PDU":1," PG": 1 },
+            permission : {'E56' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1," PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1029,7 +1132,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
+            permission : {'E54' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1043,7 +1148,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "laporan",
-            permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2},
+            permission : {'E55' : 1},
+
+            //permission: { "B1": 2, "C9": 1, "PDU":1,"PG": 2},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1056,7 +1163,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "g-purchasing",
-    //         permission: { "PG": 1, "APG": 1, "C9": 1 },
+    //         //permission: { "PG": 1, "APG": 1, "C9": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -1069,7 +1176,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-purchasing",
-            //permission: { "C9": 1 },
+            ////permission: { "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1083,7 +1190,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "monitoring",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
+            permission : {'E38' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1097,7 +1206,9 @@ module.exports = [
         settings: {
             group: "g-purchasing",
             subGroup: "fitur",
-            permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
+            permission : {'E57' : 1},
+
+            //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
     }

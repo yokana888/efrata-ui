@@ -9,7 +9,7 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "kontrak",
-      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      ////permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -23,7 +23,9 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "packing list subcon",
-      permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      permission : {'I1' : 1},
+
+      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -37,7 +39,9 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "packing list subcon",
-      permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      permission : {'I2' : 1},
+
+      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -51,7 +55,9 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "packing list subcon",
-      permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      permission : {'I3' : 1},
+
+      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -65,7 +71,9 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "packing list subcon",
-      permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      permission : {'I4' : 1},
+
+      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -79,7 +87,9 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "surat jalan subcon",
-      permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      permission : {'I5' : 1},
+
+      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -93,7 +103,7 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "bc subcon",
-      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      ////permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -107,7 +117,7 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "bc subcon",
-      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      ////permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -122,7 +132,7 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "laporan",
-      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      ////permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
@@ -137,7 +147,7 @@ module.exports = [
     settings: {
       group: "g-subcon",
       subGroup: "laporan",
-      //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+      ////permission: { "C9": 1, "AG2": 1, "PDU":1 },
       iconClass: 'fa fa-dashboard'
     }
   },
