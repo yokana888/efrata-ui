@@ -8,7 +8,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -23,7 +23,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "*": 1 },
+    //         //permission: { "*": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -38,7 +38,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -52,7 +52,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -67,7 +67,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -82,7 +82,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -96,7 +96,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -110,7 +110,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -125,7 +125,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -142,7 +142,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -159,7 +159,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -174,7 +174,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -188,7 +188,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -203,7 +203,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -218,7 +218,7 @@ module.exports = [
     //     settings: {
     //         group: "Inventory",
     //         subGroup: "Gudang Weaving",
-    //         permission: { C9: 1, W1: 1, W2: 1 },
+    //         //permission: { C9: 1, W1: 1, W2: 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -232,7 +232,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "*": 1 },
+    //         //permission: { "*": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -245,7 +245,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "*": 1 },
+    //         //permission: { "*": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -258,7 +258,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "*": 1 },
+    //         //permission: { "*": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -271,7 +271,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         ////permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -284,7 +284,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
 
@@ -298,7 +298,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -311,7 +311,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -324,7 +324,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -337,7 +337,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -350,7 +350,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -363,7 +363,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -376,7 +376,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -389,7 +389,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -402,7 +402,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -415,7 +415,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -428,7 +428,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         ////permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -441,7 +441,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         ////permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -454,7 +454,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -467,7 +467,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         //permission: { "C9": 1, "F1": 1, "F2": 1 },
+    //         ////permission: { "C9": 1, "F1": 1, "F2": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -480,7 +480,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K1' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -494,7 +496,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K2' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -508,7 +512,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K3' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -522,7 +528,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K4' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -536,7 +544,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K5' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -550,7 +560,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K6' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -564,7 +576,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "Inventory",
-    //         permission: { "*": 1 },
+    //         //permission: { "*": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -577,7 +589,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K7' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -591,7 +605,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K8' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -605,7 +621,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K9' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -619,7 +637,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K10' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -633,7 +653,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "B1": 1, "PG": 1, "PDU":1 },
+            permission : {'K11' : 1},
+
+            //permission: { "C9": 1, "B1": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -647,7 +669,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "B1": 1, "PG": 1, "PDU":1 },
+            permission : {'K12' : 1},
+
+            //permission: { "C9": 1, "B1": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -661,7 +685,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K13' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -675,7 +701,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K14' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -689,7 +717,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1 , "PDU":1},
+            permission : {'K15' : 1},
+
+            //permission: { C9: 1, "PG": 1 , "PDU":1},
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -703,7 +733,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { "C9": 1, "PG": 1, "PDU":1 },
+            permission : {'K16' : 1},
+
+            //permission: { "C9": 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard"
         }
@@ -717,7 +749,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K17' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -731,7 +765,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K18' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -745,7 +781,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K19' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -759,7 +797,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K20' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -773,7 +813,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K21' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -787,7 +829,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K22' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -801,7 +845,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K23' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -817,7 +863,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K24' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -827,11 +875,13 @@ module.exports = [
         name: "inventory/garment/leftover-warehouse/reports/bookkeeping/flow-stock",
         moduleId: "modules/inventory/garment-leftover-warehouse/reports/bookkeeping/flow-stock/index",
         nav: true,
-        title: "Report FLow Persediaan Gudang Sisa",
+        title: "Report Flow Persediaan Gudang Sisa",
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K25' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -845,7 +895,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K26' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
@@ -859,7 +911,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "Inventory",
-            permission: { C9: 1, "PG": 1, "PDU":1 },
+            permission : {'K27' : 1},
+
+            //permission: { C9: 1, "PG": 1, "PDU":1 },
             subGroup: "gudang sisa garment",
             iconClass: "fa fa-dashboard",
         },
