@@ -9,7 +9,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "gudang sample",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J1' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -23,7 +25,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "md",
-			permission: { "C9": 1, "PGA":1,"PDU":1 },
+			permission : {'J4' : 1},
+
+			//permission: { "C9": 1, "PGA":1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -38,7 +42,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "gudang sample",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J2' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -52,7 +58,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "gudang sample",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J3' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -66,7 +74,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J7' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -80,7 +90,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J8' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -94,7 +106,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J9' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -108,7 +122,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J10' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -122,7 +138,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J11' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -136,7 +154,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J12' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -150,7 +170,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J13' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -164,7 +186,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1 ,"PDU":1},
+			permission : {'J14' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1 ,"PDU":1},
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -178,7 +202,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J15' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -193,7 +219,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J16' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -208,7 +236,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J17' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -222,7 +252,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J18' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -237,7 +269,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "transaksi",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J19' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -252,7 +286,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1,"PDU":1 },
+			permission : {'J20' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1,"PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -266,7 +302,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J21' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -280,7 +318,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J22' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -294,7 +334,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J23' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -309,7 +351,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J24' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -323,7 +367,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J25' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -337,7 +383,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J26' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -351,7 +399,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J27' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -365,7 +415,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J28' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -379,7 +431,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J29' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -393,7 +447,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J30' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -407,7 +463,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "fitur",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1  },
+			permission : {'J35' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1  },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -421,7 +479,9 @@ module.exports = [
         settings: {
             group: "g-sample",
             subGroup: "fitur",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1  },
+			permission : {'J36' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1  },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -435,7 +495,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "md",
-			permission: { "C9": 1, "PGA": 1 },
+			permission : {'J5' : 1},
+
+			//permission: { "C9": 1, "PGA": 1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -449,7 +511,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "md",
-			permission: { "C9": 1, "PGA": 1, "PDU":1  },
+			permission : {'J6' : 1},
+
+			//permission: { "C9": 1, "PGA": 1, "PDU":1  },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -460,12 +524,14 @@ module.exports = [
 		name: 'monitoring-sample-flow-by-size',
 		moduleId: './modules/garment-sample/report/monitoring-sample-flow-by-size/index',
 		nav: true,
-		title: 'Monitoring Flow  Sample per Size',
+		title: 'Monitoring Flow Sample per Size',
 		auth: true,
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J31' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -479,7 +545,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1 },
+			permission : {'J32' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -493,7 +561,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1, "PGA":1 },
+			permission : {'J33' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1, "PGA":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},
@@ -507,7 +577,9 @@ module.exports = [
 		settings: {
 			group: "g-sample",
 			subGroup: "laporan",
-			permission: { "C9": 1, "SMP1": 1, "PDU":1, "PGA":1 },
+			permission : {'J34' : 1},
+
+			//permission: { "C9": 1, "SMP1": 1, "PDU":1, "PGA":1 },
 			iconClass: 'fa fa-dashboard'
 		}
 	},

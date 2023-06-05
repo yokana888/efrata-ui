@@ -8,7 +8,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "B7": 1, "C9": 1 },
+            permission : {'C1' : 1},
+
+            //permission: { "B7": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -21,7 +23,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "IE": 1,"C9": 1 },
+            permission : {'C2' : 1},
+
+            //permission: { "IE": 1,"C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -34,7 +38,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1, "B7": 1,"C9": 1 },
+            //permission: { "PGA": 1, "B7": 1,"C9": 1 },
+            permission : {'C3' : 1},
+
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -47,7 +53,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "IE": 1 },
+            //permission: { "IE": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -60,7 +66,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "C9": 1, "PGA": 2, "B1": 2, "PDU": 1 },
+            permission : {'C5' : 1},
+
+            //permission: { "C9": 1, "PGA": 2, "B1": 2, "PDU": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -73,7 +81,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1, "C9": 1, "B1": 2 },
+            permission : {'C4' : 1},
+
+            //permission: { "PGA": 1, "C9": 1, "B1": 2 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -86,7 +96,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "g-master-plan",
-    //         permission: { "C5": 1, "C9": 1 },
+    //         //permission: { "C5": 1, "C9": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -99,7 +109,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "g-master-plan",
-    //         permission: { "C5": 1, "C9": 1 },
+    //         //permission: { "C5": 1, "C9": 1 },
     //         iconClass: 'fa fa-dashboard'
     //     }
     // },
@@ -112,7 +122,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1, "B7": 1,"C9": 1 },
+            permission : {'C6' : 1},
+
+            //permission: { "PGA": 1, "B7": 1,"C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -125,7 +137,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1, "B7": 1,"C9": 1 },
+            permission : {'C7' : 1},
+
+            //permission: { "PGA": 1, "B7": 1,"C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -138,7 +152,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1, "B7": 1, "IE": 1,"C9": 1 },
+            permission : {'C8' : 1},
+
+            //permission: { "PGA": 1, "B7": 1, "IE": 1,"C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -151,7 +167,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "B7": 1,"C9": 1 },
+            permission : {'C9' : 1},
+
+            //permission: { "B7": 1,"C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -164,7 +182,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "B7": 1, "C9": 1 },
+            permission : {'C10' : 1},
+
+            //permission: { "B7": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -177,7 +197,9 @@ module.exports = [
       auth: true,
       settings: {
           group: "g-master-plan",
-          permission: { "PGA": 1, "B7": 1, "IE": 1,"C9": 1 },
+          permission : {'C11' : 1},
+
+          //permission: { "PGA": 1, "B7": 1, "IE": 1,"C9": 1 },
           iconClass: 'fa fa-dashboard'
       }
   },
@@ -190,7 +212,9 @@ module.exports = [
       auth: true,
       settings: {
           group: "g-master-plan",
-          permission: { "PGA": 1, "B7": 1,"C9": 1 },
+          permission : {'C12' : 1},
+
+          //permission: { "PGA": 1, "B7": 1,"C9": 1 },
           iconClass: 'fa fa-dashboard'
       }
   },
@@ -204,7 +228,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1,"B7": 1,"IE": 1,"C9": 1 },
+            permission : {'C13' : 1},
+
+            //permission: { "PGA": 1,"B7": 1,"IE": 1,"C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -218,7 +244,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
+            permission : {'C14' : 1},
+
+            //permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -232,7 +260,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
+            permission : {'C15' : 1},
+
+            //permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -246,7 +276,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
+            permission : {'C16' : 1},
+
+            //permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -259,7 +291,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
+            permission : {'C17' : 1},
+
+            //permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -272,7 +306,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
+            permission : {'C18' : 1},
+
+            //permission: { "PGA": 1,"B7": 1, "IE": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -285,7 +321,7 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            //permission: { "PG": 1,"B7": 1, "IE": 1, "C9": 1 },
+            ////permission: { "PG": 1,"B7": 1, "IE": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -298,7 +334,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "B7": 1, "IE": 1, "C9": 1 },
+            permission : {'C19' : 1},
+
+            //permission: { "B7": 1, "IE": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -311,7 +349,9 @@ module.exports = [
         auth: true,
         settings: {
             group: "g-master-plan",
-            permission: { "B7": 1, "IE": 1, "C9": 1 },
+            permission : {'C20' : 1},
+
+            //permission: { "B7": 1, "IE": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     }

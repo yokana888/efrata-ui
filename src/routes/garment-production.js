@@ -9,7 +9,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "master",
-            permission: { "C9": 1, "B1" : 1, "AG2": 1, "PGA": 1, "PDU":1},
+            permission : {'G1' : 1},
+
+            //permission: { "C9": 1, "B1" : 1, "AG2": 1, "PGA": 1, "PDU":1},
             iconClass: 'fa fa-dashboard'
         }
     }, {
@@ -22,7 +24,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "master",
-            permission: { "C9": 1, "AG2": 1, "PGA": 1, "PDU":1  },
+            permission : {'G2' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PGA": 1, "PDU":1  },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -36,7 +40,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "master",
-            permission: { "C9": 1, "AG2": 1, "PGA": 1, "PDU":1 },
+            permission : {'G3' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PGA": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -50,7 +56,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "master",
-            permission: { "C9": 1, "AG2": 1, "PGA": 1, "PDU":1 },
+            permission : {'G4' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PGA": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -64,7 +72,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G5' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -78,7 +88,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G19' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -92,7 +104,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G6' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -106,7 +120,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G20' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -120,7 +136,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G42' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -134,7 +152,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G21' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -148,7 +168,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G7' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -162,7 +184,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G22' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -176,7 +200,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G8' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -190,7 +216,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G23' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -204,7 +232,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G9' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -226,7 +256,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            //permission : {'G43' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -240,7 +272,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G10' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -254,7 +288,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G24' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -268,7 +304,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G11' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -282,7 +320,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G25' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -296,7 +336,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G12' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -310,7 +352,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G26' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -324,7 +368,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G13' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -338,7 +384,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G27' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -352,8 +400,10 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
-            // permission: { "C9": 1 },
+            permission : {'G14' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            // //permission: { "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -367,7 +417,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G28' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -381,7 +433,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1},
+            permission : {'G15' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -395,7 +449,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G29' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -409,7 +465,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            //permission: { "C9": 1, "AG2": 1, "PDU":1},
+            permission : {'G45' : 1},
+
+            ////permission: { "C9": 1, "AG2": 1, "PDU":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -423,7 +481,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G30' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -437,8 +497,10 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
-            // permission: { "C9": 1 },
+            permission : {'G16' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            // //permission: { "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -452,7 +514,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G31' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -466,8 +530,10 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
-            // permission: { "C9": 1 },
+            permission : {'G17' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            // //permission: { "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -481,7 +547,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G31' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -495,7 +563,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G18' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -509,7 +579,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G33' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -523,8 +595,10 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
-            // permission: { "C9": 1 },
+            permission : {'G43' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            // //permission: { "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -538,7 +612,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G44' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -552,7 +628,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G46' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -566,7 +644,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G47' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -580,7 +660,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G48' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -594,7 +676,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G49' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -608,7 +692,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G50' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         },
 
@@ -623,7 +709,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1  },
+            permission : {'G51' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1  },
             iconClass: 'fa fa-dashboard'
         },
 
@@ -639,7 +727,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: { "C9": 1, "AG2": 1, "PDU":1  },
+            permission : {'G52' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1  },
             iconClass: 'fa fa-dashboard'
         },
 
@@ -654,7 +744,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "aval",
-            permission: {  "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G53' : 1},
+
+            //permission: {  "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         },
 
@@ -669,7 +761,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G54' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -683,7 +777,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G55' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -697,7 +793,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G56' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -711,7 +809,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G57' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -725,8 +825,10 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
-            // permission: { "C9": 1 },
+            permission : {'G58' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            // //permission: { "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -740,7 +842,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G59' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -754,8 +858,10 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
-            // permission: { "C9": 1 },
+            permission : {'G60' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            // //permission: { "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -769,7 +875,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G61' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -783,7 +891,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "adjustment",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G62' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -797,7 +907,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G34' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
 
             iconClass: 'fa fa-dashboard'
         }
@@ -812,7 +924,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            // permission: {"C9": 1, "B1":1},
+            // //permission: {"C9": 1, "B1":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -826,7 +938,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G35' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -840,7 +954,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "transaksi",
-            // permission: {"C9": 1, "B1":1},
+            // //permission: {"C9": 1, "B1":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -854,7 +968,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G36' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -868,7 +984,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            // permission: {"C9": 1, "B1":1},
+            // //permission: {"C9": 1, "B1":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -882,7 +998,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G37' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     }, {
@@ -895,7 +1013,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            // permission: {"C9": 1, "B1":1},
+            // //permission: {"C9": 1, "B1":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -909,7 +1027,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G38' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
 
             iconClass: 'fa fa-dashboard'
         }
@@ -924,7 +1044,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            // permission: {"C9": 1, "B1":1},
+            // //permission: {"C9": 1, "B1":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -938,7 +1058,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G39' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
 
             iconClass: 'fa fa-dashboard'
         }
@@ -953,7 +1075,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            // permission: {"C9": 1, "B1":1},
+            // //permission: {"C9": 1, "B1":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -967,7 +1089,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G40' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -981,7 +1105,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            // permission: {"C9": 1, "B1":1},
+            // //permission: {"C9": 1, "B1":1},
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -995,7 +1119,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G41' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1009,7 +1135,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "laporan",
-            // permission: {"C9": 1, "B1":1},
+            // //permission: {"C9": 1, "B1":1},
 
             iconClass: 'fa fa-dashboard'
         }
@@ -1024,7 +1150,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "fitur",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G63' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1038,7 +1166,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "fitur",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G64' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1051,7 +1181,7 @@ module.exports = [
     //     auth: true,
     //     settings: {
     //         group: "g-production",
-    //         permission: { "C9": 1 },
+    //         //permission: { "C9": 1 },
     //         iconClass: "fa fa-dashboard"
     //     }
     // },
@@ -1066,7 +1196,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "fitur",
-            permission: { "C9": 1, "AG2": 1, "PDU":1 },
+            permission : {'G65' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "PDU":1 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -1080,7 +1212,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "packing list",
-            permission: { "C9": 1, "AG2": 1, "SP": 1, "PDU":1 },
+            permission : {'G66' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "SP": 1, "PDU":1 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -1094,7 +1228,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "packing list",
-            permission: { "C9": 1, "AG2": 1, "SP": 1, "PDU":1 },
+            permission : {'G67' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "SP": 1, "PDU":1 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -1108,7 +1244,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "packing list",
-            permission: { "C9": 1, "AG2": 1, "SP": 1, "PDU":1 },
+            permission : {'G68' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "SP": 1, "PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
@@ -1122,7 +1260,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "packing list",
-            permission: { "C9": 1, "AG2": 1, "SP": 1, "PDU":1 },
+            permission : {'G69' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "SP": 1, "PDU":1 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -1136,7 +1276,7 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "packing list",
-            permission: { "C9": 1, "FP": 1 },
+            //permission: { "C9": 1, "FP": 1 },
             iconClass: "fa fa-dashboard"
         }
     },*/
@@ -1150,7 +1290,9 @@ module.exports = [
         settings: {
             group: "g-production",
             subGroup: "packing list",
-            permission: { "C9": 1, "AG2": 1, "SP": 1,"PDU":1 },
+            permission : {'G70' : 1},
+
+            //permission: { "C9": 1, "AG2": 1, "SP": 1,"PDU":1 },
             iconClass: 'fa fa-dashboard'
         }
     },
