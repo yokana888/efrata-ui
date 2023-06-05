@@ -42,7 +42,6 @@ export async function configure(aurelia) {
             var inventoryAzure = "https://com-efrata-service-inventory.azurewebsites.net/v1/";
             var garmentMasterPlan = "https://dl-garment-master-plan-webapi.azurewebsites.net/v1/";
             var spMasterPlan = "https://dl-sp-master-plan-webapi.mybluemix.net/v1/";
- 
             var spinning = "https://com-efrata-service-spinning.azurewebsites.net/";
             var intPurchasing = "https://com-efrata-service-internal-transfer.azurewebsites.net/v1/";
             var customsReport = "https://com-efrata-service-support.azurewebsites.net/v1/";
@@ -56,7 +55,6 @@ export async function configure(aurelia) {
             var dyeing = "https://dyeing-printing-etl-service.azurewebsites.net/api/";
             const garmentShipping = "https://garment-etl-service.azurewebsites.net/api/";
             var ItInven = "https://it-inventory-etl-service.azurewebsites.net/api/";
-
 
             // var core = "https://com-efrata-service-core-uat-uat.azurewebsites.net/v1/";
             // var auth = "https://com-efrata-service-auth-uat-uat.azurewebsites.net/v1/";
@@ -82,7 +80,6 @@ export async function configure(aurelia) {
             // var dyeing = "https://dyeing-printing-etl-service-uat.azurewebsites.net/api/";
             // const garmentShipping = "https://garment-etl-service-uat.azurewebsites.net/api/";
             // var ItInven = "https://it-inventory-etl-service-uat.azurewebsites.net/api/";
-
 
             config.registerEndpoint('auth', auth);
             config.registerEndpoint('core', core);
