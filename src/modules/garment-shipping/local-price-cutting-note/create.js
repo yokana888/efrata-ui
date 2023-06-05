@@ -27,13 +27,24 @@ export class Create {
     }
 
     saveCallback(event) {
-        this.service.create(this.data)
-            .then(result => {
-                alert("Data berhasil dibuat");
-                this.router.navigateToRoute('create', {}, { replace: true, trigger: true });
-            })
-            .catch(error => {
-                this.error = error;
-            });
+
+        var valueArr = this.data.items.map(function (item) { return item.salesNoteId });
+
+        var isDuplicate = valueArr.some(function (item, idx) {
+            return valueArr.indexOf(item, idx + 1) !== -1
+        });
+
+        if (!isDuplicate) {
+            this.service.create(this.data)
+                .then(result => {
+                    alert("Data berhasil dibuat");
+                    this.router.navigateToRoute('create', {}, { replace: true, trigger: true });
+                })
+                .catch(error => {
+                    this.error = error;
+                });
+        } else {
+            alert("Terdapat No. Nota Penjualan yang Sama");
+        }
     }
 }
