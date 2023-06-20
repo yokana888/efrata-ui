@@ -130,12 +130,6 @@ export class DataForm {
     this.data = this.context.data;
     this.error = this.context.error;
    
-    // const unit = await this.serviceCore.getUnit();
-    
-    // for (var u of unit)
-    // {
-
-    // }
     this.selectedSMV_Cutting = this.data.SMV_Cutting ? this.data.SMV_Cutting : 0;
     this.selectedSMV_Sewing = this.data.SMV_Sewing ? this.data.SMV_Sewing : 0;
     this.selectedSMV_Finishing = this.data.SMV_Finishing ? this.data.SMV_Finishing : 0;
@@ -145,11 +139,13 @@ export class DataForm {
     this.data.Risk = this.data.Risk ? this.data.Risk : 5;
     this.imageSrc = this.data.ImageFile = this.isEdit || this.isCopy ? (this.data.ImageFile || "#") : "#";
     this.selectedLeadTime = this.data.LeadTime ? `${this.data.LeadTime} hari` : "";
-    this.selectedUnit = this.data.Unit?this.data.Unit:"";
+    this.selectedUnit = this.data.Unit ? this.data.Unit : "";
     this.data.OTL1 = this.data.OTL1 ? this.data.OTL1 : Object.assign({}, this.defaultRate);
     this.data.OTL2 = this.data.OTL2 ? this.data.OTL2 : Object.assign({}, this.defaultRate);
-    this.data.ConfirmPrice =this.data.ConfirmPrice ? this.data.ConfirmPrice:0 ;
+    this.data.ConfirmPrice =this.data.ConfirmPrice ? this.data.ConfirmPrice: 0;
     this.create = this.context.create; 
+
+    console.log(this.create);
     
     if (!this.create)
     {
@@ -165,7 +161,7 @@ export class DataForm {
     }
     else
     {
-        this.selectedBookingOrder = null;
+      this.selectedBookingOrder = null;
     }
     let promises = [];
 
@@ -222,11 +218,45 @@ export class DataForm {
     }
     promises.push(rate);
 
+    let OTL1;
+    if (!this.create) { 
+      OTL1 = new Promise((resolve, reject) => {
+        resolve(this.data.OTL1);
+      });
+    } 
+    else {
+        this.data.OTL1 = this.defaultRate;
+        OTL1 = this.rateService.search({ filter: JSON.stringify({ Name: "OTL 1", UnitCode: this.selectedUnit.UnitCode }) }).then((results) => {
+        let result = results.data[0] ? results.data[0] : this.defaultRate;
+        result.Value = numeral(numeral(result.Value).format(rateNumberFormat)).value();
+        return result;
+      });
+    }
+    promises.push(OTL1);
+
+    let OTL2; 
+    if (!this.create) {
+      OTL2 = new Promise((resolve, reject) => {
+        resolve(this.data.OTL2);
+      });
+    } 
+    else {
+      this.data.OTL2 = this.defaultRate;
+      OTL2 = this.rateService.search({ filter: JSON.stringify({ Name: "OTL 2", UnitCode: this.selectedUnit.UnitCode }) }).then((results) => {
+        let result = results.data[0] ? results.data[0] : this.defaultRate;
+        result.Value = numeral(numeral(result.Value).format(rateNumberFormat)).value();
+        return result;
+      });
+    }
+    promises.push(OTL2);
+
     let all = await Promise.all(promises);
     this.data.Wage = all[0];
     this.data.Wage.Value=this.data.Wage.Value.toLocaleString('en-EN', { minimumFractionDigits: 2 }) ;
     this.data.THR = all[1];
     this.data.Rate = all[2];
+    this.data.OTL1 = all[3];
+    this.data.OTL2 = all[4];
     //this.RateDollar = all[2];
     this.selectedRate = this.data.Rate ? this.data.Rate : "";
 
@@ -257,14 +287,15 @@ export class DataForm {
         this.selectedRate = "IDR";
       }
     }
+
     const units = await this.serviceCore.getUnit();
     
     for(var i of units)
     {
       this.data.Unit = i;
-      this.data.UnitId=i.Id;
-      this.data.UnitCode=i.Code;
-      this.data.UnitName=i.Name;
+      this.data.UnitId = i.Id;
+      this.data.UnitCode = i.Code;
+      this.data.UnitName = i.Name;
     }
   }
 
@@ -280,7 +311,7 @@ export class DataForm {
     return`${bookingorder.BookingOrderNo} - ${bookingorder.ComodityName} - ${bookingorder.ConfirmQuantity} - ${moment(bookingorder.ConfirmDate).format("DD MMM YYYY")}`
   }
 
- get filter() {
+  get filter() {
      var filter = {};
      filter = {
                BuyerCode: this.data.BuyerCode,
@@ -386,7 +417,6 @@ export class DataForm {
     this.costCalculationGarment_MaterialsInfo.options.SCId = this.data.PreSCId;
   }
 
- 
  @bindable selectedBookingOrder;
   async selectedBookingOrderChanged(newValue, oldValue) {
     if (newValue)
@@ -569,9 +599,9 @@ export class DataForm {
   @bindable selectedUnit;
   async selectedUnitChanged(newVal) {
     this.data.Unit = newVal;
-    this.data.UnitId=newVal.Id;
-    this.data.UnitCode=newVal.Code;
-    this.data.BuyerName=newVal.Name;
+    this.data.UnitId = newVal.Id;
+    this.data.UnitCode = newVal.Code;
+    this.data.BuyerName = newVal.Name;
     if (newVal) {
       let UnitCode = newVal.Code;
 
@@ -599,7 +629,6 @@ export class DataForm {
       this.data.UnitName=newVal.Name;
     }
   }
-
 
   @computedFrom('data.SMV_Cutting', 'data.SMV_Sewing', 'data.SMV_Finishing')
   get SMV_Total() {
