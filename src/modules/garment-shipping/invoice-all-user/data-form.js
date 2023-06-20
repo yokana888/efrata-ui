@@ -35,7 +35,7 @@ export class DataForm {
         DivisionName: "G"
     };
 
-    INCOTERMSOptions=["FOB", "FAS","CFR","CIF","EXW","FCA","CPT","CIP","DAT","DAP","DDP"];
+    INCOTERMSOptions=["FOB","FAS","CFR","CIF","EXW","FCA","CPT","CIP","DAT","DAP","DDP"];
 
     bind(context) {
         this.context = context;
@@ -72,8 +72,7 @@ export class DataForm {
                     this.data.bankAccount = result.BankName;
                 });
             }
-            
-            
+                     
             this.fabricType = {
                 Id: this.data.fabricTypeId,
                 Name: this.data.fabricType

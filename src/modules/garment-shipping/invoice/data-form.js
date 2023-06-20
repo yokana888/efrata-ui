@@ -36,7 +36,7 @@ export class DataForm {
         DivisionName: "G"
     };
 
-    INCOTERMSOptions=["FOB", "FAS","CFR","CIF","EXW","FCA","CPT","CIP","DAT","DAP","DDP"];
+    INCOTERMSOptions=["FOB","FAS","CFR","CIF","EXW","FCA","CPT","CIP","DAT","DAP","DDP"];
 
     bind(context) {
         this.context = context;
@@ -74,7 +74,7 @@ export class DataForm {
                 });
             }
             
-            if (this.data.packingListType == "LOCAL"){
+            if (this.data.packingListType == "LOKAL"){
                 this.fabricType = this.data.fabricType;
             }else{
                 this.fabricType = {
@@ -165,6 +165,7 @@ export class DataForm {
             this.data.shippingStaff = selectedShipping.Name;
         }
     }
+
     bankAccountChanged(newValue, oldValue) {
         var selectedAccount = newValue;
         if (selectedAccount) {
@@ -172,7 +173,6 @@ export class DataForm {
             this.data.bankAccountId = selectedAccount.Id;
 
             this.data.bankAccount = selectedAccount.BankName;
-
         }
     }
 
@@ -180,7 +180,7 @@ export class DataForm {
         var selectedfabric = newValue;
         console.log(newValue);
         console.log(this.data.packingListType);
-        if (selectedfabric && this.data.packingListType == "LOCAL") {
+        if (selectedfabric && this.data.packingListType == "LOKAL") {
             this.data.fabricTypeId = 0 ;
             this.data.fabricType = selectedfabric;
         } else if (selectedfabric && this.data.packingListType == "EXPORT") {
@@ -190,6 +190,7 @@ export class DataForm {
 
         console.log(this.data.fabricType);
     }
+
     async packinglistsChanged(newValue, oldValue) {
         var selectedInv = newValue;
         if (selectedInv && this.data.id == undefined) {
@@ -312,6 +313,7 @@ export class DataForm {
         // }
 
     }
+
     async updateItems(invoiceNo) {
         var dataPackingList = await this.service.getInvoiceNo({ filter: JSON.stringify({ InvoiceNo:invoiceNo })});
         var invoiceData = await this.service.getById(this.data.id);
@@ -333,12 +335,10 @@ export class DataForm {
             _item.scNo = item.scNo;
            
             _item.priceRO = item.priceRO;
-            if(packingItem.invoiceType ==='DS' || packingItem.invoiceType ==='SM')
-            {
+            if(packingItem.invoiceType ==='DS' || packingItem.invoiceType ==='SM') {
                 _item.price = item.price; 
-            }else
-            {
-                 _item.price = item.priceFOB;
+            } else {
+                _item.price = item.priceFOB;
             }
             _item.quantity = item.quantity;
             _item.cmtPrice = item.priceCMT;
@@ -346,25 +346,25 @@ export class DataForm {
                 id: item.comodity.id,
                 code: item.comodity.code,
                 name: item.comodity.name
-
             };
+
             _item.buyerBrand = {
                 id: item.buyerBrand.id,
                 code: item.buyerBrand.code,
                 name: item.buyerBrand.name
-
             };
+
             _item.uom = {
                 id: item.uom.id,
                 unit: item.uom.unit
-
             };
+
             _item.unit = {
                 id: item.unit.id,
                 code: item.unit.code,
                 name: item.unit.name
-
             };
+
             this.data.shippingStaffId = packingItem.shippingStaff.id;
             this.data.shippingStaff = packingItem.shippingStaff.name;
             this.shippingStaff = {
@@ -381,6 +381,7 @@ export class DataForm {
             _item.lastModifiedUtc = item.lastModifiedUtc;
             _item.lastModifiedBy = item.lastModifiedBy;
             _item.lastModifiedAgent = item.lastModifiedAgent;
+
             if(dataInvoiceLama) {
                 _item.id = dataInvoiceLama.id;
                 _item.createdUtc = dataInvoiceLama.createdUtc;
@@ -393,6 +394,7 @@ export class DataForm {
                 _item.desc3 = dataInvoiceLama.desc3;
                 _item.desc4 = dataInvoiceLama.desc4;
             }
+            
             consignee += item.buyerBrand.name;
             if (consignees.length > 0) {
                 var dup = consignees.find(a => a == item.buyerBrand.name);
