@@ -11,6 +11,7 @@ export class Edit {
         this.prService = prService;
         this.data = {};
         this.error = {};
+        this.create = false;
     }
 
     async activate(params) {
