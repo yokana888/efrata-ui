@@ -366,6 +366,7 @@ export class DataForm {
 
                             item.FabricType= uenItem.FabricType;
                             item.ContractQuantity=uenItem.Quantity;
+                            item.Quantity=item.ContractQuantity;
                             this.data.Items.push(item);
                         }   
                     }
