@@ -7,7 +7,7 @@
                     <div class="col-sm-6">
                         <au-autocomplete label="Invoice No" value.bind="selectedShippingInvoice"
                             error.bind="error.invoiceNo" text="invoiceNo" loader.bind="shippingInvoiceLoader"
-                            placeholder="Invoice No" query.bind="filter" read-only.bind="readOnly || isEdit" options.bind="controlOptions">
+                            placeholder="Invoice No" read-only.bind="readOnly || isEdit" options.bind="controlOptions">
                         </au-autocomplete>
 
                         <au-datepicker label="TGL" value.bind="data.date" error.bind="error.date"
@@ -18,7 +18,7 @@
                             label="Trucking" 
                             placeholder="Pilih Trucking"
                             value.bind="selectedEMKL" 
-                            error.bind="error.EMKL" 
+                            error.bind="error.emkl" 
                             loader.bind="emklLoader"
                             text.bind="emklView" 
                             read-only.bind="readOnly" 
@@ -81,10 +81,10 @@
                             error.bind="error.cartoonQuantity" read-only.bind="readOnly" options.bind="controlOptions">
                         </au-numeric>
 
-                        <au-autocomplete label="Forwarder" value.bind="data.forwarder" error.bind="error.forwarder"
+                        <!-- <au-autocomplete label="Forwarder" value.bind="data.forwarder" error.bind="error.forwarder"
                             loader.bind="forwarderLoader" text.bind="forwarderView" placeholder="Forwarder"
                             read-only.bind="readOnly" options.bind="controlOptions">
-                        </au-autocomplete>
+                        </au-autocomplete> -->
 
                         <au-textbox label="Truck" value.bind="data.truck" error.bind="error.truck" placeholder="Truck"
                             read-only.bind="readOnly" options.bind="controlOptions">
@@ -100,7 +100,7 @@
                     </div>
 
                     <div class="col-sm-6">
-                        <au-textbox label="Container No" value.bind="data.containerNo" error.bind="error.containerNo"
+                        <!-- <au-textbox label="Container No" value.bind="data.containerNo" error.bind="error.containerNo"
                             placeholder="Container No" read-only.bind="readOnly" options.bind="controlOptions">
                         </au-textbox>
 
@@ -113,15 +113,15 @@
                             options.bind="controlOptions">
                         </au-textbox>
 
-                        <au-textbox label="Seal DL" value.bind="data.dlSeal" error.bind="error.dlSeal"
+                        <au-textbox label="Seal EFRATA" value.bind="data.dlSeal" error.bind="error.dlSeal"
                             placeholder="Seal DL" read-only.bind="readOnly" options.bind="controlOptions">
                         </au-textbox>
 
                         <au-textbox label="Seal EMKL" value.bind="data.emklSeal" error.bind="error.emklSeal"
                             placeholder="Seal EMKL" read-only.bind="readOnly" options.bind="controlOptions">
-                        </au-textbox>
+                        </au-textbox> -->
 
-                        <au-datepicker label="Tgl Perkiraan Export" value.bind="data.exportEstimationDate"
+                        <au-datepicker label="Tgl Perkiraan Pengiriman" value.bind="data.exportEstimationDate"
                             error.bind="error.exportEstimationDate" read-only.bind="readOnly" options.bind="controlOptions">
                         </au-datepicker>
 

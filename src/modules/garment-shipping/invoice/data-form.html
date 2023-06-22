@@ -65,7 +65,7 @@
             <au-textbox label="Shipping Per" value.bind="data.shippingPer" error.bind="error.ShippingPer"
                 read-only.bind="readOnly " options.bind="length4">
             </au-textbox>
-            <au-datepicker label="SailingDate" value.bind="data.sailingDate" error.bind="error.SailingDate"
+            <au-datepicker label="Tanggal Pengiriman" value.bind="data.sailingDate" error.bind="error.SailingDate"
                 read-only.bind="readOnly " options.bind="length4">
             </au-datepicker>
 
@@ -84,8 +84,6 @@
             <au-textbox label="Jenis Fabric" value.bind="fabricType"
                 error.bind="error.FabricType" read-only.bind="readOnly" options.bind="length4" if.bind = "!isPackinglistType">
             </au-textbox>
-
-
             <au-autocomplete label="Bank Detail" value.bind="bankAccount" error.bind="error.BankAccount"
                 read-only.bind="readOnly" loader.bind="accountBankLoader" text.bind="accountBankView"
                 placeholder="Cari Bank" query.bind="bankFilter" options.bind="length4">
@@ -94,12 +92,12 @@
             <au-numeric label="Tempo Pembayaran (HARI)" value.bind="data.paymentDue" error.bind="error.PaymentDue"
                 read-only.bind="readOnly " options.bind="length4" format="0">
             </au-numeric>
-            <au-textbox label="No PEB" value.bind="data.pebNo" error.bind="error.pEBNo" read-only.bind="readOnly "
+            <!-- <au-textbox label="No PEB" value.bind="data.pebNo" error.bind="error.pEBNo" read-only.bind="readOnly "
                 options.bind="length4">
             </au-textbox>
             <au-datepicker label="Tgl PEB" value.bind="data.pebDate" error.bind="error.pEBDate"
                 read-only.bind="readOnly " options.bind="length4">
-            </au-datepicker>
+            </au-datepicker> -->
 
             <au-textbox
                 label="Authorized By"
@@ -108,10 +106,16 @@
                 read-only.bind="readOnly" 
                 options.bind="length4">
             </au-textbox>
+            <au-multiline label="Description" value.bind="data.description" error.bind="error.description"
+                read-only.bind="readOnly" options.bind="length4">
+            </au-multiline>
+            <au-multiline label="Keterangan" value.bind="data.remark" error.bind="error.remark"
+                read-only.bind="readOnly" options.bind="length4">
+            </au-multiline>
         </div>
-        <div class="col-sm-3">
+        <!-- <div class="col-sm-3"> -->
 
-            <au-textbox label="No NPE" value.bind="data.npeNo" error.bind="error.npeNo" read-only.bind="readOnly "
+            <!-- <au-textbox label="No NPE" value.bind="data.npeNo" error.bind="error.npeNo" read-only.bind="readOnly "
                 options.bind="length4">
             </au-textbox>
             <au-datepicker label="Tgl NPE" value.bind="data.npeDate" error.bind="error.npeDate"
@@ -135,14 +139,14 @@
             </au-textbox>
             <au-datepicker label="Tgl COTP" value.bind="data.cotpDate" error.bind="error.cotpDate"
                 read-only.bind="readOnly" options.bind="length4">
-            </au-datepicker>
-            <au-multiline label="Description" value.bind="data.description" error.bind="error.description"
+            </au-datepicker> -->
+            <!-- <au-multiline label="Description" value.bind="data.description" error.bind="error.description"
                 read-only.bind="readOnly" options.bind="length4">
             </au-multiline>
             <au-multiline label="Keterangan" value.bind="data.remark" error.bind="error.remark"
                 read-only.bind="readOnly" options.bind="length4">
-            </au-multiline>
-        </div>
+            </au-multiline> -->
+        <!-- </div> -->
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group has-error">
@@ -174,9 +178,9 @@
                     read-only.bind="readOnly || isEdit || isUpdated" options.bind="length4">
                 </au-multiline>
 
-                <au-dropdown label="INCOTERMS" value.bind="data.cPrice" error.bind="error.CPrice"
+                <!-- <au-dropdown label="INCOTERMS" value.bind="data.cPrice" error.bind="error.CPrice"
                     read-only.bind="readOnly" options.bind="length4" items.bind="INCOTERMSOptions">
-                </au-dropdown>
+                </au-dropdown> -->
 
                 <au-numeric label="TOTAL AMOUNT" value.bind="totalAmounts" error.bind="error.totalAmount"
                     read-only.bind="true" options.bind="length4">

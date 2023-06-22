@@ -117,7 +117,7 @@ export class items {
             this.data.amount = sc.Amount;
             this.data.price = sc.Price;
             this.data.priceRO = sc.Price;
-            this.data.currencyCode = "USD"
+            this.data.currencyCode = result.Rate ? (result.Rate.Value == 1 ? "IDR" : "USD") : "IDR";
             this.data.comodity = {
               id: result.Comodity.Id,
               code: result.Comodity.Code,
