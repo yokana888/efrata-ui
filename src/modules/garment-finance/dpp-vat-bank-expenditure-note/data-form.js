@@ -39,9 +39,8 @@ export class DataForm {
         this.data = this.context.data;
         this.error = this.context.error;
 
-        console.log(this);
-
         this.isNotEditable = this.context.isNotEditable;
+        this.isEdit = this.context.isEdit;
 
         this.cancelCallback = this.context.cancelCallback;
 
@@ -116,7 +115,7 @@ export class DataForm {
 
         if (newValue) {
             this.currencyCodeValue = this.data.Currency.Code;
-            if (this.supplier && !this.readOnly) {
+            if (this.supplier && !this.readOnly && !this.isEdit) {
                 let newItems = await this.purchasingService.dppVATBankExpenditureNotes({ supplierId: newValue.Id, currencyCode: this.currency.Code })
                     .then((items) => {
                         return items.map((item) => {
@@ -129,7 +128,7 @@ export class DataForm {
                             return item;
                         })
                     });
-
+                    
                 if (newItems) {
                     this.data.Items = this.data.Items.map((item) => {
                         var newItem = newItems.find((element => element.InternalNote.Id == item.InternalNote.Id));
@@ -146,7 +145,33 @@ export class DataForm {
 
                         return !exist
                     });
-                    this.data.Items = this.data.Items.concat(items);
+                    var dtItems = this.data.Items.concat(items);
+                    var dataItems=[];
+                    for(var dataItem of dtItems){
+                        var dataDetails=[];
+                        var paid=0;
+                        for(var dataDetail of dataItem.InternalNote.Items){
+                            var dt= await this.service.getDetailByNIId(dataDetail.Invoice.Id);
+                            var paidAmount=dt ? dt.PaidAmount : 0;
+                            paid+=paidAmount;
+                            if(dataDetail.Invoice.Amount-paidAmount>0){
+                                dataDetail.Invoice.PaidAmount=dataDetail.Invoice.Amount-paidAmount;
+                                dataDetail.Invoice.Amount=dataDetail.Invoice.Amount-paidAmount;
+                                dataDetails.push(dataDetail);
+                            }
+                        }
+                        dataItem.OutstandingAmount= dataItem.InternalNote.TotalAmount-paid;
+                        if(dataDetails.length>0){
+                            dataItem.InternalNote.Items=dataDetails;
+                            dataItems.push(dataItem);
+                        }
+                    }
+                    if(dataItems.length>0){
+                        this.data.Items =dataItems;
+                    }
+                    else{
+                        this.data.Items =dtItems;
+                    }
                 }
             }
             if (this.bankCurrency == "IDR" && this.currencyCodeValue != "IDR" && this.currencyCodeValue != null && !this.readOnly) {
@@ -165,7 +190,7 @@ export class DataForm {
         this.data.Supplier = newValue;
 
         if (newValue) {
-            if (this.currency && !this.readOnly) {
+            if (this.currency && !this.readOnly && !this.isEdit) {
                 let newItems = await this.purchasingService.dppVATBankExpenditureNotes({ supplierId: newValue.Id, currencyCode: this.currency.Code })
                     .then((items) => {
                         return items.map((item) => {
@@ -174,11 +199,10 @@ export class DataForm {
                                 internalNoteItem.Id = 0;
                                 return internalNoteItem;
                             })
-
                             return item;
                         })
                     });
-
+                    
                 if (newItems) {
                     this.data.Items = this.data.Items.map((item) => {
                         var newItem = newItems.find((element => element.InternalNote.Id == item.InternalNote.Id));
@@ -186,7 +210,6 @@ export class DataForm {
                         if (newItem) {
                             item.InternalNote.Items = item.InternalNote.Items.concat(newItem.InternalNote.Items)
                         }
-
                         return item;
                     })
 
@@ -195,9 +218,34 @@ export class DataForm {
 
                         return !exist
                     });
-                    this.data.Items = this.data.Items.concat(items);
+                    var dtItems = this.data.Items.concat(items);
+                    var dataItems=[];
+                    for(var dataItem of dtItems){
+                        var dataDetails=[];
+                        var paid=0;
+                        for(var dataDetail of dataItem.InternalNote.Items){
+                            var dt= await this.service.getDetailByNIId(dataDetail.Invoice.Id);
+                            var paidAmount=dt ? dt.PaidAmount : 0;
+                            paid+=paidAmount;
+                            if(dataDetail.Invoice.Amount-paidAmount>0){
+                                dataDetail.Invoice.PaidAmount=dataDetail.Invoice.Amount-paidAmount;
+                                dataDetail.Invoice.Amount=dataDetail.Invoice.Amount-paidAmount;
+                                dataDetails.push(dataDetail);
+                            }
+                        }
+                        dataItem.OutstandingAmount= dataItem.InternalNote.TotalAmount-paid;
+                        if(dataDetails.length>0){
+                            dataItem.InternalNote.Items=dataDetails;
+                            dataItems.push(dataItem);
+                        }
+                    }
+                    if(dataItems.length>0){
+                        this.data.Items =dataItems;
+                    }
+                    else{
+                        this.data.Items =dtItems;
+                    }
                 }
-
             }
         } else {
             this.data.Items = [];

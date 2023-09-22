@@ -4,14 +4,16 @@ export class Item {
         this.data = context.data;
         this.readOnly = context.options.readOnly;
         this.isShowing = false;
-
+        
+        this.data.total=this.data.OutstandingAmount;
+        
         if (!this.readOnly) {
             this.collection = {
-                columns: ['', 'No. Invoice', 'Tanggal Invoice', 'Nama Barang', 'Kategori', 'Total']
+                columns: ['', 'No. Invoice', 'Tanggal Invoice', 'Nama Barang', 'Kategori', 'Total Dibayar', 'Total Belum Dibayar']
             };
         } else {
             this.collection = {
-                columns: ['No. Invoice', 'Tanggal Invoice', 'Nama Barang', 'Kategori', 'Total']
+                columns: ['No. Invoice', 'Tanggal Invoice', 'Nama Barang', 'Kategori', 'Total Dibayar', 'Total Belum Dibayar']
             };
         }
     }
@@ -56,11 +58,11 @@ export class Item {
         if (this.data.InternalNote.Items && this.data.InternalNote.Items.length > 0) {
             for (let item of this.data.InternalNote.Items) {
                 if (item.SelectInvoice)
-                    result += item.Invoice.Amount;
+                    result += item.Invoice.PaidAmount;
             }
         }
-
-        this.data.OutstandingAmount = this.data.InternalNote.TotalAmount - result;
+        if(!this.readOnly)
+            this.data.OutstandingAmount = this.data.total - result;
 
         return result;
     }
