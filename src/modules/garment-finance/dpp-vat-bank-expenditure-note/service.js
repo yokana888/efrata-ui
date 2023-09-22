@@ -44,4 +44,9 @@ export class Service extends RestService {
         let endpoint = `${serviceUri}/posting`;
         return super.put(endpoint, data);
     }
+
+    getDetailByNIId(id) {
+        let endpoint = `${serviceUri}/get-detail/${id}`;
+        return super.get(endpoint);
+    }
 }
