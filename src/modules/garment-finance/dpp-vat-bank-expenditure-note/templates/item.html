@@ -70,6 +70,7 @@
 
             <au-collection items.bind="data.InternalNote.Items"
                            read-only.bind="readOnly"
+                           errors.bind="error.Details"
                            columns.bind="collection.columns"
                            item-template="modules/garment-finance/dpp-vat-bank-expenditure-note/templates/detail">
             </au-collection>

@@ -4,6 +4,7 @@ export class Item {
         this.data = context.data;
         this.readOnly = context.options.readOnly;
         this.isShowing = false;
+		this.error = context.error;
         
         this.data.total=this.data.OutstandingAmount;
         

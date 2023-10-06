@@ -79,6 +79,7 @@
 
         <au-collection show.bind="supplier && currency"
                        view-model.ref="ItemsCollection"
+                       errors.bind="error.Items"
                        items.bind="data.Items"
                        columns.bind="collection.columns"
                        read-only.bind="readOnly"
