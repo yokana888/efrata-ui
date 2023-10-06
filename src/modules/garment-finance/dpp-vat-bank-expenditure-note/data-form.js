@@ -193,6 +193,7 @@ export class DataForm {
             if (this.currency && !this.readOnly && !this.isEdit) {
                 let newItems = await this.purchasingService.dppVATBankExpenditureNotes({ supplierId: newValue.Id, currencyCode: this.currency.Code })
                     .then((items) => {
+                        console.log(items)
                         return items.map((item) => {
                             item.Id = 0;
                             item.InternalNote.Items = item.InternalNote.Items.map((internalNoteItem) => {
@@ -239,6 +240,8 @@ export class DataForm {
                             dataItems.push(dataItem);
                         }
                     }
+                    console.log(dataItems)
+                    console.log(dtItems)
                     if(dataItems.length>0){
                         this.data.Items =dataItems;
                     }
