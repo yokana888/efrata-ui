@@ -221,14 +221,41 @@
           options.bind="controlOptions">
         </au-textbox>
 
-        <au-textbox
+        <!-- <au-textbox
           label="Down Payment (DP)"
           value.bind="data.DownPayment"
           error.bind="error.DownPayment"
           read-only.bind="readOnly"
           if.bind="type=='Lokal' || type=='Internal'"
           options.bind="controlOptions">
-        </au-textbox>
+        </au-textbox> -->
+        <div class="row" if.bind="type=='Lokal' || type=='Internal'">
+
+          <div class="col-sm-2" style="padding-left: 10%;">
+            
+            <textbox label="Down Payment (DP)" read-only="true"></textbox>
+            
+          </div>
+
+          <div class="col-sm-6">
+            
+            <au-numeric
+              value.bind="data.DownPayment"
+              error.bind="error.DownPayment"
+              read-only.bind="readOnly"
+              options.bind="controlOptions">
+            </au-numeric>
+            
+          </div>
+
+          <div class="col-sm-1">
+
+              <textbox label="%" read-only="true"></textbox>
+
+          </div>
+
+      </div>
+
         <div class="row" if.bind="type=='Lokal' || type=='Internal'">
 
           <div class="col-sm-2" style="padding-left: 10%;">
@@ -239,13 +266,12 @@
 
           <div class="col-sm-6">
             
-            <au-textbox
+            <au-numeric
               value.bind="data.LatePayment"
               error.bind="error.LatePayment"
-              placeholder="input denda"
               read-only.bind="readOnly"
               options.bind="controlOptions">
-            </au-textbox>
+            </au-numeric>
             
           </div>
 
