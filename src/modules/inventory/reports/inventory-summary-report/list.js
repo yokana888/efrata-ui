@@ -17,7 +17,7 @@ export class List {
         { field: "productName", title: "Nama Barang" },
         {
             field: "quantity", title: "Kuantiti", formatter:(value,data)=>{
-            return value.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         }
         },
         { field: "uom", title: "UOM" }

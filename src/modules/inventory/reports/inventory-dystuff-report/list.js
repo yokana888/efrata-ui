@@ -39,16 +39,16 @@ export class List {
         
    
         { field: "BeginningQty", title: "Saldo Awal", formatter:(value,data)=>{
-            return value.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         }  },
         { field: "ReceiptQty", title: "Masuk", formatter:(value,data)=>{
-            return value.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         } },
         { field: "ExpandQty", title: "Keluar" , formatter:(value,data)=>{
-            return value.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         } },
         { field: "EndingQty", title: "Saldo Akhir" , formatter:(value,data)=>{
-            return value.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            return value.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         } }
     ]
 

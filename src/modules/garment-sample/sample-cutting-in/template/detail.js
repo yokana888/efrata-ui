@@ -47,8 +47,8 @@ export class Item {
             this.data.RemainingQuantity = this.data.CuttingInQuantity;
             this.data.FC=parseFloat((this.data.PreparingQuantity/this.data.CuttingInQuantity).toFixed(2));
 
-            this.data.BasicPrice=parseFloat((this.data.PreparingBasicPrice * this.data.FC).toFixed(4));
-            this.data.Price=parseFloat(((this.data.BasicPrice + (this.data.ComodityPrice * 25/100)) * this.data.CuttingInQuantity).toFixed(4));
+            this.data.BasicPrice=parseFloat((this.data.PreparingBasicPrice * this.data.FC).toFixed(2));
+            this.data.Price=parseFloat(((this.data.BasicPrice + (this.data.ComodityPrice * 25/100)) * this.data.CuttingInQuantity).toFixed(2));
         }
         else 
             this.data.FC=0;

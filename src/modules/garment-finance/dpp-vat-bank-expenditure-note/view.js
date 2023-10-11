@@ -10,11 +10,23 @@ export class View {
         this.service = service;
         this.dialog = dialog;
     }
-
+    isView=true;
     async activate(params) {
         let id = params.id;
         this.data = await this.service.getById(id);
-        // this.data.IsPosted = true;
+        
+        for(var item of this.data.Items){
+            var paid=0;
+            for(var detail of item.InternalNote.Items){
+                var dt= await this.service.getDetailByNIId(detail.Invoice.Id);
+                var paidAmount=dt ? dt.PaidAmount : 0;
+                paid+=paidAmount;
+                if(detail.Invoice.Amount-paidAmount>0){
+                    detail.Invoice.Amount=item.InternalNote.TotalAmount-paid + detail.Invoice.PaidAmount;
+                }
+            }
+            item.OutstandingAmount=item.InternalNote.TotalAmount-paid;
+        }
 
         if (this.data.IsPosted) {
             this.editCallback = undefined;

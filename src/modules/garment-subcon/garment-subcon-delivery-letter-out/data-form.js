@@ -175,7 +175,7 @@ export class DataForm {
             };
     
             var epo = await this.purchasingService.getGarmentEPO(infoEPO)
-            this.data.ContractQty = epo.data.DealQuantity;
+            this.data.ContractQty = epo.data[0].DealQuantity;
 
             this.selectedUomUnit={
                 Unit: this.data.UomUnit
@@ -366,6 +366,7 @@ export class DataForm {
 
                             item.FabricType= uenItem.FabricType;
                             item.ContractQuantity=uenItem.Quantity;
+                            //item.Quantity=item.ContractQuantity;
                             this.data.Items.push(item);
                         }   
                     }

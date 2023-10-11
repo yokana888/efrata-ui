@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - efrata-ui-uat
 on:
   push:
     branches:
-      - uat
+      - newUAT
   workflow_dispatch:
 
 jobs:

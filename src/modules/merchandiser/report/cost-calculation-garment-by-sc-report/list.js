@@ -115,7 +115,7 @@ export class List {
                             BrandName : data.BrandName,
                             Type : data.Type,
                             Quantity : data.Quantity.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
-                            ConfirmPrice : data.ConfirmPrice.toLocaleString('en-EN', { minimumFractionDigits: 4, maximumFractionDigits: 4 }),
+                            ConfirmPrice : data.ConfirmPrice.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 4 }),
                             UOMUnit : data.UOMUnit,
                             Amount : data.Amount.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
                         });

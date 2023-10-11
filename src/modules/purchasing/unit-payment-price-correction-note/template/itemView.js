@@ -15,13 +15,13 @@ export class UnitReceiptNoteItem {
      // this.data.quantity=this.data.quantity.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     }
     if(this.pricePerDealUnitAfter){
-      this.pricePerDealUnitAfter=this.pricePerDealUnitAfter.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+      this.pricePerDealUnitAfter=this.pricePerDealUnitAfter.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     }
     if(this.data.priceTotalAfter){
-      this.data.priceTotalAfter=this.data.priceTotalAfter.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+      this.data.priceTotalAfter=this.data.priceTotalAfter.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     }
     if(this.totalPrice){
-      this.totalPrice=this.totalPrice.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+      this.totalPrice=this.totalPrice.toLocaleString('en-EN', { minimumFractionDigits: 2 });
     }
 
   }

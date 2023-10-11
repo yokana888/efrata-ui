@@ -84,7 +84,7 @@ export class DataForm {
             this.supplierName = this.data.Supplier.code + " - " + this.data.Supplier.name;
         }
         if (this.readOnly) {
-            this.data.Amount = this.data.Amount.toLocaleString('en-EN', { minimumFractionDigits: 4 });
+            this.data.Amount = this.data.Amount.toLocaleString('en-EN', { minimumFractionDigits: 2 });
         }
         if(this.data.Items){
             for(var a of this.data.Items){

@@ -48,10 +48,18 @@ export class List {
       align: "right",
     },
     {
-      field: "InternalNoteAmount",
+      field: "PaidAmount",
       title: "Total Bayar Ke Supplier",
       formatter: function (value, data, index) {
         return value ? numeral(value).format("0,000.00") : "-";
+      },
+      align: "right",
+    },
+    {
+      field: "OutstandingAmount",
+      title: "Total Outstanding",
+      formatter: function (value, data, index) {
+        return numeral(value).format("0,000.00");
       },
       align: "right",
     },
@@ -69,7 +77,7 @@ export class List {
       align: "right",
     },
     {
-      field: "InvoiceAmount",
+      field: "PaidAmountDetail",
       title: "Nilai Dibayar",
       formatter: function (value, data, index) {
         return value ? numeral(value).format("0,000.00") : numeral(0).format("0,000.00");
@@ -170,8 +178,8 @@ export class List {
             before._ExpenditureDate_rowspan = 1;
             before._CategoryName_rowspan = 1;
             before._PaymentMethod_rowspan = 1;
-            before._DPP_rowspan = 1;
-            before._VAT_rowspan = 1;
+            //before._DPP_rowspan = 1;
+            //before._VAT_rowspan = 1;
             before._InternalNoteAmount_rowspan = 1;
             before._CurrencyCode_rowspan = 1;
             before._BankName_rowspan = 1;
@@ -180,8 +188,8 @@ export class List {
             before._ExpenditureDate_rowspan++;
             before._CategoryName_rowspan++;
             before._PaymentMethod_rowspan++;
-            before._DPP_rowspan++;
-            before._VAT_rowspan++;
+            //before._DPP_rowspan++;
+            //before._VAT_rowspan++;
             before._InternalNoteAmount_rowspan++;
             before._CurrencyCode_rowspan++;
             before._BankName_rowspan++;
@@ -193,8 +201,8 @@ export class List {
             result.data[i].ExpenditureDate = undefined;
             result.data[i].CategoryName = undefined;
             result.data[i].PaymentMethod = undefined;
-            result.data[i].DPP = undefined;
-            result.data[i].VAT = undefined;
+            //result.data[i].DPP = undefined;
+            //result.data[i].VAT = undefined;
             result.data[i].InternalNoteAmount = undefined;
             result.data[i].CurrencyCode = undefined;
             result.data[i].BankName = undefined;

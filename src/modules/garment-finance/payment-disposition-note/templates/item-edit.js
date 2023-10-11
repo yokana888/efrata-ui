@@ -29,6 +29,6 @@ export class ItemView {
     }
 
     TotalPaidPaymentChanged(e){
-      this.data.DiffTotalPaidPayment = parseFloat(this.data.TotalPaid.toFixed(4))-(parseFloat(e.srcElement.value)+parseFloat(this.data.TotalPaidPaymentBefore.toFixed(4)))
+      this.data.DiffTotalPaidPayment = parseFloat(this.data.TotalPaid.toFixed(2))-(parseFloat(e.srcElement.value)+parseFloat(this.data.TotalPaidPaymentBefore.toFixed(2)))
     }
 }
