@@ -42,7 +42,7 @@ export class PurchaseOrderItem {
             });
       }
     }
-    this.data.SmallQuantity = parseFloat(this.data.DealQuantity * this.data.Conversion).toFixed(2);
+    this.data.SmallQuantity = parseFloat(this.data.DealQuantity * this.data.Conversion).toFixed(4);
     if(!this.data.UsedBudget ){
       this.data.budgetUsed=(this.data.DealQuantity * this.data.PricePerDealUnit * this.kurs.Rate);
     }
@@ -64,7 +64,7 @@ export class PurchaseOrderItem {
     //   }
     // }
     if(this.options.readOnly){
-      this.data.PricePerDealUnit=parseFloat(this.data.PricePerDealUnit).toFixed(2);
+      this.data.PricePerDealUnit=parseFloat(this.data.PricePerDealUnit).toFixed(4);
     }
     if(!this.options.readOnly)
       this.checkIsOverBudget();
