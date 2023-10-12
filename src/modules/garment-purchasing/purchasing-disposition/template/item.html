@@ -21,6 +21,7 @@
         <td class="col-sm-2">
             <au-numeric 
                 value.bind="vatValue"
+                format = "0,0.0000"
                 show.bind="selectedEPO"
                 read-only="true"
                 error.bind="error.incomeTax">
@@ -37,6 +38,7 @@
         <td class="col-sm-2">
             <au-textbox 
                 value.bind="incomeTax"
+                format = "0,0.0000"
                 show.bind="selectedEPO"
                 read-only="true"
                 error.bind="error.incomeTax">
@@ -45,6 +47,7 @@
         <td class="col-sm-2" if.bind ="false">
             <au-numeric 
                 value.bind="dppValue"
+                format = "0,0.0000"
                 show.bind="selectedEPO"
                 read-only="true"
                 error.bind="error.dppValue">
@@ -55,6 +58,7 @@
                 value.bind="incomeTaxValue"
                 show.bind="selectedEPO"
                 read-only="true"
+                format = "0,0.0000"
                 error.bind="error.incomeTax">
             </au-numeric>
         </td>
@@ -64,6 +68,7 @@
                 value.bind="data.DispositionAmountCreated"
                 show.bind="selectedEPO"
                 read-only="true"
+                format = "0,0.0000"
                 error.bind="error.DispositionAmountCreated">
             </au-numeric>
         </td>
