@@ -26,7 +26,7 @@ export class List {
       field: "PPH",
       title: "PPH",
       formatter: function (value, data, index) {
-        return value ? numeral(value).format("0,000.00") : "-";
+        return value ? numeral(value).format("0,000.0000") : "-";
       },
       align: "right",
     },
@@ -289,9 +289,9 @@ export class List {
               ? moment(data.Date).format("DD MMM YYYY")
               : "-",
             Category: data.Category,
-            DPP: data.DPP ? numeral(data.DPP).format("0,000.00") : "-",
+            DPP: data.DPP ? numeral(data.DPP).format("0,000.0000") : "-",
             PPH: data.IncomeTax
-              ? numeral(data.IncomeTax).format("0,000.00")
+              ? numeral(data.IncomeTax).format("0,000.0000")
               : "-",
             "Mata Uang": data.Currency,
             "Bank Bayar PPH": data.Bank,
