@@ -19,7 +19,7 @@ export class List {
     "RETENSI",
   ];
   isPaidFilter = { IsPaid: true };
-
+  NIFilter={PositionIds:[5]};
   columns = [
     { field: "ExpenditureNoteNo", title: "No Bukti Pengeluaran Bank" },
     {

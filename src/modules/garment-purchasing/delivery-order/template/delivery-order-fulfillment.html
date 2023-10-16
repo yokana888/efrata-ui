@@ -63,6 +63,7 @@
                     value.bind="doQuantity" 
                     error.bind="error.doQuantity" 
                     read-only.bind="options.readOnly" 
+                    format="0.0000"
                     options.bind="controlOptions">
                 </au-numeric>
                 <span class="help-block">Jumlah diterima lebih besar dari jumlah dipesan</span>
@@ -72,6 +73,7 @@
                     value.bind="doQuantity" 
                     error.bind="error.doQuantity" 
                     read-only.bind="options.readOnly"
+                    format="0.0000"
                     options.bind="controlOptions">
                 </au-numeric>
             </div>
@@ -112,6 +114,7 @@
             <au-numeric 
                 value.bind="smallQuantity"
                 read-only.bind="true"
+                format="0.0000"
                 options.bind="controlOptions">
             </au-numeric>
         </td>
@@ -126,6 +129,7 @@
             <au-textbox 
                 value.bind="data.pricePerDealUnit" 
                 read-only.bind="true" 
+                format="0.0000"
                 options.bind="controlOptions">
             </au-textbox>
         </td>
@@ -133,6 +137,7 @@
             <au-numeric 
                 value.bind="priceTotal" 
                 read-only.bind="true" 
+                format="0.0000"
                 options.bind="controlOptions">
             </au-numeric>
         </td>
