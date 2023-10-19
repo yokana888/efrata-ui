@@ -1,6 +1,7 @@
 import { inject, bindable, computedFrom } from 'aurelia-framework';
 import { Service } from './service';
 import { PurchasingService } from './purchasing-service';
+import { CoreService } from './core-service';
 import moment from 'moment';
 
 const BankLoader = require('../shared/bank-account-loader');
@@ -8,7 +9,7 @@ const SupplierLoader = require('../shared/garment-supplier-loader');
 // const CurrencyLoader = require('../shared/garment-currency-loader');
 const CurrencyLoader = require('../../../loader/garment-currencies-by-latest-date-loader');
 
-@inject(Service, PurchasingService)
+@inject(Service, PurchasingService,CoreService)
 export class DataForm {
     @bindable title;
     @bindable readOnly;
@@ -29,16 +30,18 @@ export class DataForm {
         },
     };
 
-    constructor(service, purchasingService) {
+    constructor(service, purchasingService,coreService) {
         this.service = service;
         this.purchasingService = purchasingService;
+        this.coreService = coreService;
     }
 
-    bind(context) {
+    async bind(context) {
         this.context = context;
         this.data = this.context.data;
         this.error = this.context.error;
-
+console.log(context,this.data)
+this.currency=this.data.Currency;
         this.isNotEditable = this.context.isNotEditable;
         this.isEdit = this.context.isEdit;
 
@@ -50,7 +53,7 @@ export class DataForm {
             this.deleteCallback = this.context.deleteCallback;
             this.editCallback = this.context.editCallback;
         }
-
+       
         if (!this.readOnly) {
             this.collection = {
                 columns: ['__check', 'No NI', 'Tanggal NI', 'Tanggal Jatuh Tempo', 'Supplier', 'PPN', 'PPh', 'Total Harga ((DPP + PPN) - PPh)', 'Mata Uang', 'Total Outstanding', '']
@@ -62,7 +65,7 @@ export class DataForm {
         }
 
         this.bankAccount = this.data.Bank || null;
-        this.currency = this.data.Currency || null;
+        //this.currency = this.data.Currency || null;
         this.supplier = this.data.Supplier || null;
 
         this.sameCurrency = true;
@@ -109,89 +112,90 @@ export class DataForm {
       }
     }
 
-    @bindable currency;
-    async currencyChanged(newValue, oldValue) {
-        this.data.Currency = newValue;
+    // @bindable currency;
+    // async currencyChanged(newValue, oldValue) {
+    //     this.data.Currency = newValue;
 
-        if (newValue) {
-            this.currencyCodeValue = this.data.Currency.Code;
-            if (this.supplier && !this.readOnly && !this.isEdit) {
-                let newItems = await this.purchasingService.dppVATBankExpenditureNotes({ supplierId: newValue.Id, currencyCode: this.currency.Code })
-                    .then((items) => {
-                        return items.map((item) => {
-                            item.Id = 0;
-                            item.InternalNote.Items = item.InternalNote.Items.map((internalNoteItem) => {
-                                internalNoteItem.Id = 0;
-                                return internalNoteItem;
-                            })
+    //     if (newValue) {
+    //         this.currencyCodeValue = this.data.Currency.Code;
+    //         if (this.supplier && !this.readOnly && !this.isEdit) {
+    //             let newItems = await this.purchasingService.dppVATBankExpenditureNotes({ supplierId: newValue.Id, currencyCode: this.currency.Code })
+    //                 .then((items) => {
+    //                     return items.map((item) => {
+    //                         item.Id = 0;
+    //                         item.InternalNote.Items = item.InternalNote.Items.map((internalNoteItem) => {
+    //                             internalNoteItem.Id = 0;
+    //                             return internalNoteItem;
+    //                         })
 
-                            return item;
-                        })
-                    });
+    //                         return item;
+    //                     })
+    //                 });
                     
-                if (newItems) {
-                    this.data.Items = this.data.Items.map((item) => {
-                        var newItem = newItems.find((element => element.InternalNote.Id == item.InternalNote.Id));
+    //             if (newItems) {
+    //                 this.data.Items = this.data.Items.map((item) => {
+    //                     var newItem = newItems.find((element => element.InternalNote.Id == item.InternalNote.Id));
 
-                        if (newItem) {
-                            item.InternalNote.Items = item.InternalNote.Items.concat(newItem.InternalNote.Items)
-                        }
+    //                     if (newItem) {
+    //                         item.InternalNote.Items = item.InternalNote.Items.concat(newItem.InternalNote.Items)
+    //                     }
 
-                        return item;
-                    })
+    //                     return item;
+    //                 })
 
-                    let items = newItems.filter((element) => {
-                        let exist = this.data.Items.find((item) => item.InternalNote.Id == element.InternalNote.Id);
+    //                 let items = newItems.filter((element) => {
+    //                     let exist = this.data.Items.find((item) => item.InternalNote.Id == element.InternalNote.Id);
 
-                        return !exist
-                    });
-                    var dtItems = this.data.Items.concat(items);
-                    var dataItems=[];
-                    for(var dataItem of dtItems){
-                        var dataDetails=[];
-                        var paid=0;
-                        for(var dataDetail of dataItem.InternalNote.Items){
-                            var dt= await this.service.getDetailByNIId(dataDetail.Invoice.Id);
-                            var paidAmount=dt ? dt.PaidAmount : 0;
-                            paid+=paidAmount;
-                            if(dataDetail.Invoice.Amount-paidAmount>0){
-                                dataDetail.Invoice.PaidAmount=dataDetail.Invoice.Amount-paidAmount;
-                                dataDetail.Invoice.Amount=dataDetail.Invoice.Amount-paidAmount;
-                                dataDetails.push(dataDetail);
-                            }
-                        }
-                        dataItem.OutstandingAmount= dataItem.InternalNote.TotalAmount-paid;
-                        if(dataDetails.length>0){
-                            dataItem.InternalNote.Items=dataDetails;
-                            dataItems.push(dataItem);
-                        }
-                    }
-                    if(dataItems.length>0){
-                        this.data.Items =dataItems;
-                    }
-                    else{
-                        this.data.Items =dtItems;
-                    }
-                }
-            }
-            if (this.bankCurrency == "IDR" && this.currencyCodeValue != "IDR" && this.currencyCodeValue != null && !this.readOnly) {
-                this.sameCurrency = false;
-            }
-            else {
-                this.sameCurrency = true;
-            }
-        } else {
-            this.data.Items = [];
-        }
-    }
+    //                     return !exist
+    //                 });
+    //                 var dtItems = this.data.Items.concat(items);
+    //                 var dataItems=[];
+    //                 for(var dataItem of dtItems){
+    //                     var dataDetails=[];
+    //                     var paid=0;
+    //                     for(var dataDetail of dataItem.InternalNote.Items){
+    //                         var dt= await this.service.getDetailByNIId(dataDetail.Invoice.Id);
+    //                         var paidAmount=dt ? dt.PaidAmount : 0;
+    //                         paid+=paidAmount;
+    //                         if(dataDetail.Invoice.Amount-paidAmount>0){
+    //                             dataDetail.Invoice.PaidAmount=dataDetail.Invoice.Amount-paidAmount;
+    //                             dataDetail.Invoice.Amount=dataDetail.Invoice.Amount-paidAmount;
+    //                             dataDetails.push(dataDetail);
+    //                         }
+    //                     }
+    //                     dataItem.OutstandingAmount= dataItem.InternalNote.TotalAmount-paid;
+    //                     if(dataDetails.length>0){
+    //                         dataItem.InternalNote.Items=dataDetails;
+    //                         dataItems.push(dataItem);
+    //                     }
+    //                 }
+    //                 if(dataItems.length>0){
+    //                     this.data.Items =dataItems;
+    //                 }
+    //                 else{
+    //                     this.data.Items =dtItems;
+    //                 }
+    //             }
+    //         }
+    //         if (this.bankCurrency == "IDR" && this.currencyCodeValue != "IDR" && this.currencyCodeValue != null && !this.readOnly) {
+    //             this.sameCurrency = false;
+    //         }
+    //         else {
+    //             this.sameCurrency = true;
+    //         }
+    //     } else {
+    //         this.data.Items = [];
+    //     }
+    // }
 
     @bindable supplier;
     async supplierChanged(newValue, oldValue) {
         this.data.Supplier = newValue;
 
         if (newValue) {
+            console.log(this.currency);
             if (this.currency && !this.readOnly && !this.isEdit) {
-                let newItems = await this.purchasingService.dppVATBankExpenditureNotes({ supplierId: newValue.Id, currencyCode: this.currency.Code })
+                let newItems = await this.purchasingService.dppVATBankExpenditureNotes({ supplierId: newValue.Id, currencyCode: this.currency.code })
                     .then((items) => {
                         console.log(items)
                         return items.map((item) => {
@@ -240,8 +244,6 @@ export class DataForm {
                             dataItems.push(dataItem);
                         }
                     }
-                    console.log(dataItems)
-                    console.log(dtItems)
                     if(dataItems.length>0){
                         this.data.Items =dataItems;
                     }
