@@ -2,17 +2,22 @@ import { inject, Lazy } from "aurelia-framework";
 import { Router } from "aurelia-router";
 import { Service } from "./service";
 import { activationStrategy } from "aurelia-router";
+import { CoreService } from './core-service';
 
-@inject(Router, Service)
+@inject(Router, Service,CoreService)
 export class Create {
-    constructor(router, service) {
+    constructor(router, service,coreService) {
         this.router = router;
         this.service = service;
+        this.coreService = coreService;
         this.data = {};
     }
 
-    activate(params) { }
-
+    async activate(context) {
+        let currencyResult=await this.coreService.getCurrency({ size: 1, filter: JSON.stringify({ Code:"IDR" }) });
+        this.currency = currencyResult.data[0];
+        this.data.Currency=this.currency;
+    }
     list() {
         this.router.navigateToRoute("list");
     }

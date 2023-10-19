@@ -5,7 +5,6 @@ import { RestService } from '../../../utils/rest-service';
 const serviceUri = "dpp-vat-bank-expenditure-notes";
 
 export class Service extends RestService {
-
     constructor(http, aggregator, config, api) {
         super(http, aggregator, config, "finance");
     }
