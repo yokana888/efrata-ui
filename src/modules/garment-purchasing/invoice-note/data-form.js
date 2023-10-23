@@ -1,11 +1,11 @@
 import { inject, bindable, containerless, computedFrom, BindingEngine } from 'aurelia-framework'
-import { Service } from "./service";
+import { Service,CoreService } from "./service";
 var SupplierLoader = require('../../../loader/garment-supplier-loader');
 var CurrencyLoader = require('../../../loader/garment-currencies-by-date-loader');
 var IncomeTaxLoader = require('../../../loader/vat-loader');
 var VatLoader = require('../../../loader/vat-tax-loader');
 
-@inject(BindingEngine, Element, Service)
+@inject(BindingEngine, Element, Service,CoreService)
 export class DataForm {
     @bindable readOnly = false;
     @bindable data = {};
@@ -48,10 +48,11 @@ export class DataForm {
             { header: "Total Amount" }]
     }
 
-    constructor(bindingEngine, element, service) {
+    constructor(bindingEngine, element, service,coreService) {
         this.bindingEngine = bindingEngine;
         this.element = element;
         this.service = service;
+        this.coreService=coreService;
     }
 
     @computedFrom("data.Id")
@@ -203,7 +204,6 @@ export class DataForm {
         
         if (selectedVat) {
             if (selectedVat.Id) {
-                
                 //this.data.vat = selectedVat;
                 this.data.vatId = selectedVat.Id;
                 this.data.vatRate = selectedVat.Rate;
@@ -276,14 +276,22 @@ export class DataForm {
         }
     }
 
-    useVatChanged(e) {
+    async useVatChanged(e) {
         var selectedUseVat = e.srcElement.checked || false;
         this.data.vatNo = "";
         this.data.vatDate = "";
         this.data.vatId = 0;
         this.data.vatRate = 0;
+        this.data.vat = 0;
         //this.context.vatTaxVM.editorValue = "";
-        
+        if(selectedUseVat){
+            let vatResult=await this.coreService.getVat({ size: 1, filter: JSON.stringify({ Name:"11" }) });
+            this.vatTax = vatResult.data[0];
+            this.data.vat = this.vatTax.Id;
+            this.data.vatRate = this.vatTax.Rate;
+            this.options.vatId = this.vatTax.Id;
+            this.options.vatRate = this.vatTax.Rate;
+        }
         this.options.useVat = selectedUseVat;
         if (!this.data.useVat) {
             this.data.isPayVat = false;
