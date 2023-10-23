@@ -8,7 +8,7 @@ const serviceUri = 'garment-invoices';
 // const deliveryOrderUri = 'garment-delivery-orders/no-invoice';
 // const deliveryOrderUriRouter = 'garment-delivery-orders';
 
-export class Service extends RestService {
+class Service extends RestService {
 
     constructor(http, aggregator, config, endpoint) {
         super(http, aggregator, config, "purchasing-azure");
@@ -54,3 +54,19 @@ export class Service extends RestService {
         return super.list(endpoint, info);
     }
 }
+
+const resource = 'master/vat';
+
+class CoreService extends RestService {
+    constructor(http, aggregator, config, api) {
+        super(http, aggregator, config, "core");
+    }
+
+    getVat(info) {
+        var endpoint = `${resource}`;
+        return super.list(endpoint, info);
+    }
+
+}
+
+export { Service,CoreService }
