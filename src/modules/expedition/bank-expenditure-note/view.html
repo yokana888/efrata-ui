@@ -3,6 +3,12 @@
     <au-input-form title="Bukti Pengeluaran Bank DPP + PPN"
                    options.bind="formOptions">
 
+        <au-textbox label="No. Bukti Pengeluaran Bank"
+                   value.bind="data.DocumentNo"
+                   read-only.bind="true"
+                   options.bind="controlOptions">
+        </au-textbox>
+
         <au-textbox label="Bank"
                     value.bind="bankView"
                     read-only.bind="true"

@@ -23,14 +23,14 @@
         </au-textbox>
 
         <au-textbox label="Mata Uang"
-                    value.bind="data.CurrencyCode"
+                    value.bind="data.Currency.Code"
                     read-only.bind="true"
                     options.bind="controlOptions"
                     show.bind="IDR">
         </au-textbox>
 
         <au-numeric label="Rate"
-                    value.bind="data.CurrencyRate"
+                    value.bind="data.Currency.Rate"
                     read-only.bind="true"
                     options.bind="controlOptions"
                     show.bind="IDR">
@@ -57,7 +57,7 @@
         <au-datepicker label="Tanggal"
                        value.bind="data.Date"
                        error.bind="error.Date"
-                       options.bind="controlOptions1">
+                       options.bind="controlOptions">
         </au-datepicker>
 
         <div class="row">
@@ -81,7 +81,7 @@
                        errors.bind="error.Details"
                        columns.bind="collection.columns"
                        checkall.delegate="onCheckAll($event)"
-                       item-template="modules/expedition/bank-expenditure-note/templates/item"
+                       item-template="modules/expedition/bank-expenditure-note/templates/item-edit"
                        options.bind="collectionOptions">
         </au-collection>
 

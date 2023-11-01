@@ -66,4 +66,18 @@ class Service extends RestService {
     }
 }
 
-export default Service;
+const currencyServiceUri = "master/garment-currencies";
+
+class CoreService extends RestService {
+    constructor(http, aggregator, config, api) {
+        super(http, aggregator, config, "core");
+    }
+
+    getCurrency(info) {
+        var endpoint = `${currencyServiceUri}`;
+        return super.list(endpoint, info);
+    }
+
+}
+
+export {Service,CoreService} ;

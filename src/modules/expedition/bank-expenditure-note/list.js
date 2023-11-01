@@ -1,5 +1,5 @@
 import { inject } from 'aurelia-framework';
-import Service from './service';
+import {Service } from './service';
 import { Router } from 'aurelia-router';
 import moment from 'moment';
 import numeral from 'numeral';
@@ -30,7 +30,6 @@ export class List {
             field: 'Date',
             title: 'Tanggal',
             formatter: function(value, data, index) {
-                console.log("dateValue", value);
                 return moment(value).format('DD MMM YYYY');
             },
         },

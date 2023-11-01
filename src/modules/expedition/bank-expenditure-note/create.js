@@ -9,9 +9,9 @@ import BankLoader from '../../../loader/account-banks-loader';
 
 import CurrencyLoader from '../../../loader/garment-currency-loader';
 
-import Service from './service';
+import {Service,CoreService} from './service';
 
-@inject(Router, Service, Dialog)
+@inject(Router, Service, Dialog,CoreService)
 export class Create {
     controlOptions = {
         label: {
@@ -39,10 +39,21 @@ export class Create {
         saveText: 'Simpan',
     };
 
-    constructor(router, service, dialog) {
+    async activate(context) {
+        let currencyResult=await this.coreService.getCurrency({ size: 1, filter: JSON.stringify({ Code:"IDR" }) });
+        this.selectedCurrency = currencyResult.data[0];
+        this.data.Currency=this.selectedCurrency;
+        this.data.CurrencyCode=this.selectedCurrency.code;
+        this.data.CurrencyId=this.selectedCurrency.Id;
+        this.data.CurrencyRate=this.selectedCurrency.rate;
+        this.IDR =true;
+    }
+
+    constructor(router, service, dialog,coreService) {
         this.router = router;
         this.service = service;
         this.dialog = dialog;
+        this.coreService = coreService;
         this.data = {};
         if (!this.IDR || this.sameCurrency) {
             this.collection = {
@@ -212,7 +223,7 @@ export class Create {
         this.data.Supplier = newVal;
         if (newVal) {
             if (this.selectedBank && this.selectedBank.Currency.Code) {
-                var currency = this.data.CurrencyCode ? this.data.CurrencyCode : this.selectedBank.Currency.Code;
+                var currency = this.data.Currency ? this.data.Currency.Code : this.selectedBank.Currency.Code;
                 let arg = {
                     page: 1,
                     size: Number.MAX_SAFE_INTEGER,
@@ -221,9 +232,15 @@ export class Create {
 
                 this.UPOResults = await this.service.searchAllByPosition(arg)
                     .then((result) => {
-                        let resultData = result.data && result.data.length > 0 ? result.data.filter((datum) => datum.PaymentMethod && datum.PaymentMethod.toLowerCase() != "cash" && datum.IsPosted == true) : [];
-
-                        return resultData;
+                        let resultData = result.data && result.data.length > 0 ? result.data.filter((datum) => datum.PaymentMethod && datum.PaymentMethod.toLowerCase() != "cash" ) : [];
+                        var items=[];
+                        for(var item of resultData){
+                            console.log(item)
+                            if(item.TotalPaid-item.AmountPaid>0){
+                                items.push(item);
+                            }
+                        }
+                        return items;
                     });
             }
         } else {
@@ -265,7 +282,7 @@ export class Create {
     currency = "";
     async selectedBankChanged(newVal) {
         this.data.Bank = newVal;
-        this.IDR = false;
+        //this.IDR = false;
         if (newVal) {
             console.log(newVal);
             if (this.selectedSupplier) {
@@ -277,8 +294,10 @@ export class Create {
 
                 this.UPOResults = await this.service.searchAllByPosition(arg)
                     .then((result) => {
+                        console.log(result)
                         let resultData = result.data && result.data.length > 0 ? result.data.filter((datum) => datum.PaymentMethod && datum.PaymentMethod.toLowerCase() != "cash" && datum.IsPosted == true) : [];
 
+                        console.log(resultData)
                         return resultData;
                     });
             }

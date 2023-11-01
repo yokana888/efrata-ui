@@ -2,7 +2,7 @@ import { inject, Lazy, bindable } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
 import { Dialog } from '../../../components/dialog/dialog'
 
-import Service from './service';
+import {Service }  from './service';
 
 
 @inject(Router, Service, Dialog)
@@ -69,18 +69,24 @@ export class Edit {
 
         let newData = await this.service.searchAllByPosition(arg)
             .then((result) => {
-                let resultData = result.data && result.data.length > 0 ? result.data.filter((datum) => datum.PaymentMethod && datum.PaymentMethod.toLowerCase() != "cash" && datum.IsPosted == true) : [];
-                
-                return resultData;
+                let resultData = result.data && result.data.length > 0 ? result.data.filter((datum) => datum.PaymentMethod && datum.PaymentMethod.toLowerCase() != "cash" ) : [];
+                var items=[];
+                for(var item of resultData){
+                    var upoExist= this.UPOResults.find(a=>a.UnitPaymentOrderNo==item.UnitPaymentOrderNo)
+                    if(!upoExist){
+                        items.push(item);
+                    }
+                }
+                return items;
             });
 
         if (newData.length > 0) {
             this.UPOResults = this.UPOResults.concat(newData);
         }
-
+        console.log(this.UPOResults);
         for (var a of this.data.Details) {
-            a.SupplierName = this.data.Supplier.Name;
-            a.Currency = this.data.Bank.Currency.Code;
+            a.SupplierName = this.data.Supplier.name;
+            a.Currency = this.data.CurrencyCode;
             a.PaymentDifference = a.TotalPaid - (a.AmountPaid + a.SupplierPayment);
         }
 
@@ -107,7 +113,8 @@ export class Edit {
         this.collectionOptions = {
             IDR: this.IDR,
             rate: this.data.CurrencyRate,
-            SameCurrency: this.sameCurrency
+            SameCurrency: this.sameCurrency,
+            DocumentNo: this.data.DocumentNo
         };
     }
 
