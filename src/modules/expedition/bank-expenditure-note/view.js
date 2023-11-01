@@ -1,6 +1,6 @@
 import { inject, Lazy, bindable } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
-import Service from './service';
+import {Service } from './service';
 import { Dialog } from '../../../au-components/dialog/dialog'
 
 
@@ -52,9 +52,10 @@ export class View {
     async activate(params) {
         var id = params.id;
         this.data = await this.service.getById(id);
+        
         for (var a of this.data.Details) {
-            a.SupplierName = this.data.Supplier.Name;
-            a.Currency = this.data.Bank.Currency.Code;
+            a.SupplierName = this.data.Supplier.name;
+            a.Currency = this.data.CurrencyCode;
             a.PaymentDifference = a.TotalPaid - (a.AmountPaid + a.SupplierPayment);
         }
 
@@ -87,10 +88,31 @@ export class View {
         this.collectionOptions = {
             IDR: this.IDR,
             rate: this.data.CurrencyRate,
-            SameCurrency: this.sameCurrency
+            SameCurrency: this.sameCurrency,
+            DocumentNo: this.data.DocumentNo
         };
-        console.log(this.IDR)
+        
         this.bankView = this.data.Bank.AccountName ? `${this.data.Bank.AccountName} - A/C : ${this.data.Bank.AccountNumber}` : '';
+        
+        for(var d of this.data.Details){
+            
+            let arg = {
+                page: 1,
+                size: Number.MAX_SAFE_INTEGER,
+                filter: JSON.stringify({ "BankExpenditureNoteNo":d.DocumentNo }) //CASHIER DIVISION
+            };
+    
+            await this.service.searchAllByPosition(arg)
+                .then((result) => {
+                    d.AmountPaid=result.data[0].AmountPaid-d.SupplierPayment;
+                    d.PaymentDifference=d.TotalPaid-(d.AmountPaid+d.SupplierPayment);
+                });
+        }
+
+        var canUpdate= this.data.Details.find(a=>a.PaymentDifference>0);
+        if(!canUpdate){
+            this.editCallback=null;
+        }
     }
 
     cancelCallback(event) {

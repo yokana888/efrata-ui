@@ -40,8 +40,7 @@ export class DataForm {
         this.context = context;
         this.data = this.context.data;
         this.error = this.context.error;
-console.log(context,this.data)
-this.currency=this.data.Currency;
+        this.currency=this.data.Currency;
         this.isNotEditable = this.context.isNotEditable;
         this.isEdit = this.context.isEdit;
 
@@ -193,11 +192,9 @@ this.currency=this.data.Currency;
         this.data.Supplier = newValue;
 
         if (newValue) {
-            console.log(this.currency);
             if (this.currency && !this.readOnly && !this.isEdit) {
                 let newItems = await this.purchasingService.dppVATBankExpenditureNotes({ supplierId: newValue.Id, currencyCode: this.currency.code })
                     .then((items) => {
-                        console.log(items)
                         return items.map((item) => {
                             item.Id = 0;
                             item.InternalNote.Items = item.InternalNote.Items.map((internalNoteItem) => {
