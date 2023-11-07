@@ -5,7 +5,7 @@ import XLSX from "xlsx";
 import { Service } from "./service";
 
 const DPPVATExpenditureDocumentLoader = require("../shared/dpp-vat-expenditure-loader");
-const InternalNoteLoader = require("../shared/internal-note-loader");
+const InternalNoteLoader = require("../../../loader/garment-intern-note-loader");
 const InvoiceLoader = require("../shared/invoice-loader");
 const SupplierLoader = require("../shared/garment-supplier-loader");
 
@@ -19,7 +19,7 @@ export class List {
     "RETENSI",
   ];
   isPaidFilter = { IsPaid: true };
-  NIFilter={PositionIds:[5]};
+  NIFilter={Position:5};
   columns = [
     { field: "ExpenditureNoteNo", title: "No Bukti Pengeluaran Bank" },
     {
@@ -324,6 +324,7 @@ export class List {
     this.info.paymentMethod = "";
     this.error.dateFrom = undefined;
     this.error.dateTo = undefined;
+    this.info.internalNoteId=undefined;
     this.tableList.refresh();
   }
 
