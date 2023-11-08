@@ -128,44 +128,44 @@ export class List {
     };
 
     if (this.info.bankExpenditureNote)
-      arg.expenditureId = this.info.bankExpenditureNote.Id;
-    if (this.info.unitPaymentOrder)
-      arg.internalNoteId = this.info.unitPaymentOrder.Id;
-    if (this.info.invoice) arg.invoiceId = this.info.invoice.Id;
-    if (this.info.supplier) arg.supplierId = this.info.supplier.Id;
-    if (
-      (this.info.dateFrom && this.info.dateFrom != "Invalid Date") ||
-      (this.info.dateTo && this.info.dateTo != "Invalid Date")
-    ) {
-      arg.startDate =
-        this.info.dateFrom && this.info.dateFrom != "Invalid Date"
-          ? this.info.dateFrom
-          : "";
-      arg.endDate =
-        this.info.dateTo && this.info.dateTo != "Invalid Date"
-          ? this.info.dateTo
-          : "";
+        arg.expenditureId = this.info.bankExpenditureNote.Id;
+      if (this.info.unitPaymentOrder)
+        arg.internalNoteId = this.info.unitPaymentOrder.Id;
+      if (this.info.invoice) arg.invoiceId = this.info.invoice.Id;
+      if (this.info.supplier) arg.supplierId = this.info.supplier.Id;
+      if (
+        (this.info.dateFrom && this.info.dateFrom != "Invalid Date") ||
+        (this.info.dateTo && this.info.dateTo != "Invalid Date")
+      ) {
+        arg.startDate =
+          this.info.dateFrom && this.info.dateFrom != "Invalid Date"
+            ? this.info.dateFrom
+            : "";
+        arg.endDate =
+          this.info.dateTo && this.info.dateTo != "Invalid Date"
+            ? this.info.dateTo
+            : "";
 
-      if (!arg.dateFrom) {
-        arg.startDate = new Date(arg.startDate);
+        if (!arg.startDate) {
+          arg.startDate = new Date(arg.startDate);
+          arg.startDate.setMonth(arg.startDate.getMonth() - 1);
+        }
+
+        if (!arg.endDate) {
+          arg.endDate = new Date(arg.startDate);
+          arg.endDate.setMonth(arg.endDate.getMonth() + 1);
+        }
+
+        arg.startDate = moment(arg.startDate).format("MM/DD/YYYY");
+        arg.endDate = moment(arg.endDate).format("MM/DD/YYYY");
+      } else {
+        arg.startDate = new Date();
         arg.startDate.setMonth(arg.startDate.getMonth() - 1);
+        arg.endDate = new Date();
+
+        arg.startDate = moment(arg.startDate).format("MM/DD/YYYY");
+        arg.endDate = moment(arg.endDate).format("MM/DD/YYYY");
       }
-
-      if (!arg.endDate) {
-        arg.endDate = new Date(arg.startDate);
-        arg.endDate.setMonth(arg.endDate.getMonth() + 1);
-      }
-
-      arg.startDate = moment(arg.startDate).format("MM/DD/YYYY");
-      arg.endDate = moment(arg.endDate).format("MM/DD/YYYY");
-    } else {
-      arg.startDate = new Date();
-      arg.startDate.setMonth(arg.startDate.getMonth() - 1);
-      arg.endDate = new Date();
-
-      arg.startDate = moment(arg.startDate).format("MM/DD/YYYY");
-      arg.endDate = moment(arg.endDate).format("MM/DD/YYYY");
-    }
 
     return this.flag
       ? this.service.search(arg).then((result) => {
