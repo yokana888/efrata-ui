@@ -178,17 +178,17 @@ export class DataForm {
 
     fabricTypeChanged(newValue, oldValue) {
         var selectedfabric = newValue;
-        console.log(newValue);
-        console.log(this.data.packingListType);
-        if (selectedfabric && this.data.packingListType == "LOKAL") {
-            this.data.fabricTypeId = 0 ;
-            this.data.fabricType = selectedfabric;
-        } else if (selectedfabric && this.data.packingListType == "EXPORT") {
-            this.data.fabricTypeId = selectedfabric.Id;
-            this.data.fabricType = selectedfabric.Name;
+        if (selectedfabric && this.data.packingListType == "EXPORT") {
+                this.data.fabricTypeId = selectedfabric.Id;
+                this.data.fabricType = selectedfabric.Name;
         }
-
-        console.log(this.data.fabricType);
+        // if (selectedfabric && this.data.packingListType == "LOKAL") {
+        //     this.data.fabricTypeId = 0 ;
+        //     this.data.fabricType = selectedfabric;
+        // } else if (selectedfabric && this.data.packingListType == "EXPORT") {
+        //     this.data.fabricTypeId = selectedfabric.Id;
+        //     this.data.fabricType = selectedfabric.Name;
+        // }
     }
 
     async packinglistsChanged(newValue, oldValue) {

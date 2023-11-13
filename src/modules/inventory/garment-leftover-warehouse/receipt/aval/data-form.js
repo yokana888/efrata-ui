@@ -164,7 +164,7 @@ export class DataForm {
         if(!this.data.Id && this.data.Items){
 
             this.data.Items.splice(0);
-            this.data.TotalAval=0;
+            //this.data.TotalAval=0;
         }
 
 
@@ -180,7 +180,7 @@ export class DataForm {
         if(!this.data.Id && this.data.Items){
 
             this.data.Items.splice(0);
-            this.data.TotalAval=0;
+            //this.data.TotalAval=0;
         }
     }
 
@@ -224,7 +224,7 @@ export class DataForm {
                         qty += detail.Quantity;
                 }
             }
-            this.data.TotalAval=qty;
+            //this.data.TotalAval=qty;
             return qty;
         }
 
@@ -233,12 +233,8 @@ export class DataForm {
             for(var item of this.data.Items){
                 qty += item.Quantity;
             }
-            this.data.TotalAval=qty;
+            //this.data.TotalAval=qty;
             return qty;
         }
-
-       
     }
-
-    
 }
