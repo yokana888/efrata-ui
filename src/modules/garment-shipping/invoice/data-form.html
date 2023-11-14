@@ -78,12 +78,13 @@
             </au-autocomplete>
             <au-autocomplete label="Jenis Fabric" value.bind="fabricType" error.bind="error.FabricType"
                 read-only.bind="readOnly " loader.bind="fabricTypeLoader" text.bind="fabricTypeView"
-                placeholder="Cari Jenis Fabric" options.bind="length4" view-model.ref="fabricTypeViewModel" if.bind = "isPackinglistType">
-            </au-autocomplete>
+                placeholder="Cari Jenis Fabric" options.bind="length4" view-model.ref="fabricTypeViewModel"></au-autocomplete> 
+                <!-- if.bind = "isPackinglistType"> -->
+            
 
-            <au-textbox label="Jenis Fabric" value.bind="fabricType"
+            <!-- <au-textbox label="Jenis Fabric" value.bind="fabricType"
                 error.bind="error.FabricType" read-only.bind="readOnly" options.bind="length4" if.bind = "!isPackinglistType">
-            </au-textbox>
+            </au-textbox> -->
             <au-autocomplete label="Bank Detail" value.bind="bankAccount" error.bind="error.BankAccount"
                 read-only.bind="readOnly" loader.bind="accountBankLoader" text.bind="accountBankView"
                 placeholder="Cari Bank" query.bind="bankFilter" options.bind="length4">
