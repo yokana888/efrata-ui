@@ -2,6 +2,7 @@ import { inject } from 'aurelia-framework';
 import { Service } from "./service";
 
 const UnitLoader = require('../../../../../../loader/garment-units-loader');
+var StockLoader = require('../../../../../../loader/garment-leftover-warehouse-stock-loader');
 import moment from 'moment';
 
 @inject(Service)
@@ -20,6 +21,9 @@ export class List {
         return `${unit.Code} - ${unit.Name}`;
     
     }
+    roView = (stock) => {
+        return `${stock.RONo}`
+    }
     controlOptions = {
         label: {
             length: 4
@@ -28,6 +32,10 @@ export class List {
             length: 4
         }
     };
+
+    get stockLoader() {
+        return StockLoader;
+    }
 
     tableOptions = {
         search: false,
@@ -64,7 +72,8 @@ export class List {
         this.dateTo = undefined;
         this.dateFrom = undefined;
         this.error = {};
-        this.unit = {},
+        this.unit = null;
+        this.stock = null;
         this.flag = false;
         this.mdnTable.refresh();
     }
@@ -82,8 +91,8 @@ export class List {
             dateFrom: moment(this.dateFrom).format("MM/DD/YYYY"),
             dateTo: moment(this.dateTo).format("MM/DD/YYYY"),
             unit : this.unit ? this.unit.Id : "",
+            ro : this.stock ? this.stock.RONo : "",
         };
-        console.log(args);
         return this.flag ?
             (
                 this.service.search(args)
@@ -108,6 +117,7 @@ export class List {
             dateFrom: moment(this.dateFrom).format("MM/DD/YYYY"),
             dateTo: moment(this.dateTo).format("MM/DD/YYYY"),
             unit : this.unit ? this.unit.Id : "",
+            ro : this.stock ? this.stock.RONo : "",
         };
         this.service.xls(args);
     }

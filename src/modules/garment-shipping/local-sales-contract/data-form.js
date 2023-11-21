@@ -81,11 +81,11 @@ export class DataForm {
             this.items.options.transactionTypeId = this.data.transactionType.id;
         }
         if(!this.data.sellerAddress || this.data.sellerAddress==""){
-            this.data.sellerAddress="PT EFRATA GARMINDO UTAMA (DIVISI GARMENT) - \nJl. Cemani, Banaran Baru, Cemani, Kec. Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552";
+            this.data.sellerAddress="PT EFRATA GARMINDO UTAMA (DIVISI GARMENT) - \nJl. Merapi No.23 Blok E1, Desa/Kelurahan Banaran, Kec. Grogol, Kab. Sukoharjo, Provinsi Jawa Tengah 57552";
         }
 
         if(!this.data.sellerNPWP || this.data.sellerNPWP==""){
-            this.data.sellerNPWP="01.139.907.8-532.000";
+            this.data.sellerNPWP="31.579.110.3-532.000";
         }
 
         this.selectedVatTax = this.data.vat || false;       

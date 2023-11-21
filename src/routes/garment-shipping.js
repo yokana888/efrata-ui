@@ -702,7 +702,7 @@ module.exports = [
         settings: {
             group: "g-shipping",
             subGroup: "penjualan lokal",
-            permission : {'H53' : 1},
+            //permission : {'H53' : 1},
 
             //permission: { "C9": 1, "SP": 2, "PDU":1  },
             iconClass: "fa fa-dashboard"

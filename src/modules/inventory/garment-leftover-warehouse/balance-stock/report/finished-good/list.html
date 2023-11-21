@@ -15,18 +15,26 @@
             options.bind="controlOptions"
             error.bind="error.date">
         </au-datepicker>
-        <au-autocomplete 
-        value.bind="unit" 
-        label="Unit" 
-        loader.bind="unitLoader"
-        placeholder="Cari Nama Unit" 
-        read-only.bind="readOnly" 
-        text.bind="unitView"
-        options.bind="controlOptions">
-    </au-autocomplete>
 
-       
+        <au-autocomplete 
+            value.bind="unit" 
+            label="Unit" 
+            loader.bind="unitLoader"
+            placeholder="Cari Nama Unit" 
+            read-only.bind="readOnly" 
+            text.bind="unitView"
+            options.bind="controlOptions">
+        </au-autocomplete>
         
+        <au-autocomplete
+            value.bind="stock"
+            loader.bind="stockLoader"
+            label="RO" 
+            placeholder="Cari RO"
+            text.bind = "roView"
+            options.bind="controlOptions">
+        </au-autocomplete>
+
         <div class="form-group">
             <label for="contact" class="col-sm-5 control-label"></label>
             <div class="col-sm-3">
