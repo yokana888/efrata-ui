@@ -1211,5 +1211,19 @@ module.exports = [
             //permission: { "B1": 1, "C9": 1, "PDU":1,"PG": 1 },
             iconClass: 'fa fa-dashboard'
         }
+    },
+    {
+        route: '/garment-do-items',
+        name: 'garment-do-items',
+        moduleId: './modules/garment-purchasing/garment-do-items/index',
+        nav: true,
+        title: 'Inventory Racking',
+        auth: true,
+        settings: {
+            group: "g-purchasing",
+            subGroup: "fitur",
+            permission: { "H59" :1 },
+            iconClass: 'fa fa-dashboard'
+        }
     }
 ]

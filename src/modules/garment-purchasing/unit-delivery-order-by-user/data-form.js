@@ -76,6 +76,22 @@ export class DataForm {
                 "Satuan",
                 "Tipe Fabric"
             ];
+
+            this.itemsFabric.columns = [
+                "Kode Barang",
+                "Nama Barang",
+                "Keterangan Barang",
+                "RO Asal",
+                "Jumlah DO Awal",
+                "Jumlah DO",
+                "Satuan",
+                "Tipe Fabric",
+                "Warna",
+                "Rak",
+                "Box",
+                "Level",
+                "Area",
+            ];
         }
         
         if (this.data) {
@@ -184,9 +200,10 @@ export class DataForm {
             };
             return this.service.searchMoreDOItems(info)
                 .then((result) => {
-                    console.log(result)
-                    let itemIds = this.data.Items.map(i => i.URNItemId);
-                    return result.data.filter(data => data && itemIds.indexOf(data.URNItemId) < 0);
+                    //let itemIds = this.data.Items.map(i => i.URNItemId);
+                    let itemIds = this.data.Items.map(i => i.DOItemsId);
+                    //return result.data.filter(data => data && itemIds.indexOf(data.URNItemId) < 0);
+                    return result.data.filter(data => data && (itemIds.indexOf(data.DOItemsId) < 0));
                 });
         }
     }
@@ -391,6 +408,12 @@ export class DataForm {
                                 Items.IsSave = Items.Quantity > 0;
                                 Items.IsDisabled = !(Items.Quantity > 0);
                                 Items.CustomsCategory=item.CustomsCategory;
+
+                                Items.Rack = item.Rack;
+                                Items.Level = item.Level;
+                                Items.Box = item.Box;
+                                Items.Colour = item.Colour;
+                                Items.Area = item.Area;
                                 this.dataItems.push(Items);
                             }
                         }
@@ -449,6 +472,11 @@ export class DataForm {
                                 Items.IsDisabled = !(Items.Quantity > 0);
                                 Items.CustomsCategory=item.CustomsCategory;
                 
+                                Items.Rack = item.Rack;
+                                Items.Level = item.Level;
+                                Items.Box = item.Box;
+                                Items.Colour = item.Colour;
+                                Items.Area = item.Area;
                                 this.dataItems.push(Items);
                             }
                         }
@@ -501,7 +529,12 @@ export class DataForm {
                                 Items.IsSave = Items.Quantity > 0;
                                 Items.IsDisabled = !(Items.Quantity > 0);
                                 Items.CustomsCategory=item.CustomsCategory;
-                
+                                
+                                Items.Rack = item.Rack;
+                                Items.Level = item.Level;
+                                Items.Box = item.Box;
+                                Items.Colour = item.Colour;
+                                Items.Area = item.Area;
                                 this.dataItems.push(Items);
                             }
                         }
@@ -684,6 +717,12 @@ export class DataForm {
                         this.newProduct.Quantity = this.newProduct.DefaultDOQuantity;
                         this.newProduct.IsSave = this.newProduct.Quantity > 0;
                         this.newProduct.IsDisabled = !(this.newProduct.Quantity > 0);
+
+                        this.newProduct.Rack = selectedROHeader.Rack;
+                        this.newProduct.Level = selectedROHeader.Level;
+                        this.newProduct.Box = selectedROHeader.Box;
+                        this.newProduct.Colour = selectedROHeader.Colour;
+                        this.newProduct.Area = selectedROHeader.Area;
                     });
             
         }
@@ -708,7 +747,7 @@ export class DataForm {
     
 
     roNoView = (rono) => {
-        return `${rono.RONo} - ${rono.ProductCode} - ${rono.ProductName} - ${rono.POSerialNumber} - ${rono.RemainingQuantity}`;
+        return `${rono.RONo} - ${rono.ProductCode} - ${rono.ProductName} - ${rono.POSerialNumber} - ${rono.RemainingQuantity} - ${rono.Colour}`;
     }
 
     unitRequestView = (unitRequest) => {
@@ -744,6 +783,23 @@ export class DataForm {
             "Jumlah DO Awal",
             "Satuan",
             "Tipe Fabric"
+        ],
+    };
+
+    itemsFabric = {
+        columns: [
+            "Kode Barang",
+            "Nama Barang",
+            "Keterangan Barang",
+            "RO Asal",
+            "Jumlah DO Awal",
+            "Satuan",
+            "Tipe Fabric",
+            "Warna",
+            "Rak",
+            "Box",
+            "Level",
+            "Area",
         ],
     };
 
