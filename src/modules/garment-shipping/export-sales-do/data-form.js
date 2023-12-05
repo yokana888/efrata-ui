@@ -52,17 +52,6 @@ export class DataForm {
         return PackingListLoader;
     }
     
-    // get unitLoader(){
-    //     return UnitLoader;
-    // }
-
-    // unitOptions = ["AG1 - AMBASSADOR GARMINDO 1", "AG2 - AMBASSADOR GARMINDO 2"];
-    // get unitQuery(){
-    //     var result = { "Description" : "GARMENT" }
-    //     return result;   
-    //   }
-
-    // ShipmentModeOptions=["By Air", "By Sea"];
     ShipmentModeOptions=["By Air", "By Land"];
     
     // unitView = (unit) => {
