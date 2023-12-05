@@ -136,26 +136,11 @@ export class List {
     }
 
     UnitItemChanged(newvalue){
-        
         if (newvalue) {
-            console.log(newvalue)
-            if (newvalue === "AMBASSADOR GARMINDO 1") {
-                this.unit = "AG1";
-                this.unitname = "AMBASSADOR GARMINDO 1";
+            if (newvalue === "EFRATA") {
+                this.unit = "EFR";
+                this.unitname = "EFRATA";
             }
-            else if (newvalue === "AMBASSADOR GARMINDO 2") { 
-                this.unit = "AG2";
-                this.unitname = "AMBASSADOR GARMINDO 2";
-            }
-            // else if (newvalue === "KONFEKSI 2C") {
-            //     this.unit = "C2C"; 
-            //     this.unitname = "KONFEKSI 2C";
-            // }else if(newvalue === "KONFEKSI 1A"){
-            //     this.unit = "AG1";
-            //     this.unitname = "KONFEKSI 1A";
-            // }else if(newvalue === "KONFEKSI 1B"){
-            //     this.unit = "AG2";
-            //     this.unitname = "KONFEKSI 1B";
             else{
                 this.unit = "";
                 this.unitname = "";

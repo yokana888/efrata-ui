@@ -98,9 +98,6 @@ export class List {
       if (newvalue === "EFRATA") {
         this.unit = "EFR";
       }
-      // else if (newvalue === "AMBASSADOR GARMINDO 2") {
-      //   this.unit = "AG2";
-      // } 
       else {
         this.unit = "";
         this.unitname = "";
