@@ -39,34 +39,21 @@ export class List {
         }
     }
     unitselectChanged(newvalue){
-        
         if (newvalue) {
-            if (newvalue === "AMBASSADOR GARMINDO 1") {
-                this.unit = "AG1";
-                this.unitname = "AMBASSADOR GARMINDO 1";
-            }
-            else if (newvalue === "AMBASSADOR GARMINDO 2") { 
-                this.unit = "AG2";
-                this.unitname = "AMBASSADOR GARMINDO 2";
-            //}
-            // else if (newvalue === "CENTRAL 2C/EX. K4") {
-            //     this.unit = "C2C";
-            //     this.unitname = "CENTRAL 2C/EX. K4";
-            // }else if(newvalue === "CENTRAL 1A/EX. K3"){
-            //     this.unit = "AG1";
-            //     this.unitname = "CENTRAL 1A/EX. K3";
-            // }else if(newvalue === "CENTRAL 1B"){
-            //     this.unit = "AG2";
-            //     this.unitname = "CENTRAL 1B";
-            }else{
-                this.unit = "";
-                this.unitname = "";
+            if (newvalue === "EFRATA") {
+                this.unit = "EFR";
+                this.unitname = "EFRATA";
             }
         }
+        else{
+            this.unit = "";
+            this.unitname = "";
+        }
+    }
 
         //console.log(this.unit);
         //console.log(this.uniname);
-    }
+    
     constructor(router, service) {
         this.service = service;
         this.router = router;
