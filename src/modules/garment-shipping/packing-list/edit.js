@@ -27,10 +27,10 @@ export class Edit {
     if (this.data.section) {
       //this.selectedSection = await this.coreService.getSectionById(this.data.section.id);
       if(this.data.section.code == "MD01"){
-        this.selectedSection = "MD01 – VERA FATIMAH"
+        this.selectedSection = "MD01 – AYU RIMA"
       }
       else{
-        this.selectedSection = "MD02 – WAHYU PAMUNGKAS"
+        this.selectedSection = "MD02 – NOYA KALISTANIA"
       }
     }
     if (this.data.invoiceType) {
