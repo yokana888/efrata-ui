@@ -59,7 +59,7 @@ export class List {
                 console.log(result.data);
                 var resultTotal=0;
                 //this.info.total=result.info.total; 
-                this.data = result.data.Result;
+                this.data = result.data;
                 for(var item of this.data)
                 {
                     this.resultTotal= item.Total;
