@@ -40,10 +40,11 @@ export class List {
     ]
 
     loader = (info) => {
-        var order = { "IsReceived": "asc", "Date": "desc" };
+        var order = {};
+        //var order = { "IsReceived": "asc", "Date": "desc" };
         if (info.sort)
             order[info.sort] = info.order;
-
+        
         var arg = {
             page: parseInt(info.offset / info.limit, 10) + 1,
             size: info.limit,
