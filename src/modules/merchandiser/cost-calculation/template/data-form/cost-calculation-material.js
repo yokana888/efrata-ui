@@ -442,8 +442,8 @@ uomView =(uom)=>{
             }
         }
         let budgetQuantity = this.data.Quantity && this.data.Conversion ? this.data.Quantity * this.data.QuantityOrder / this.data.Conversion + allowance * this.data.Quantity * this.data.QuantityOrder / this.data.Conversion : 0;
-        budgetQuantity = Math.ceil(budgetQuantity);
-        this.data.BudgetQuantity = Math.ceil(budgetQuantity);
+        
+        this.data.BudgetQuantity = budgetQuantity;
         return budgetQuantity;
     }
 
