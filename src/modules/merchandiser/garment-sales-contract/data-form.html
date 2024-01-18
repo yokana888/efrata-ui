@@ -104,7 +104,7 @@
           read-only.bind="readOnly"
           items.bind="countries"
           options.bind="controlOptions"
-          if.bind="data.SCType!='Lokal'|| data.SCType!='Internal'"
+          if.bind="data.SCType!='Lokal'"
         ></au-dropdown>
 
         <au-textbox
@@ -113,7 +113,7 @@
           error.bind="error.Country"
           read-only.bind="readOnly"
           options.bind="controlOptions"
-          if.bind="data.SCType=='Lokal'|| data.SCType=='Internal'"
+          if.bind="data.SCType=='Lokal'"
         ></au-textbox>
 
         <!-- <au-multiline
@@ -221,14 +221,6 @@
           options.bind="controlOptions">
         </au-textbox>
 
-        <!-- <au-textbox
-          label="Down Payment (DP)"
-          value.bind="data.DownPayment"
-          error.bind="error.DownPayment"
-          read-only.bind="readOnly"
-          if.bind="type=='Lokal' || type=='Internal'"
-          options.bind="controlOptions">
-        </au-textbox> -->
         <div class="row" if.bind="type=='Lokal' || type=='Internal'">
 
           <div class="col-sm-2" style="padding-left: 10%;">
@@ -243,6 +235,7 @@
               value.bind="data.DownPayment"
               error.bind="error.DownPayment"
               read-only.bind="readOnly"
+              format = "0.00"
               options.bind="controlOptions">
             </au-numeric>
             
@@ -255,7 +248,7 @@
           </div>
 
       </div>
-
+        
         <div class="row" if.bind="type=='Lokal' || type=='Internal'">
 
           <div class="col-sm-2" style="padding-left: 10%;">
@@ -270,6 +263,7 @@
               value.bind="data.LatePayment"
               error.bind="error.LatePayment"
               read-only.bind="readOnly"
+              format = "0"
               options.bind="controlOptions">
             </au-numeric>
             
@@ -292,13 +286,13 @@
     
           <div class="col-sm-6">
     
-            <au-textbox
+            <au-numeric
               value.bind="data.LateReturn"
               error.bind="error.LateReturn"
-              placeholder="input pengembalian barang"
+              format = "0"
               read-only.bind="readOnly"
               options.bind="controlOptions">
-            </au-textbox>
+            </au-numeric>
     
           </div>
     
@@ -320,13 +314,13 @@
     
           <div class="col-sm-6">
             
-            <au-textbox
+            <au-numeric
               value.bind="data.Claim"
               error.bind="error.Claim"
-              placeholder="input claim"
+              format = "0"
               read-only.bind="readOnly"
               options.bind="controlOptions">
-            </au-textbox>
+            </au-numeric>
     
           </div>
     
