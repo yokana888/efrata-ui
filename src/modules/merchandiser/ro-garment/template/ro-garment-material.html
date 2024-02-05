@@ -1,5 +1,9 @@
 <template>
     <tr if.bind="data.Category.name === 'FABRIC'">
+        <td class="col-sm-1">
+            <au-textbox value.bind="data.PO_SerialNumber" options.bind="controlOptions"
+                read-only.bind="disabled"></au-textbox>
+        </td>
         <td class="col-sm-1" >
             <au-textbox value.bind="data.Product.Code" options.bind="controlOptions" read-only.bind="disabled"></au-textbox>
         </td>
@@ -30,6 +34,10 @@
         </td>
     </tr>
     <tr else>
+        <td class="col-sm-1">
+            <au-textbox value.bind="data.PO_SerialNumber" options.bind="controlOptions"
+                read-only.bind="disabled"></au-textbox>
+        </td>
         <td class="col-sm-2" >
             <au-textbox value.bind="data.Product.Code" options.bind="controlOptions" read-only.bind="disabled"></au-textbox>
         </td>
