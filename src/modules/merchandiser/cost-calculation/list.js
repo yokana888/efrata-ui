@@ -3,6 +3,7 @@ import { Service } from "./service";
 import { Router } from 'aurelia-router';
 import { activationStrategy } from 'aurelia-router';
 import { AuthService } from "aurelia-authentication";
+import moment from 'moment';
 
 @inject(Router, Service, AuthService)
 export class List {
@@ -18,6 +19,11 @@ export class List {
         },
         { field: "PreSCNo", title: "No Sales Contract" },
         { field: "RO_Number", title: "No RO" },
+        {
+            field: "DeliveryDate", title: "Delivery Date", formatter: function (value, data, index) {
+                return moment(value).format("DD MMM YYYY");
+            }
+        },
         { field: "Article", title: "Artikel" },
         { field: "UnitName", title: "Unit" },
         { field: "Quantity", title: "Kuantitas" },
@@ -27,6 +33,11 @@ export class List {
         { field: "IsApprovedIE", title: "Approval IE" },
         { field: "IsApprovedPurchasing", title: "Approval Purchasing" },
         { field: "IsApprovedKadivMD", title: "Approval Direktur Penjualan" },
+        {
+            field: "IsApprovedKadivMDDate", title: " Tgl Approval Direktur Penjualan", formatter: function (value, data, index) {
+                return moment(value).format("DD MMM YYYY");
+            }
+        },
     ];
 
     rowFormatter(data, index) {
@@ -60,6 +71,7 @@ export class List {
                     data.IsApprovedIE = data.ApprovalIE.IsApproved ? "SUDAH" : "BELUM";
                     data.IsApprovedPurchasing = data.ApprovalPurchasing.IsApproved ? "SUDAH" : "BELUM";
                     data.IsApprovedKadivMD = data.ApprovalKadivMD.IsApproved ? "SUDAH" : "BELUM";
+                    data.IsApprovedKadivMDDate = data.ApprovalKadivMD.ApprovedDate;
                     return data;
                 });
                 return {

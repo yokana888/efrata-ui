@@ -3,6 +3,7 @@ import { Service } from "./service";
 import { Router } from 'aurelia-router';
 import { activationStrategy } from 'aurelia-router';
 import { AuthService } from "aurelia-authentication";
+import moment from 'moment';
 
 @inject(Router, Service, AuthService)
 export class List {
@@ -26,7 +27,13 @@ export class List {
         { field: "CostCalculationGarment.IsValidatedROMD", title: "Approval Kasie Md"
             , formatter: (value) => value === true ? "SUDAH" : "BELUM"},
         { field: "CostCalculationGarment.IsValidatedROSample", title: "Approval QC"
-            , formatter: (value) => value === true ? "SUDAH" : "BELUM"},
+            , formatter: (value) => value === true ? "SUDAH" : "BELUM"
+        },
+        {
+            field: "LastModifiedUtc", title: " Tgl Approval QC", formatter: function (value, data, index) {
+                return moment(value).format("DD MMM YYYY");
+            }
+        },
     ];
 
     rowFormatter(data, index) {
@@ -59,6 +66,7 @@ export class List {
                     data.BrandCode = data.CostCalculationGarment.BuyerBrand.Code;
                     data.BrandName = data.CostCalculationGarment.BuyerBrand.Name;   
                     data.UOMUnit = data.CostCalculationGarment.UOM.Unit; 
+                    data.LastModifiedUtc = data.CostCalculationGarment.IsValidatedROSample ? data.CostCalculationGarment.LastModifiedUtc : new Date("0001-01-01"); 
                 });
                 return {
                     total: result.info.total,
