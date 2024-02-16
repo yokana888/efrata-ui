@@ -37,9 +37,11 @@ export class View {
             }
 
             if (this.data.Items) {
-                let fabricItemsProductIds = this.data.Items
-                    .filter(i => i.Category.Name === "FABRIC")
-                    .map(i => i.Product.Id);
+                let fabricItemsProductIds = this.data.Items.filter(
+                    (i) => i.Category.Name === "FABRIC"
+                  )
+                    .map((i) => i.Product.Id)
+                    .filter((x, i, a) => a.indexOf(x) == i);
 
                 if (fabricItemsProductIds.length) {
                     await this.coreService.getGarmentProductsByIds(fabricItemsProductIds)
