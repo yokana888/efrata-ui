@@ -689,7 +689,7 @@ module.exports = [
         name: 'latest-available-budget-report',
         moduleId: './modules/merchandiser/report/latest-available-budget-report/index',
         nav: true,
-        title: 'Laporan Kesiapan Budget | >= 2022',
+        title: 'Laporan Kesiapan Budget | >= 2024',
         auth: true,
         settings: {
             group: "merchandiser",
@@ -710,8 +710,8 @@ module.exports = [
         settings: {
             group: "merchandiser",
             subGroup: "monitoring",
-            permission : {'D24' : 1},
-
+            permission : {'D57' : 1},
+            
             ////permission: { "PGA": 2, "PDU": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
@@ -721,11 +721,12 @@ module.exports = [
         name: 'latest-available-ro-garment-report',
         moduleId: './modules/merchandiser/report/latest-available-ro-garment-report/index',
         nav: true,
-        title: 'Laporan Kesiapan RO | >= 2022',
+        title: 'Laporan Kesiapan RO | >= 2024',
         auth: true,
         settings: {
             group: "merchandiser",
             subGroup: "monitoring",
+            permission : {'D24' : 1},
             //permission: { "PGA": 2, "PDU": 1, "C9": 1 },
             iconClass: 'fa fa-dashboard'
         }
