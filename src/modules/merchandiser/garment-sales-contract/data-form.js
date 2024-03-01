@@ -24,6 +24,7 @@ export class DataForm {
     
   countries =
     ["Indonesia"];
+    //tambah commit untuk region indonesia
 
   filterBank = {
     "DivisionName.toUpper()":"EFRATA"
