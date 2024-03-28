@@ -7,6 +7,7 @@ const GarmentCategoryLoader = require('../../../../../loader/garment-category-lo
 import { Service } from '../../service';
 import { ServiceCore } from '../../service-core';
 import { PRMasterDialog } from './pr-master-dialog';
+import { DOItemDialog } from './do-item-dialog';
 
 const rateNumberFormat = "0,0.00";
 
@@ -492,6 +493,60 @@ uomView =(uom)=>{
                                     });
                             }
                         });
+                }
+            });
+    }
+
+
+    clickDOItem() {
+ //       this.dialog.show(DOItemDialog, { CCId: this.context.context.options.CCId || 0, SCId: this.context.context.options.SCId || 0 })
+        this.dialog.show(DOItemDialog, { CCId: this.context.context.options.CCId || 0 })
+           .then(response => {
+                if (!response.wasCancelled) {
+                    this.error = {};
+
+                    const result = response.output;
+
+                    this.data.IsPRMaster = true;
+                    this.data.PRMasterId = result.PRMasterId;
+                    this.data.PRMasterItemId = result.PRMasterItemId;
+                    this.data.POMaster = result.POMaster;
+
+                    this.data.Category = result.Category;
+                    this.data.Product = result.Product;
+                    this.productCode = this.data.Product ? this.data.Product.Code : "";
+                    this.data.Description = result.Description;
+
+                    this.data.ProductRemark = "-";
+                    this.data.Quantity = 0;
+                    this.data.UOMQuantity = null;
+                    this.data.Price = result.BudgetPrice;
+                    this.data.UOMPrice = result.PriceUom;
+                    this.data.Conversion = 0;
+                    // this.total = 0;
+                    this.data.ShippingFeePortion = 0;
+                    // this.totalShippingFee = 0;
+                    // this.budgetQuantity = 0;
+                    this.data.AvailableQuantity = result.AvailableQuantity;
+
+                    this.data.isFabricCM = false
+                    this.data.showDialog = false;
+
+                    // this.serviceCore.getCategoryId(this.data.Category.Id)
+                    //     .then(category => {
+                    //         this.data.Category = category;
+                    //         if (this.data.Category.name.toUpperCase() === "FABRIC") {
+                    //             this.dialog.prompt("Apakah fabric ini menggunakan harga CMT?", "Detail Fabric Material")
+                    //                 .then(response => {
+                    //                     if (response == "ok") {
+                    //                         this.data.isFabricCM = true;
+                    //                     } else {
+                    //                         this.data.isFabricCM = false;
+                    //                     }
+                    //                     this.data.showDialog = false;
+                    //                 });
+                    //         }
+                    //     });
                 }
             });
     }

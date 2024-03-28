@@ -28,6 +28,13 @@
         <td>
             <au-textbox value.bind="data.MaterialIndex + 1" options.bind="controlOptions" read-only="true"></au-textbox>
         </td>
+
+        <!-- do items -->
+        <td>
+            <button class="btn btn-primary" click.delegate="clickDOItem()">+</button>
+        </td>
+        <!-- do itema -->
+
         <!-- prmaster -->
         <td>
             <button class="btn btn-primary" click.delegate="clickPRMaster()">+</button>
