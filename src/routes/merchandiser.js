@@ -50,6 +50,20 @@ module.exports = [
         }
     },
     {
+        route: '/merchandiser/recap-cost-calculation-report',
+        name: 'recap-cost-calculation-report',
+        moduleId: './modules/merchandiser/report/recap-cost-calculation-report/index',
+        nav: true,
+        title: 'Monitoring Rekap Cost Calculation',
+        auth: true,
+        settings: {
+            group: "merchandiser",
+            subGroup: "monitoring",
+            permission : {'D58' : 1},
+            iconClass: 'fa fa-calculator'
+        }
+    },
+    {
         route: '/merchandiser/garment-purchase-request-master-by-user',
         name: 'purchase-request-master-by-user',
         moduleId: './modules/merchandiser/garment-purchase-request-master/index',
