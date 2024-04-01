@@ -2,20 +2,15 @@
     <!-- <ai-dialog style="width:500px;"> -->
     <ai-dialog>
         <ai-dialog-header>
-            DO Item
+            Stock
         </ai-dialog-header>
 
         <ai-dialog-body>
             <!-- <form class="form-horizontal">
             </form> -->
             <div style="width:750px;">
-                <au-table
-                    data.bind="loader"
-                    columns.bind="columns"
-                    options.bind="options"
-                    page-size="25" 
-                    sortable.bind="true"
-                    selections.bind="selectedData">
+                <au-table data.bind="loader" columns.bind="columns" options.bind="options" page-size="25"
+                    sortable.bind="true" selections.bind="selectedData">
                 </au-table>
             </div>
         </ai-dialog-body>
