@@ -9,6 +9,7 @@ module.exports = [
         settings: {
             group: "customs",
             //permission: { CT: 2, "C9": 1, "PDU":1 },
+            permission: { O1:1  },
             iconClass: 'fa fa-dashboard'
         },
     },
@@ -35,6 +36,7 @@ module.exports = [
         settings: {
             group: "customs",
             //permission: { CT: 2, "C9": 1, "PDU":1  },
+            permission: { O3:1  },
             iconClass: 'fa fa-dashboard'
         },
     },
