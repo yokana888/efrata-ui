@@ -100,6 +100,10 @@ export class List {
           "en-EN",
           { minimumFractionDigits: 2, maximumFractionDigits: 2 }
         );
+        _data.Quantity = _data.Quantity.toLocaleString(
+          "en-EN",
+          { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+        );
 
         this.data.push(_data);
       }
