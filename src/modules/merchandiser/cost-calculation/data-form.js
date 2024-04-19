@@ -62,7 +62,6 @@ export class DataForm {
   costCalculationGarment_MaterialsInfo = {
     columns: [
       { header: "No." },
-      { header: "DO Item" },
       { header: "PR Master" },
       { header: "No. PO" },
       { header: "Kategori", value: "Category" },

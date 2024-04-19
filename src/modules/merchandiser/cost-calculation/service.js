@@ -161,14 +161,9 @@ class Service extends RestService {
         return super.list(endpoint, info);
     }
 
-    getDOItemMaterials(info) {
-        var endpoint = `${serviceUri}/materials/by-doitemids`;
-        return super.list(endpoint, info);
-    }
 };
 
 const serviceUriPurchaseRequest = 'garment-purchase-requests';
-const serviceUriDOItem = 'garment-do-items';
 
 class PurchasingService extends RestService {
     constructor(http, aggregator, config, endpoint) {
@@ -184,13 +179,6 @@ class PurchasingService extends RestService {
         var endpoint = `${serviceUriPurchaseRequest}/items`;
         return super.list(endpoint, info);
     }
-
-    searchDOItems(info) {
-        var endpoint = `${serviceUriDOItem}/for-cc`;
-        return super.list(endpoint, info);
-    }
 }
-
-
 
 export { Service, PurchasingService }
