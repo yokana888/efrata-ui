@@ -147,15 +147,12 @@ export class DOItemDialog {
 
   activate(params) {
     this.DOItemsIds = params.DOItemsIds;
-    this.filter = {};
-
     var doitemIds = this.DOItemsIds.filter(
       (x) => x.data.DOItemsId != undefined
     ).map((m) => `Id==${m.data.DOItemsId}`);
 
-    if (doitemIds.length) {
-      this.filter[`(${doitemIds.join("||")})`] = false;
-    }
+    this.filter = {};
+    this.filter[`(${doitemIds.join("||")})`] = false;
   }
 
   select() {
