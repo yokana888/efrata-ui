@@ -388,8 +388,8 @@ export class DataForm {
                      this.data.Article = ro[0].Article;
                      this.error.Article = null;
                  } else {
-                     this.data.Article = null;
-                     this.error.Article = "Artikel tidak ditemukan."
+                     this.data.Article = this.data.RONo;
+                    //  this.error.Article = "Artikel tidak ditemukan."
                  }
                     this.service.searchDOItems({ filter: JSON.stringify({ RONo: this.data.RONo, UnitId:this.data.UnitSender.Id, StorageId:this.data.Storage.Id ? this.data.Storage.Id : this.data.Storage._id}) })
                     .then(result=>{
@@ -522,8 +522,8 @@ export class DataForm {
                      this.data.Article = ro[0].Article;
                      this.error.Article = null;
                  } else {
-                     this.data.Article = null;
-                     this.error.Article = "Artikel tidak ditemukan."
+                     this.data.Article = this.data.RONo;
+                    //  this.error.Article = "Artikel tidak ditemukan."
                  }
                     this.service.searchDOItems({ filter: JSON.stringify({ RONo: this.data.RONo, UnitId:this.data.UnitSender.Id, StorageId:this.data.Storage.Id ? this.data.Storage.Id : this.data.Storage._id}) })
                     .then(result=>{
