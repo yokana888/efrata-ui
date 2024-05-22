@@ -51,7 +51,7 @@ export class DataForm {
         this.isItem = false;
 
         if (!this.data.OrderDate) {
-            this.data.OrderDate = new Date().toLocaleDateString();
+            this.data.OrderDate = new Date();
         }
 
         if (this.data.Category) {
