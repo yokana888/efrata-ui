@@ -1,50 +1,49 @@
 <template>
     <tr>
-        <td >
-            <au-numeric
-                value.bind="data.carton1"
-                error.bind="error.Carton1"
-                format="0"
-                read-only.bind="readOnly">
+        <td style="text-align: center important">
+            <au-numeric value.bind="data.index" error.bind="error.index" read-only.bind="readOnly" format="0">
             </au-numeric>
         </td>
-        <td >
-            <au-numeric
-                value.bind="data.carton2"
-                error.bind="error.Carton2"
-                format="0"
-                read-only.bind="readOnly">
+        <td>
+            <au-numeric value.bind="carton1" error.bind="error.Carton1" format="0" read-only.bind="readOnly">
             </au-numeric>
         </td>
-        <td >
-            <au-textbox
-                value.bind="data.colour"
-                error.bind="error.Colour"
-                read-only.bind="readOnly">
+        <td>
+            <au-numeric value.bind="carton2" error.bind="error.Carton2" format="0" read-only.bind="readOnly">
+            </au-numeric>
+        </td>
+        <td>
+            <au-textbox value.bind="data.style" error.bind="error.Style" read-only.bind="readOnly">
             </au-textbox>
         </td>
         <td>
-            <au-numeric
-                value.bind="cartonQuantity"
-                error.bind="error.CartonQuantity"
-                format="0"
+            <au-textbox value.bind="data.colour" error.bind="error.Colour" read-only.bind="readOnly">
+            </au-textbox>
+        </td>
+        <td>
+            <au-numeric value.bind="data.cartonQuantity" error.bind="error.CartonQuantity" format="0"
                 read-only.bind="true">
             </au-numeric>
         </td>
-        <td >
-            <au-numeric
-                value.bind="data.quantityPCS"
-                error.bind="error.QuantityPCS"
-                format="0"
+        <td>
+            <au-numeric value.bind="data.quantityPCS" error.bind="error.QuantityPCS" format="0"
                 read-only.bind="readOnly">
             </au-numeric>
         </td>
-        <td >
-            <au-numeric
-                value.bind="totalQuantity"
-                error.bind="error.TotalQuantity"
-                format="0"
-                read-only.bind="true">
+        <td>
+            <au-numeric value.bind="totalQuantity" error.bind="error.TotalQuantity" format="0" read-only.bind="true">
+            </au-numeric>
+        </td>
+        <td>
+            <au-numeric value.bind="grossWeight" error.bind="error.GrossWeight" read-only.bind="readOnly">
+            </au-numeric>
+        </td>
+        <td>
+            <au-numeric value.bind="netWeight" error.bind="error.NetWeight" read-only.bind="readOnly">
+            </au-numeric>
+        </td>
+        <td>
+            <au-numeric value.bind="netNetWeight" error.bind="error.NetNetWeight" read-only.bind="readOnly">
             </au-numeric>
         </td>
         <td if.bind="!readOnly" class="bg-light">
@@ -52,29 +51,23 @@
         </td>
         <td class="col-sm-1" class="bg-light">
             <div>
-                <button class="btn btn-info pull-right" if.bind= "data.sizes" click.delegate="toggle()">i</button>
+                <button class="btn btn-info pull-right" if.bind="data.sizes" click.delegate="toggle()">i</button>
             </div>
         </td>
     </tr>
     <tr>
-        <td colspan="7">
+        <td colspan="11">
             <p if.bind="error.SizesCount" class="help-block text-center" style='color:red;'>${error.SizesCount}</p>
         </td>
     </tr>
-    <tr show.bind="isShowing">
+    <tr if.bind="isShowing">
         <td colspan="1" style='border:none;'>
         </td>
-        <td colspan="5" style='border:none;'>
-            <au-collection 
-                items.bind="data.sizes" 
-                errors.bind="error.Sizes" 
-                columns.bind="sizesColumns"
-                read-only.bind="readOnly" 
-                add.bind="addSizes" 
-                remove.bind="removeSizes"
-                options.bind="itemOptions"
-                footer-template="modules/garment-production/packing-list/template/detail-size-footer" 
-                item-template="modules/garment-production/packing-list/template/detail-size" >
+        <td colspan="9" style='border:none;'>
+            <au-collection items.bind="data.sizes" errors.bind="error.Sizes" columns.bind="sizesColumns"
+                read-only.bind="readOnly" add.bind="addSizes" remove.bind="removeSizes" options.bind="itemOptions"
+                footer-template="modules/garment-production/packing-list/template/detail-size-footer"
+                item-template="modules/garment-production/packing-list/template/detail-size">
             </au-collection>
             <!-- <hr style="border: 5px solid #173250; border-radius: 0px 0px 5px 5px;"> -->
         </td>
@@ -82,7 +75,7 @@
         </td>
     </tr>
     <tr show.bind="isShowing">
-        <td colspan="7">
+        <td colspan="11">
             <table class="table table-hover table-bordered">
                 <thead>
                     <tr>
@@ -122,7 +115,7 @@
             </table>
         </td>
     </tr>
-<!-- 
+    <!-- 
     <tr show.bind="isShowing">
         <td colspan="1" style='border:none;'>
         </td>
@@ -137,5 +130,5 @@
         <td colspan="1" style='border:none;'>
         </td>
     </tr> -->
-    
+
 </template>
