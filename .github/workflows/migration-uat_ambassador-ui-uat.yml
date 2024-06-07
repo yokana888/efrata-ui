@@ -23,6 +23,7 @@ jobs:
 
     - name: npm install, build, and test
       run: |
+        git config --global url."https://github.com".insteadOf git://github.com
         npm install
         npm run build:prod
 
