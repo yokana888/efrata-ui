@@ -14,6 +14,7 @@ export class List {
    
     columns = [
         { field: "UnitCode", title: "Unit" },
+        { field: "ComodityCode", title: "Kode" },
         { field: "ComodityName", title: "Komoditi" },
         { field: "Price", title: "Tarif" }
     ]
@@ -36,6 +37,7 @@ export class List {
                 for(var a of result.data){
                     a.UnitCode=a.Unit.Code;
                     a.ComodityName=a.Comodity.Name;
+                    a.ComodityCode=a.Comodity.Code;
                     a.Price=a.Price.toLocaleString('en-EN');
                 }
                 return {

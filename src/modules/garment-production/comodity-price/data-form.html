@@ -33,6 +33,19 @@
             options.bind="controlOptions">
         </au-autocomplete>
 
+        <td>
+            <au-autocomplete
+                value.bind="selectedComodity"
+                error.bind="error.Comodity"
+                label="Comodity"
+                loader.bind="comodityLoader"
+                text.bind="comodityView"
+                placeholder="comodity"
+                if.bind="isEdit"
+                options.bind="controlOptions">
+            </au-autocomplete>
+        </td>
+
         <div class="form-group has-error">
             <p if.bind="error.ItemsCount" class="help-block text-center">${error.ItemsCount}</p>
         </div>
@@ -56,7 +69,7 @@
             options.bind="itemOptions"
             item-template="modules/garment-production/comodity-price/template/item-edit"
             
-            if.bind="selectedUnit && isEdit">
+            if.bind="selectedComodity && isEdit">
         </au-collection>
 
     </au-input-form>
