@@ -32,7 +32,7 @@ export class List {
             size: info.limit,
             keyword: info.search,
             order: order,
-            filter: JSON.stringify({ Status: "POSTED", SectionCode: this.section })
+            filter: JSON.stringify({'Status == "POSTED" || Status == "REJECTED_SHIPPING_MD"':"true", SectionCode: this.section })
         }
 
         return this.service.search(arg)

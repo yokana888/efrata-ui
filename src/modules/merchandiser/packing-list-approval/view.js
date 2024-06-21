@@ -39,6 +39,16 @@ export class View {
                 item.section = this.data.section;
             });
         }
+
+        switch (this.data.status) {
+            case "REJECTED_SHIPPING_MD":
+              this.alertInfo =
+                "<strong>Alasan Reject oleh Shipping:</strong> " +
+                (this.data.statusActivities.slice(-1)[0] || {}).remark;
+              break;
+            default:
+              break;
+          }
     }
 
     cancelCallback(event) {

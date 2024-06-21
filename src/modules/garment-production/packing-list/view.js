@@ -49,6 +49,18 @@ export class View {
         this.hasEdit = true;
         this.hasDelete = true;
         break;
+      case "POSTED":
+        this.hasEdit = true;
+        this.hasDelete = true;
+        break;
+      case "REJECTED_MD":
+        this.hasEdit = true;
+        this.hasDelete = true;
+        break;
+      case "REJECTED_SHIPPING_UNIT":
+        this.hasEdit = true;
+        this.hasDelete = true;
+        break;
       default:
         this.hasEdit = null;
         this.hasDelete = null;
