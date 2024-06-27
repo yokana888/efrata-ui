@@ -918,9 +918,8 @@ module.exports = [
         settings: {
             group: "merchandiser",
             subGroup: "approval shipping",
-            permission : {'D53' : 1},
+            // permission : {'D53' : 1},
 
-            //permission: { "PGA": 2, "PDU": 1, "C9": 1 },
             iconClass: "fa fa-dashboard"
         }
     },
@@ -934,9 +933,8 @@ module.exports = [
         settings: {
             group: "merchandiser",
             subGroup: "approval shipping",
-            permission : {'D54' : 1},
+            // permission : {'D54' : 1},
 
-            //permission: { "PGA": 2, "PDU": 1, "C9": 1 },
             iconClass: 'fa fa-calculator'
         }
     },
