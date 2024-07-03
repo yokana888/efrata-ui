@@ -164,11 +164,16 @@ export class Item {
                   //   avgPrice = sc.Price;
                   // }
                   if (sc.Price == 0) {
-                    avgPrice =
-                      sc.SalesContractROs[0].Items.reduce(
-                        (acc, cur) => (acc += cur.Price),
-                        0
-                      ) / sc.SalesContractROs[0].Items.length;
+                    var matchSalesContractROs = sc.SalesContractROs.find((scRO) => scRO.RONumber == result.RO_Number);
+                    if (matchSalesContractROs.Items.length > 0)
+                      avgPrice =
+                        matchSalesContractROs.Items.reduce(
+                          (acc, cur) => (acc += cur.Price),
+                          0
+                        ) / matchSalesContractROs.Items.length;
+                    else {
+                      avgPrice = matchSalesContractROs.Price;
+                    }
                   } else {
                     avgPrice = sc.SalesContractROs[0].Price;
                   }
