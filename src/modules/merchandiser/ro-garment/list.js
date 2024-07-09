@@ -26,7 +26,13 @@ export class List {
         { field: "CostCalculationGarment.IsValidatedROMD", title: "Approval Kasie Md"
             , formatter: (value) => value === true ? "SUDAH" : "BELUM"},
         { field: "CostCalculationGarment.IsValidatedROSample", title: "Approval QC"
-            , formatter: (value) => value === true ? "SUDAH" : "BELUM"},
+            , formatter: (value) => value === true ? "SUDAH" : "BELUM"
+        },
+        {
+            field: "CostCalculationGarment.ValidationSampleDate", title: "Tgl Approval QC", formatter: function (value, data, index) {
+                return moment(value).format("DD MMM YYYY");
+            }
+        },
     ];
 
     rowFormatter(data, index) {
