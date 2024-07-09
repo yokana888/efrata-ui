@@ -30,7 +30,7 @@ export class List {
             , formatter: (value) => value === true ? "SUDAH" : "BELUM"
         },
         {
-            field: "LastModifiedUtc", title: " Tgl Approval QC", formatter: function (value, data, index) {
+            field: "CostCalculationGarment.ValidationSampleDate", title: "Tgl Approval QC", formatter: function (value, data, index) {
                 return moment(value).format("DD MMM YYYY");
             }
         },
