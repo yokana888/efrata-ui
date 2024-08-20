@@ -34,7 +34,8 @@
             <au-numeric value.bind="totalQuantity" error.bind="error.TotalQuantity" format="0" read-only.bind="true">
             </au-numeric>
         </td>
-        <td>
+        <!-- 2024/18/Enhance/Remove GW, NW, NNW 20-Agustus-2024 -->
+        <!-- <td>
             <au-numeric value.bind="grossWeight" error.bind="error.GrossWeight" read-only.bind="readOnly">
             </au-numeric>
         </td>
@@ -45,7 +46,7 @@
         <td>
             <au-numeric value.bind="netNetWeight" error.bind="error.NetNetWeight" read-only.bind="readOnly">
             </au-numeric>
-        </td>
+        </td> -->
         <td if.bind="!readOnly" class="bg-light">
             <button class="btn btn-danger pull-right" click.delegate="onremove(data, $event)">-</button>
         </td>
@@ -75,21 +76,24 @@
         </td>
     </tr>
     <tr show.bind="isShowing">
-        <td colspan="11">
+        <td colspan="5">
             <table class="table table-hover table-bordered">
                 <thead>
                     <tr>
-                        <th><label>Length</label></th>
+                        <!-- 2024/18/Enhance/Remove GW, NW, NNW 20-Agustus-2024 -->
+                        <!-- <th><label>Length</label></th>
                         <th><label>Width</label></th>
-                        <th><label>Height</label></th>
+                        <th><label>Height</label></th> -->
+        
                         <th><label>Qty Cartons</label></th>
-                        <th><label>CBM</label></th>
+                        <!-- <th><label>CBM</label></th> -->
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td>
+                        <!-- 2024/18/Enhance/Remove GW, NW, NNW 20-Agustus-2024 -->
+                        <!-- <td>
                             <au-numeric value.bind="length" read-only.bind="readOnly">
                             </au-numeric>
                         </td>
@@ -100,16 +104,16 @@
                         <td>
                             <au-numeric value.bind="height" read-only.bind="readOnly">
                             </au-numeric>
-                        </td>
+                        </td> -->
                         <td>
                             <au-numeric value.bind="data.cartonQuantity" format="0" read-only="true">
                             </au-numeric>
                         </td>
-                        <td>
+                        <!-- <td>
                             <div class="form-group">
                                 <p class="form-control-static text-right">${cmb}</p>
                             </div>
-                        </td>
+                        </td> -->
                     </tr>
                 </tbody>
             </table>
