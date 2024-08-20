@@ -54,9 +54,10 @@ export class Item {
     { header: "Jml Carton" },
     { header: "Qty" },
     { header: "Total Qty" },
-    { header: "GW" },
-    { header: "NW" },
-    { header: "NNW" },
+    // 2024/18/Enhance/Remove GW, NW, NNW 20-Agustus-2024
+    // { header: "GW" },
+    // { header: "NW" },
+    // { header: "NNW" },
     { header: "" },
   ];
 
@@ -290,20 +291,21 @@ export class Item {
     return result;
   }
 
-  get subGrossWeight() {
-    return this.sumSubTotal(0);
-    //return (this.data.details || []).reduce((acc, cur) => acc += (cur.grossWeight * cur.cartonQuantity), 0);
-  }
+  // 2024/18/Enhance/Remove GW, NW, NNW 20-Agustus-2024
+  // get subGrossWeight() {
+  //   return this.sumSubTotal(0);
+  //   //return (this.data.details || []).reduce((acc, cur) => acc += (cur.grossWeight * cur.cartonQuantity), 0);
+  // }
 
-  get subNetWeight() {
-    return this.sumSubTotal(1);
-    // return (this.data.details || []).reduce((acc, cur) => acc += cur.netWeight, 0);
-  }
+  // get subNetWeight() {
+  //   return this.sumSubTotal(1);
+  //   // return (this.data.details || []).reduce((acc, cur) => acc += cur.netWeight, 0);
+  // }
 
-  get subNetNetWeight() {
-    return this.sumSubTotal(2);
-    //  return (this.data.details || []).reduce((acc, cur) => acc += cur.netNetWeight, 0);
-  }
+  // get subNetNetWeight() {
+  //   return this.sumSubTotal(2);
+  //   //  return (this.data.details || []).reduce((acc, cur) => acc += cur.netNetWeight, 0);
+  // }
 
   get addDetails() {
     return (event) => {
@@ -333,72 +335,73 @@ export class Item {
     return (event) => {
       this.error = null;
       this.updateTotalSummary();
-      this.updateMeasurements();
+      // this.updateMeasurements();
     };
   }
 
-  updateMeasurements() {
-    let measurementCartons = [];
-    for (const item of this.context.context.options.header.items) {
-      for (const detail of item.details || []) {
-        let measurement = measurementCartons.find(
-          (m) =>
-            m.length == detail.length &&
-            m.width == detail.width &&
-            m.height == detail.height &&
-            m.carton1 == detail.carton1 &&
-            m.carton2 == detail.carton2
-        );
-        if (!measurement) {
-          measurementCartons.push({
-            carton1: detail.carton1,
-            carton2: detail.carton2,
-            length: detail.length,
-            width: detail.width,
-            height: detail.height,
-            cartonsQuantity: detail.cartonQuantity,
-          });
-        }
-      }
-    }
-    let measurements = [];
-    for (const measurementCarton of measurementCartons) {
-      let measurement = measurements.find(
-        (m) =>
-          m.length == measurementCarton.length &&
-          m.width == measurementCarton.width &&
-          m.height == measurementCarton.height
-      );
-      if (measurement) {
-        measurement.cartonsQuantity += measurementCarton.cartonsQuantity;
-      } else {
-        measurements.push(Object.assign({}, measurementCarton));
-      }
-    }
+  //2024/18/Enhance/Remove GW, NW, NNW 20-Agustus-2024
+  // updateMeasurements() {
+  //   let measurementCartons = [];
+  //   for (const item of this.context.context.options.header.items) {
+  //     for (const detail of item.details || []) {
+  //       let measurement = measurementCartons.find(
+  //         (m) =>
+  //           m.length == detail.length &&
+  //           m.width == detail.width &&
+  //           m.height == detail.height &&
+  //           m.carton1 == detail.carton1 &&
+  //           m.carton2 == detail.carton2
+  //       );
+  //       if (!measurement) {
+  //         measurementCartons.push({
+  //           carton1: detail.carton1,
+  //           carton2: detail.carton2,
+  //           length: detail.length,
+  //           width: detail.width,
+  //           height: detail.height,
+  //           cartonsQuantity: detail.cartonQuantity,
+  //         });
+  //       }
+  //     }
+  //   }
+  //   let measurements = [];
+  //   for (const measurementCarton of measurementCartons) {
+  //     let measurement = measurements.find(
+  //       (m) =>
+  //         m.length == measurementCarton.length &&
+  //         m.width == measurementCarton.width &&
+  //         m.height == measurementCarton.height
+  //     );
+  //     if (measurement) {
+  //       measurement.cartonsQuantity += measurementCarton.cartonsQuantity;
+  //     } else {
+  //       measurements.push(Object.assign({}, measurementCarton));
+  //     }
+  //   }
 
-    this.context.context.options.header.measurements =
-      this.context.context.options.header.measurements || [];
-    this.context.context.options.header.measurements.splice(0);
+  //   this.context.context.options.header.measurements =
+  //     this.context.context.options.header.measurements || [];
+  //   this.context.context.options.header.measurements.splice(0);
 
-    for (const mt of measurements) {
-      let measurement = (
-        this.context.context.options.header.measurementsTemp || []
-      ).find(
-        (m) =>
-          m.length == mt.length && m.width == mt.width && m.height == mt.height
-      );
-      if (measurement) {
-        measurement.cartonsQuantity = mt.cartonsQuantity;
-        this.context.context.options.header.measurements.push(measurement);
-      } else {
-        this.context.context.options.header.measurements.push(mt);
-      }
-    }
+  //   for (const mt of measurements) {
+  //     let measurement = (
+  //       this.context.context.options.header.measurementsTemp || []
+  //     ).find(
+  //       (m) =>
+  //         m.length == mt.length && m.width == mt.width && m.height == mt.height
+  //     );
+  //     if (measurement) {
+  //       measurement.cartonsQuantity = mt.cartonsQuantity;
+  //       this.context.context.options.header.measurements.push(measurement);
+  //     } else {
+  //       this.context.context.options.header.measurements.push(mt);
+  //     }
+  //   }
 
-    this.context.context.options.header.measurements.forEach(
-      (m, i) => (m.MeasurementIndex = i)
-    );
-  }
+  //   this.context.context.options.header.measurements.forEach(
+  //     (m, i) => (m.MeasurementIndex = i)
+  //   );
+  // }
 
   get totalQty() {
     let qty = 0;
