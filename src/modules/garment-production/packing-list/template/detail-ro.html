@@ -98,17 +98,19 @@
         </td>
     </tr>
     <tr show.bind="isShowing" style="background-color:#C2B5B2;">
-        <td colspan="2">
+        
+        <td colspan="4">
             <au-numeric label="TOTAL QTY" value.bind="totalQty" error.bind="error.totalQty" read-only.bind="true">
             </au-numeric>
         </td>
 
-        <td colspan="2">
+        <td colspan="4">
             <au-numeric label="TOTAL CARTON" value.bind="totalCtn" read-only.bind="true">
             </au-numeric>
         </td>
 
-        <td colspan="2">
+        <!-- 2024/18/Enhance/Remove GW, NW, NNW 20-Agustus-2024 -->
+        <!-- <td colspan="2">
             <au-numeric label="Total GW" value.one-way="subGrossWeight" read-only="true">
             </au-numeric>
         </td>
@@ -119,7 +121,7 @@
         <td colspan="3">
             <au-numeric label="Total NNW" value.one-way="subNetNetWeight" read-only="true">
             </au-numeric>
-        </td>
+        </td> -->
     </tr>
     <tr show.bind="isShowing" style='border:none;'>
         <td colspan="13">
