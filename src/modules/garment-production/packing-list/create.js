@@ -44,8 +44,12 @@ export class Create {
     this.service
       .create(this.data)
       .then((result) => {
-        alert("Data berhasil dibuat, No Invoice: " + result);
-        this.router.navigateToRoute("list");
+        if (Object.keys(result).length > 0) {
+          alert("Data berhasil dibuat, No Invoice: " + result);
+          this.router.navigateToRoute("list");
+        } else {
+          alert("Ada kesalahan data, cek kembali inputan Anda.")
+        }
       })
       .catch((error) => {
         this.error = error;
