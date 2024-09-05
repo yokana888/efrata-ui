@@ -968,5 +968,20 @@ module.exports = [
             //permission: { "PGA": 2, "PDU": 1, "C9": 1 },
             iconClass: 'fa fa-calculator'
         }
-    }
+    },
+    {
+        route: '/merchandiser/cost-calculation-cancel-approval',
+        name: 'cost-calculation-cancel-approval',
+        moduleId: './modules/merchandiser/cost-calculation-cancel-approval/index',
+        nav: true,
+        title: 'Cancel Approval Cost Calculation',
+        auth: true,
+        settings: {
+            group: "merchandiser",
+            subGroup: "feature",
+            permission : {'D57' : 1},
+            iconClass: 'fa fa-calculator',
+            type: "kadivmd"
+        }
+    },
 ];
