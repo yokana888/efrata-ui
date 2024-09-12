@@ -979,7 +979,7 @@ module.exports = [
         settings: {
             group: "merchandiser",
             subGroup: "feature",
-            permission : {'D59' : 1},
+            permission : {'D57' : 1},
             iconClass: 'fa fa-calculator',
             type: "kadivmd"
         }
