@@ -993,10 +993,23 @@ module.exports = [
         auth: true,
         settings: {
             group: "merchandiser",
-            subGroup: "feature",
-            permission : {'D57' : 1},
+            subGroup: "monitoring",
+            permission : {'D59' : 1},
             iconClass: 'fa fa-calculator',
-            type: "kadivmd"
+        }
+    },
+    {
+        route: '/merchandiser/reject-ro-garment-report',
+        name: 'reject-ro-garment-report',
+        moduleId: './modules/merchandiser/report/reject-ro-garment-report/index',
+        nav: true,
+        title: 'Report Reject RO Garment',
+        auth: true,
+        settings: {
+            group: "merchandiser",
+            subGroup: "monitoring",
+            permission : {'D60' : 1},
+            iconClass: 'fa fa-calculator',
         }
     },
 ];
