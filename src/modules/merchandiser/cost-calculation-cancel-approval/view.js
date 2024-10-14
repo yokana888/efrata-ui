@@ -272,7 +272,8 @@ export class View {
             this.data.DeletedRemark = response.output.DeletedRemark;
 
             this.service.cancel_approval(this.data.Id,this.data)
-            .then(result => {
+                .then(result => {
+                    alert("Cost Calculation berhasil di cancel");
                 this.list();
             })
             .catch(e => {
