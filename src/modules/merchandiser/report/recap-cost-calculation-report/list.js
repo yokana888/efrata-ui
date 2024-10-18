@@ -80,6 +80,10 @@ export class List {
           "en-EN",
           { minimumFractionDigits: 2, maximumFractionDigits: 2 }
         );
+        _data.FCFab = _data.FCFab.toLocaleString(
+          "en-EN",
+          { minimumFractionDigits: 2, maximumFractionDigits: 2 }
+        );
         _data.EFF = _data.EFF.toLocaleString(
           "en-EN",
           { minimumFractionDigits: 2, maximumFractionDigits: 2 }
