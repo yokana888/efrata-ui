@@ -56,7 +56,8 @@
                     <th class="text-center">Profit %</th>
                     <th class="text-center">Profit IDR</th>                    
                     <th class="text-center">Profit USD</th>
-                    <th class="text-center">Profit/FOB %</th>                    
+                    <th class="text-center">Profit/FOB %</th> 
+                    <td class="text-center">Gross Profit</td>                   
                 </tr>
             </thead>
             <tbody>
@@ -88,7 +89,8 @@
                         <td class="text-right">${item.Profit}</td>
                         <td class="text-right">${item.ProfitIDR}</td>                        
                         <td class="text-right">${item.ProfitUSD}</td>      
-                        <td class="text-right">${item.ProfitFOB}</td>                                                
+                        <td class="text-right">${item.ProfitFOB}</td>      
+                        <td class="text-right">${item.GrossProfit}</td>                                          
                     </tr>
                         <tr class="active">
                         <td class="text-center">.</td>
@@ -103,7 +105,8 @@
                         <td class="text-center"><strong>.</strong></td>                                             
                         <td class="text-right"><strong>${Seksi.subTotal1}</strong></td>     
                         <td class="text-right"><strong>${Seksi.subTotal2}</strong></td>     
-                        <td class="text-center"><strong>.</strong></td>                                                                     
+                        <td class="text-center"><strong>.</strong></td>   
+                        <td class="text-right"><strong>${Seksi.subTotal3}</strong></td>                                                                  
                     </tr>
                 </template>
                 </tbody>
@@ -120,8 +123,10 @@
                             </template>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="control-label text-left col-md-4">GRAND TOTAL</label>
-                            <p class="form-control-static col-md-8">${grandTotal | numberFormat:'0,000.00'}</p>
+                            <label class="control-label text-left col-md-6">GRAND TOTAL</label>
+                            <p class="form-control-static col-md-5">${grandTotal | numberFormat:'0,000.00'}</p>
+                            <label class="control-label text-left col-md-6">GRAND TOTAL GROSS PROFIT</label>
+                            <p class="form-control-static text-left col-md-5">${grandTotalGrossProfit | numberFormat:'0,000.00'}</p>
                         </div>
                     </div>
         <div class="alert alert-info text-center" role="alert" if.bind="data.length == 0">
