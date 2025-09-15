@@ -10,35 +10,35 @@ export class List {
     @bindable KtgrItem;
     // @bindable categoryselect
     @bindable unitselect
-    KategoriItem = ['','BAHAN BAKU','BAHAN PENDUKUNG', 'BAHAN EMBALACE'];
+    KategoriItem = ['','BAHAN BAKU','BAHAN PENDUKUNG', 'BAHAN EMBALACE',"SUBKON"];
     //unitOption = ['','CENTRAL 2A', 'CENTRAL 2B','CENTRAL 2C/EX. K4','CENTRAL 1A/EX. K3','CENTRAL 1B'];
     unitOption = ['EFRATA'];
 
-    KtgrItemChanged(newvalue){
-        if (newvalue) {
-            if (newvalue === "BAHAN BAKU") {
-                this.category = "BB";
-                this.categoryname = "BAHAN BAKU";
-                this.productcode = "";
-            }
-            else if (newvalue === "BAHAN PENDUKUNG") { 
-                this.category = "BP";
-                this.categoryname = "BAHAN PENDUKUNG";
-                this.productcode = "";
-            }
-            else if (newvalue === "BAHAN EMBALACE") {
-                this.category = "BE"; 
-                this.categoryname = "BAHAN EMBALACE";
-                this.productcode = "";
-            }
-            // else if(newvalue === "INTERLINING"){
+    // KtgrItemChanged(newvalue){
+    //     if (newvalue) {
+    //         if (newvalue === "BAHAN BAKU") {
+    //             this.category = "BB";
+    //             this.categoryname = "BAHAN BAKU";
+    //             this.productcode = "";
+    //         }
+    //         else if (newvalue === "BAHAN PENDUKUNG") { 
+    //             this.category = "BP";
+    //             this.categoryname = "BAHAN PENDUKUNG";
+    //             this.productcode = "";
+    //         }
+    //         else if (newvalue === "BAHAN EMBALACE") {
+    //             this.category = "BE"; 
+    //             this.categoryname = "BAHAN EMBALACE";
+    //             this.productcode = "";
+    //         }
+    //         // else if(newvalue === "INTERLINING"){
 
-            //     this.category = "BP";
-            //     this.productcode = "INT";
-            //     this.categoryname = "PROSES";
-            // }
-        }
-    }
+    //         //     this.category = "BP";
+    //         //     this.productcode = "INT";
+    //         //     this.categoryname = "PROSES";
+    //         // }
+    //     }
+    // }
     unitselectChanged(newvalue){
         
         if (newvalue) {
@@ -51,10 +51,8 @@ export class List {
                 this.unitname = "";
             }
         }
-
-        //console.log(this.unit);
-        //console.log(this.uniname);
     }
+
     constructor(router, service) {
         this.service = service;
         this.router = router;
@@ -86,14 +84,14 @@ export class List {
        
     // ]   ;
 
-    // controlOptions = {
-    //     label: {
-    //         length: 4,
-    //     },
-    //     control: {
-    //         length: 4,
-    //     },
-    // };
+    controlOptions = {
+        label: {
+            length: 4,
+        },
+        control: {
+            length: 4,
+        },
+    };
 
     // tableOptions = {
     //     showColumns: false,
@@ -166,12 +164,18 @@ export class List {
     // }
 
     search() {
+        const categoryMap = {
+        "BAHAN BAKU": "BB",
+        "BAHAN PENDUKUNG": "BP",
+        "BAHAN EMBALACE": "BE",
+        "SUBKON": "SISA SUBCON",
+        };
         //this.flag = true;
         let args = {
             dateFrom : this.dateFrom ? moment(this.dateFrom).format("YYYY-MM-DD") : null,
             dateTo : this.dateTo ? moment(this.dateTo).format("YYYY-MM-DD") : "",
-            category : this.category ? this.category : "",
             unit : this.unit ? this.unit : "",
+            category : categoryMap[this.KtgrItem] || "",
           }
           this.service.search(args)
           .then(result => {
