@@ -43,6 +43,7 @@ export class List {
                 var subTotalUoM2 = {};
                 var subTotalUoM3 = {};
                 var subTotalUoM4 = {};
+                var subTotalUoM5 = {};
                 
                   for (var data of result) {
                        var BdgtUOM = data.UOMUnit;
@@ -58,6 +59,7 @@ export class List {
                             ProfitIDR : data.ProfitIDR.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),  
                             ProfitFOB : data.ProfitFOB.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),                                           
                             GrossProfit : data.GrossProfit.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),  
+                            Premi : data.Premi.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
                         });
                     
                         if (!subTotalUoM[BdgtUOM]) {
@@ -83,6 +85,11 @@ export class List {
                                 subTotalUoM4[BdgtUOM] = 0;
                                 }                   
                             subTotalUoM4[BdgtUOM] += toNum(data.GrossProfit);
+
+                        if (!subTotalUoM5[BdgtUOM]) {
+                                subTotalUoM5[BdgtUOM] = 0;
+                                }
+                            subTotalUoM5[BdgtUOM] += toNum(data.Premi);
                         }    
 
                var BdgtUOMs = [];
@@ -91,6 +98,7 @@ export class List {
                this.AmountTotal2 = 0;
                this.AmountTotal3 = 0;
                this.AmountTotal4 = 0;
+               this.AmountTotal5 = 0;
                    
                for (var data in dataByUOM) {
                    BdgtUOMs.push({
@@ -100,13 +108,15 @@ export class List {
                    subTotal1: (subTotalUoM1[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
                    subTotal2: (subTotalUoM2[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
                    subTotal3: (subTotalUoM3[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),                   
-                    subTotal4: (subTotalUoM4[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+                   subTotal4: (subTotalUoM4[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+                   subTotal5: (subTotalUoM5[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
                 });
                    this.AmountTotal += subTotalUoM[data];                                     
                    this.AmountTotal1 += subTotalUoM1[data];                                     
                    this.AmountTotal2 += subTotalUoM2[data];                                     
                    this.AmountTotal3 += subTotalUoM3[data];    
                    this.AmountTotal4 += subTotalUoM4[data];    
+                   this.AmountTotal5 += subTotalUoM5[data];
                }
                
                this.AmountTotal = this.AmountTotal.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -114,6 +124,7 @@ export class List {
                this.AmountTotal2 = this.AmountTotal2.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                this.AmountTotal3 = this.AmountTotal3.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                this.AmountTotal4 = this.AmountTotal4.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+               this.AmountTotal5 = this.AmountTotal5.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                this.BdgtUOMs = BdgtUOMs;
 
                 });        
@@ -136,7 +147,8 @@ export class List {
         this.AmountTotal1 = null;   
         this.AmountTotal2 = null;   
         this.AmountTotal3 = null;   
-        this.AmountTotal4 = null; 
+        this.AmountTotal4 = null;
+        this.AmountTotal5 = null;
     }
 
     dateFromChanged(e) {

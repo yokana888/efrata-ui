@@ -60,12 +60,14 @@ export class List {
                 this.grandTotalByUom = [];
                 this.grandTotal = 0;
                 this.grandTotalGrossProfit = 0;
+                this.grandTotalPremi = 0;
 
                 var dataBySection = {};
                 var subTotalSection = {};
                 var subTotalSection1 = {};
                 var subTotalSection2 = {};
                 var subTotalSection3 = {};
+                var subTotalSection4 = {};
                   
                   for (var data of result) {
                        var SECTION = data.Section;
@@ -100,6 +102,7 @@ export class List {
                             FOBPrice : data.FOBPrice.toLocaleString('en-EN',{minimumFractionDigits: 4, maximumFractionDigits: 4}),
                             Amount : data.Amount.toLocaleString('en-EN',{minimumFractionDigits: 2, maximumFractionDigits: 2}),
                             GrossProfit : data.GrossProfit.toLocaleString('en-EN',{minimumFractionDigits: 2, maximumFractionDigits: 2}),
+                            Premi : data.Premi.toLocaleString('en-EN',{minimumFractionDigits: 2, maximumFractionDigits: 2}),
                          });
                     
                         if (!subTotalSection[SECTION]) {
@@ -121,6 +124,11 @@ export class List {
                             subTotalSection3[SECTION] = 0;
                             } 
                             subTotalSection3[SECTION] += toNum(data.GrossProfit);
+
+                        if (!subTotalSection4[SECTION]) {
+                            subTotalSection4[SECTION] = 0;
+                            } 
+                            subTotalSection4[SECTION] += toNum(data.Premi);
                         }
                     //
                     for (var data of result) {
@@ -138,6 +146,7 @@ export class List {
                         console.log(this.grandTotalByUom);
                         this.grandTotal += toNum(data.Amount);
                         this.grandTotalGrossProfit += toNum(data.GrossProfit);
+                        this.grandTotalPremi += toNum(data.Premi);
                     }
                     //
                        
@@ -146,6 +155,7 @@ export class List {
                this.AmountTotal1 = 0;
                this.AmountTotal2 = 0;
                this.AmountTotal3 = 0;
+                this.AmountTotal4 = 0;
 
                for (var data in dataBySection) {
                    Sections.push({
@@ -155,17 +165,20 @@ export class List {
                    subTotal1: (subTotalSection1[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
                    subTotal2: (subTotalSection2[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
                    subTotal3: (subTotalSection3[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+                   subTotal4: (subTotalSection4[data]).toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
                 });
                    this.AmountTotal += subTotalSection[data];                                     
                    this.AmountTotal1 += subTotalSection1[data];                                     
                    this.AmountTotal2 += subTotalSection2[data];                                     
                    this.AmountTotal3 += subTotalSection3[data];                                     
+                   this.AmountTotal4 += subTotalSection4[data];                                     
                }
                
                this.AmountTotal = this.AmountTotal.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                this.AmountTotal1 = this.AmountTotal1.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                this.AmountTotal2 = this.AmountTotal2.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                this.AmountTotal3 = this.AmountTotal3.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+               this.AmountTotal4 = this.AmountTotal4.toLocaleString('en-EN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                this.Sections = Sections;
 
                 });  
@@ -191,6 +204,7 @@ export class List {
         this.AmountTotal1 = null;
         this.AmountTotal2 = null;
         this.AmountTotal3 = null;
+        this.AmountTotal4 = null;
     }
 
     dateFromChanged(e) {
