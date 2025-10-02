@@ -3,6 +3,7 @@ import { Service,SalesService } from "./service";
 import { Router } from 'aurelia-router';
 import moment from 'moment';
 import { PRMasterDialog } from '../../merchandiser/cost-calculation/template/data-form/pr-master-dialog';
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
 
 @inject(Router, Service,SalesService)
 export class List {
@@ -170,9 +171,10 @@ export class List {
   contextClickCallback(event) {
     var arg = event.detail;
     var data = arg.data;
+    const encoded = Base64Helper.encode(data.Id);
     switch (arg.name) {
       case "Rincian":
-        this.router.navigateToRoute('view', { id: data.Id });
+        this.router.navigateToRoute('view', { id: encoded });
         break;
     }
   }

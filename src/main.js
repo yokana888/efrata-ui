@@ -36,7 +36,7 @@ export async function configure(aurelia) {
             var purchasingAzure = "https://com-efrata-service-purchasing-v8.azurewebsites.net/v1/";
             var inventoryAzure = "https://com-efrata-service-inventory-v8.azurewebsites.net/v1/";
             const sales = "https://com-efrata-service-sales-v8.azurewebsites.net/v1/";
-            var finance = "https://com-efrata-service-finance-accounting.azurewebsites.net/v1/";
+            var finance = "https://com-efrata-service-finance-accounting-v8.azurewebsites.net/v1/";  
             var garmentProduction = "https://com-efrata-service-garment.azurewebsites.net/";
             // var packingInventory = "https://com-efrata-service-packing-inventory.azurewebsites.net/v1/";
             var packingInventory = "https://com-efrata-service-packing-inventory-v8.azurewebsites.net/v1/";

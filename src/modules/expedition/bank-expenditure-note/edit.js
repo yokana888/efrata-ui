@@ -1,9 +1,8 @@
 import { inject, Lazy, bindable } from 'aurelia-framework';
 import { Router } from 'aurelia-router';
-import { Dialog } from '../../../components/dialog/dialog'
-
+import { Dialog } from '../../../components/dialog/dialog';
 import Service from './service';
-
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
 
 @inject(Router, Service, Dialog)
 export class Edit {
@@ -52,6 +51,8 @@ export class Edit {
     UPOResults = [];
     async activate(params) {
         var id = params.id;
+        let decoded = Base64Helper.decode(id);
+        id = decoded;
         this.data = await this.service.getById(id);
 
         this.bankView = this.data.Bank.AccountName ? `${this.data.Bank.AccountName} - A/C : ${this.data.Bank.AccountNumber}` : '';
@@ -112,7 +113,8 @@ export class Edit {
     }
 
     cancelCallback(event) {
-        this.router.navigateToRoute('view', { id: this.data.Id });
+        const encoded = Base64Helper.encode(this.data.Id);
+        this.router.navigateToRoute('view', { id: encoded });
     }
 
     saveCallback(event) {

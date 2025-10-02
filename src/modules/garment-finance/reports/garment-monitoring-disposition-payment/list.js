@@ -129,7 +129,7 @@ selectedInvoChanged(newValue) {
 		this.invoiceNo = null;
 	}
 }
-  loader = (info) => {
+  loader = async (info) => {
 
         let startDate = this.startDate && this.startDate != "Invalid Date" ? moment(this.startDate).format("YYYY-MM-DD") : null;
 		let endDate = this.endDate && this.endDate != "Invalid Date" ? moment(this.endDate).format("YYYY-MM-DD") : null;
@@ -143,11 +143,11 @@ selectedInvoChanged(newValue) {
 	console.log(dispositionNo);
 
     return this.flag
-      ? this.service.search(params).then((result) => {
+      ? await this.service.search(params).then((result) => {
 
         return {
           total: 0,
-          data: result.data.Result
+          data: result.data
         };
       })
       : { total: 0, data: [] };
