@@ -2,6 +2,7 @@ import { inject, Lazy } from "aurelia-framework";
 import { Router } from "aurelia-router";
 import { Service } from "./service";
 import { Dialog } from "../../../au-components/dialog/dialog";
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
 
 @inject(Router, Service, Dialog)
 export class View {
@@ -19,6 +20,8 @@ export class View {
 
   async activate(params) {
     let id = params.id;
+    let decoded = Base64Helper.decode(id);
+    id = decoded;
     this.data = await this.service.getById(id);
 
     if (this.data.Position > 1 && this.data.Position < 6) {
@@ -32,7 +35,8 @@ export class View {
   }
 
   edit(event) {
-    this.router.navigateToRoute("edit-inklaring", { id: this.data.Id });
+    const encoded = Base64Helper.encode(this.data.Id);
+    this.router.navigateToRoute("edit-inklaring", { id: encoded });
   }
 
   delete(event) {

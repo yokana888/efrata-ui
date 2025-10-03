@@ -3,6 +3,8 @@ import { Service } from "./service";
 import { Router } from 'aurelia-router';
 import moment from 'moment';
 import numeral from 'numeral';
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
+
 @inject(Router, Service)
 export class List {
     context = ["Rincian", "Cetak PDF"];
@@ -91,9 +93,10 @@ export class List {
         let data = arg.data;
         console.log(event.detail);
         console.log(data);
+        const encoded = Base64Helper.encode(data.Id);
         switch (arg.name) {
             case "Rincian":
-                this.router.navigateToRoute('view', { id: data.Id });
+                this.router.navigateToRoute('view', { id: encoded});
                 break;
             case "Cetak PDF":
                 this.service.getPdfById(data.Id);

@@ -4,6 +4,7 @@ import { Service } from './service';
 import { activationStrategy } from 'aurelia-router';
 import { Dialog } from '../../../components/dialog/dialog';
 import { AlertView } from './custom-dialog-view/alert-view';
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
 
 @inject(Router, Service, Dialog)
 export class View {
@@ -18,6 +19,8 @@ export class View {
 
     async activate(params) {
         var id = params.id;
+        let decoded = Base64Helper.decode(id);
+        id = decoded;
         var orderQty = 0;
         this.data = await this.service.getById(id);
         if (this.data.Items) {
@@ -114,7 +117,8 @@ export class View {
     }
 
     edit(event) {
-        this.router.navigateToRoute('edit', { id: this.data._id });
+        const encoded = Base64Helper.encode(this.data._id);
+        this.router.navigateToRoute('edit', { id: encoded });
     }
 
     delete() {
