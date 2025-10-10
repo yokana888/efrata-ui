@@ -21,8 +21,8 @@ export class View {
         var isArriving = false;
         var canClose=false;
         var id = params.id;
-        this.poExId = id;
         let decoded = Base64Helper.decode(id);
+        this.poExId = decoded;
         id = decoded;
         this.data = await this.service.getById(id);
         for(var a of this.data.items){
@@ -92,6 +92,7 @@ export class View {
     }
 
     unpostPO(e) {
+
         this.service.unpost(this.poExId).then(result => {
             this.cancel();
         }).catch(e => {
