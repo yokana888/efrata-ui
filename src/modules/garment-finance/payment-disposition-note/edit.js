@@ -3,6 +3,7 @@ import { Router } from 'aurelia-router';
 import { Dialog } from '../../../components/dialog/dialog'
 
 import Service from './service';
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
 
 
 @inject(Router, Service, Dialog)
@@ -39,6 +40,8 @@ export class Edit {
     Items = [];
     async activate(params) {
         var id = params.id;
+        let decoded = Base64Helper.decode(id);
+        id = decoded;
         this.data = await this.service.getById(id);
 
         this.Items = this.data.Items.map((item) => {
@@ -95,7 +98,8 @@ export class Edit {
     }
 
     cancelCallback(event) {
-        this.router.navigateToRoute('view', { id: this.data.Id });
+        const encoded = Base64Helper.encode(this.data.Id);
+        this.router.navigateToRoute('view', { id: encoded });
     }
 
     saveCallback(event) {

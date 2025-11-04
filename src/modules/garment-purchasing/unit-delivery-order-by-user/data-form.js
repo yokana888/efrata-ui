@@ -36,7 +36,7 @@ export class DataForm {
 
     typeUnitDeliveryOrderOptions = ['PROSES', 'TRANSFER','SISA', 'SUBCON','TRANSFER SAMPLE'];//, 'SAMPLE'
     
-    itemToException = ["SUBCON", "WASH", "EMBROIDERY", "PROCCES"];
+    itemToException = ["SUBCON", "WASH", "PROCCES"];
     controlOptions = {
         label: {
             align: "left",

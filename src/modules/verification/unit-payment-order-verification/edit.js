@@ -4,6 +4,7 @@ import { Service, MongoService } from './service';
 import { activationStrategy } from 'aurelia-router';
 import { Dialog } from '../../../components/dialog/dialog';
 import { AlertView } from './custom-dialog-view/alert-view';
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
 
 @inject(Router, Service, MongoService, Dialog)
 export class Edit {
@@ -50,6 +51,8 @@ export class Edit {
 
     async activate(params) {
         var id = params.id;
+        let decoded = Base64Helper.decode(id);
+        id = decoded;
         this.dataExpedition = await this.service.getById(id);
 
         var arg = {
@@ -66,7 +69,8 @@ export class Edit {
     }
 
     cancel(event) {
-        this.router.navigateToRoute('view', { id: this.dataExpedition.Id });
+        const encoded = Base64Helper.encode(this.dataExpedition.Id);
+        this.router.navigateToRoute('view', { id: encoded });
     }
 
     Submit(context) {

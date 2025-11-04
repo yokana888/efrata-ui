@@ -1,6 +1,7 @@
 import { inject } from 'aurelia-framework';
 import { Service } from "./service";
 import { Router } from 'aurelia-router';
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
 
 @inject(Router, Service)
 export class List {
@@ -121,15 +122,17 @@ export class List {
   contextCallback(event) {
     var arg = event.detail;
     var data = arg.data;
+    const encoded = Base64Helper.encode(data._id);
     switch (arg.name) {
       case "detail":
-        this.router.navigateToRoute('view', { id: data._id });
+        this.router.navigateToRoute('view', { id: encoded });
         break;
     }
   }
 
   edit(Id){
-    this.router.navigateToRoute('view', { id: Id });
+    const encoded = Base64Helper.encode(Id);
+    this.router.navigateToRoute('view', { id: encoded });
   }
 
   create() {

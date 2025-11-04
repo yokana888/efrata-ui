@@ -7,6 +7,7 @@ import { Dialog } from '../../../components/dialog/dialog';
 const ExpeditionLoader = require('../shared/expedition-loader');
 import { CreateSubmit } from './dialog-template/create-submit';
 import { PurchasingService } from '../shared/purchasing-service';
+import { Base64Helper } from '../../../utils/base-64-coded-helper';
 
 @inject(Router, Service, Dialog, PurchasingService)
 export class Edit {
@@ -44,8 +45,10 @@ export class Edit {
 
     async activate(params) {
         console.log(params);
-
-        this.selectedExpedition = await this.service.getById(params.id);
+        var id = params.id;
+        let decoded = Base64Helper.decode(id);
+        id = decoded;
+        this.selectedExpedition = await this.service.getById(id);
         if (this.selectedExpedition) {
             this.verificationDate = this.selectedExpedition.VerificationAcceptedDate;
 
@@ -71,7 +74,8 @@ export class Edit {
     }
 
     cancelCallback(event) {
-        this.router.navigateToRoute('view', { id: this.selectedExpedition.Id });
+        const encoded = Base64Helper.encode(this.selectedExpedition.Id);
+        this.router.navigateToRoute('view', { id: encoded });
     }
 
     get expeditionLoader() {
@@ -112,8 +116,9 @@ export class Edit {
                         if (response.output.context == 'Cashier') {
                             this.service.sendToCashier(this.selectedExpedition.Id)
                                 .then(result => {
+                                    const encoded = Base64Helper.encode(this.selectedExpedition.Id);
                                     alert("Data berhasil dibuat");
-                                    this.router.navigateToRoute('view', { id: this.selectedExpedition.Id });
+                                    this.router.navigateToRoute('view', { id: encoded });
                                 })
                                 .catch(e => {
                                     this.error = e;
@@ -121,8 +126,9 @@ export class Edit {
                         } else if (response.output.context == 'Accounting') {
                             this.service.sendToAccounting(this.selectedExpedition.Id)
                                 .then(result => {
+                                    const encoded = Base64Helper.encode(this.selectedExpedition.Id);
                                     alert("Data berhasil dibuat");
-                                    this.router.navigateToRoute('view', { id: this.selectedExpedition.Id });
+                                    this.router.navigateToRoute('view', { id: encoded });
                                 })
                                 .catch(e => {
                                     this.error = e;
@@ -149,8 +155,9 @@ export class Edit {
                             let remark = response.output.Remark;
                             this.service.sendToPurchasingRejected(this.selectedExpedition.Id, remark)
                                 .then(result => {
+                                    const encoded = Base64Helper.encode(this.selectedExpedition.Id);
                                     alert("Data berhasil dibuat");
-                                    this.router.navigateToRoute('view', { id: this.selectedExpedition.Id });
+                                    this.router.navigateToRoute('view', { id: encoded });
                                 })
                                 .catch(e => {
                                     this.error = e;

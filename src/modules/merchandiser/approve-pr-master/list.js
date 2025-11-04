@@ -174,7 +174,8 @@ export class List {
             case "MD1":
                 this.section = 
                 { 
-                    ApprovalCC: username == "NOYA KALISTANIA" ? "AYU RIMA" : (username == "CHRIS PRASTAWA" ? "WAHYU PAMUNGKAS" : username)
+                    //ApprovalCC: username == "NOYA KALISTANIA" ? "AYU RIMA" : (username == "CHRIS PRASTAWA" ? "WAHYU PAMUNGKAS" : username)
+                    ApprovalCC: username == "DIAH JESSICA" ? "AYU RIMA" : (username == "CHRIS PRASTAWA" ? "WAHYU PAMUNGKAS" : username)
                 };
                 break;
 
