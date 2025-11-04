@@ -185,12 +185,13 @@ export class DataForm {
                     Items.Conversion=item.CorrectionConversion;
                     Items.DOCurrency={};
                     Items.DOCurrency.Rate= item.DOCurrencyRate;
-                    Items.Colour =item.Colour,
-                    Items.Rack = item.Rack,
-                    Items.Box= item.Box,
-                    Items.Area= item.Area,
-                    Items.Level= item.Level,
-                    Items.DOItemsId= item.DOItemsId
+                    Items.Colour =item.Colour;
+                    Items.Rack = item.Rack;
+                    Items.Box= item.Box;
+                    Items.Area= item.Area;
+                    Items.Level= item.Level;
+                    Items.DOItemsId= item.DOItemsId;
+                    Items.DefaultDOQuantity=Items.Quantity;
                     if(Items.ReturQuantity>0){
                         dataItems.push(Items);
                     }
